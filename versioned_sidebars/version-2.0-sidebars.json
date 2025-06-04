@@ -1,0 +1,12 @@
+{
+  "tutorialSidebar": [
+    "intro",
+    {
+      "type": "category",
+      "label": "Example Category",
+      "items": [
+        "example/lorem-ipsum"
+      ]
+    }
+  ]
+}
