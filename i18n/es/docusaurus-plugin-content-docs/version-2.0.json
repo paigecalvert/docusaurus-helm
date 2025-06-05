@@ -1,0 +1,10 @@
+{
+  "version.label": {
+    "message": "2.0",
+    "description": "The label for version 2.0"
+  },
+  "sidebar.tutorialSidebar.category.Example Category": {
+    "message": "Example Category",
+    "description": "The label for category Example Category in sidebar tutorialSidebar"
+  }
+}
