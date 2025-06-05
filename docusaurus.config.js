@@ -28,12 +28,21 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
+    // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-us',
+        label: 'English',
+      },
+      es: {
+        label: 'Español',
+      },
+    },
   },
 
   presets: [
@@ -91,6 +100,10 @@ const config = {
           {
             type: 'docsVersionDropdown',
             versions: ['current', '2.0', '1.0'],
+          },
+          {
+            type: 'localeDropdown',
+            position: 'left',
           },
           {
             href: 'https://github.com/facebook/docusaurus',
