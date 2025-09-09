@@ -15,14 +15,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://scottrigby.github.io',
+  url: 'https://paigecalvert.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docusaurus-helm-test/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'scottrigby', // Usually your GitHub org/user name.
+  organizationName: 'paigecalvert', // Usually your GitHub org/user name.
   projectName: 'docusaurus-helm-test', // Usually your repo name.
 
   onBrokenLinks: 'throw',
