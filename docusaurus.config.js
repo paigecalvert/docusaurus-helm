@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Helm',
-  tagline: 'Helm - The Kubernetes Package Manager',
+  tagline: 'The Kubernetes Package Manager',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
