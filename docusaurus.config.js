@@ -55,7 +55,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/paigecalvert/docusaurus-helm-test',
         },
         blog: {
           showReadingTime: true,
@@ -66,7 +66,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/paigecalvert/docusaurus-helm-test',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -90,7 +90,7 @@ const config = {
           alt: 'Site Logo',
           src: 'img/helm.svg',
           srcDark: 'img/helm.svg',
-          href: 'https://docusaurus.io/',
+          href: 'https://paigecalvert.github.io/docusaurus-helm-test/',
           target: '_self',
           width: 55,
           height: 55,
@@ -105,29 +105,30 @@ const config = {
             type: 'localeDropdown',
             position: 'left',
           },
+          // {
+          //   href: 'https://github.com/facebook/docusaurus',
+          //   label: 'Home',
+          //   position: 'left',
+          // },
+          // {
+          //   href: 'https://github.com/facebook/docusaurus',
+          //   label: 'Docs',
+          //   position: 'left',
+          // },
+          {to: '/docs', label: 'Docs', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'Home',
-            position: 'left',
-          },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'Docs',
-            position: 'left',
-          },
-          {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://artifacthub.io/',
             label: 'Charts',
             position: 'left',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/helm/community',
             label: 'Community',
             position: 'left',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/helm',
             label: 'GitHub',
             position: 'right',
           },
@@ -149,16 +150,20 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'GitHub Community',
+                href: 'https://github.com/helm/community',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Slack',
+                href: 'https://kubernetes.slack.com/',
+              },
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/kubernetes-helm',
               },
               {
                 label: 'X',
-                href: 'https://x.com/docusaurus',
+                href: 'https://x.com/helmpack',
               },
             ],
           },
@@ -171,7 +176,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/helm',
               },
             ],
           },
