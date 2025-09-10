@@ -55,7 +55,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/paigecalvert/docusaurus-helm-test',
+            'https://github.com/paigecalvert/docusaurus-helm-test/blob/main/',
         },
         blog: {
           showReadingTime: true,
