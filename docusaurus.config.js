@@ -192,7 +192,7 @@ const config = {
                 <p>We are a Cloud Native Computing Foundation graduated project.</p>
               </div>
               <div class="footer__cncf-logo">
-                <img src="img/cncf-white.png" alt="CNCF Logo" />
+                <img src="/docusaurus-helm-test/img/cncf-white.png" alt="CNCF Logo" />
               </div>
             </div>
             <div class="footer__copyright-text">
