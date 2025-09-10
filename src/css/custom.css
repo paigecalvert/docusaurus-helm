@@ -111,6 +111,18 @@ h1,h2,h3,h4,h5,h6 {
   color: #091C84;
 }
 
+/* Navbar Brand/Title Styling */
+.navbar__brand .navbar__title {
+  color: #091C84;
+  font-family: "Space Mono", "Courier New", monaco, monospace;
+  font-weight: bold;
+  letter-spacing: 0.035rem;
+}
+
+.navbar__brand:hover .navbar__title {
+  color: #091C84;
+}
+
 /* Remove topography background from pagination navigation */
 .pagination-nav {
   background: none;
