@@ -50,7 +50,40 @@ export default function Home() {
       wrapperClassName="homepage-wrapper">
       <HomepageHeader />
       <section className={styles.newSection}>
-        {/* Content will be added here */}
+        <div className="container">
+          <h2 className={styles.sectionTitle}>What is Helm?</h2>
+          <div className={styles.contentGrid}>
+            <div className={styles.leftContainer}>
+              <p className={styles.leftParagraph}>
+                Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
+              </p>
+              <p className={styles.leftParagraph}>
+                Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste.
+              </p>
+              <p className={styles.leftParagraph}>
+                Helm is a graduated project in the CNCF and is maintained by the Helm community.
+              </p>
+            </div>
+            <div className={styles.rightContainer}>
+              <div className={styles.tile}>
+                <h3 className={styles.tileHeading}>Manage Complexity</h3>
+                <p className={styles.tileParagraph}>Charts describe even the most complex apps, provide repeatable application installation, and serve as a single point of authority.</p>
+              </div>
+              <div className={styles.tile}>
+                <h3 className={styles.tileHeading}>Easy Updates</h3>
+                <p className={styles.tileParagraph}>Take the pain out of updates with in-place upgrades and custom hooks.</p>
+              </div>
+              <div className={styles.tile}>
+                <h3 className={styles.tileHeading}>Simple Sharing</h3>
+                <p className={styles.tileParagraph}>Charts are easy to version, share, and host on public or private servers.</p>
+              </div>
+              <div className={styles.tile}>
+                <h3 className={styles.tileHeading}>Rollbacks</h3>
+                <p className={styles.tileParagraph}>Use helm rollback to roll back to an older version of a release with ease.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <main>
         <HomepageFeatures />
