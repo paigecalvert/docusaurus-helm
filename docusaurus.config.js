@@ -85,11 +85,11 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Helm Docs',
+        title: 'Helm',
         logo: {
           alt: 'Site Logo',
           src: 'img/helm.svg',
-          srcDark: 'img/helm.svg',
+          // srcDark: 'img/helm.svg',
           href: '/',
           target: '_self',
           width: 55,
@@ -117,15 +117,15 @@ const config = {
           //   position: 'left',
           // },
           {to: '/docs/intro', label: 'Docs', position: 'left'},
-          {
-            href: 'https://artifacthub.io/',
-            label: 'Charts',
-            position: 'left',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/helm/community',
             label: 'Community',
+            position: 'left',
+          },
+          {
+            href: 'https://artifacthub.io/',
+            label: 'Charts',
             position: 'left',
           },
           {
@@ -134,6 +134,9 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      colorMode: {
+        disableSwitch: true,
       },
       footer: {
         style: 'dark',
@@ -182,7 +185,21 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `
+          <div class="footer__bottom">
+            <div class="footer__cncf-section">
+              <div class="footer__cncf-text">
+                <p>We are a Cloud Native Computing Foundation graduated project.</p>
+              </div>
+              <div class="footer__cncf-logo">
+                <img src="img/cncf-white.png" alt="CNCF Logo" />
+              </div>
+            </div>
+            <div class="footer__copyright-text">
+              Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.
+            </div>
+          </div>
+        `,
       },
       prism: {
         theme: prismThemes.github,
