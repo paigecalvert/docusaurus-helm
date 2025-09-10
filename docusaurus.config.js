@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/helm-icon-color.svg',
 
   // Set the production url of your site here
-  url: 'https://paigecalvert.github.io',
+  url: 'https://helm4docs.r6by.com/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docusaurus-helm-test/',
