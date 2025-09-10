@@ -35,6 +35,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* html {
+  border: 8px solid #091C84;
+  box-sizing: border-box;
+  min-height: 100vh;
+} */
+
+/* body {
+  border: 8px solid var(--md-primary-fg-color);
+  min-height: 100vh;
+  box-sizing: border-box;
+} */
+
 body, nav {
   background-image: url("/img/topography.png");
 }
