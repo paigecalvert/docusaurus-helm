@@ -69,13 +69,55 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--ifm-color-primary);
 }
 
+/* Navbar Link Styling */
+.navbar__link {
+  color: #091C84;
+  font-size: 1rem;
+  /* position: relative !important; */
+  /* display: inline-block !important; */
+  /* text-align: center !important; */
+  transition: all .3s ease-in-out;
+  font-family: "Space Mono", "Courier New", monaco, monospace;
+  font-weight: bold;
+  letter-spacing: 0.035rem;
+  /* -webkit-font-smoothing: antialiased; */
+  padding: 0.75rem 1.5vw;
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  background-color: rgba(249,158,172,0.5);
+  color: #091C84;
+}
+
+/* Also target navbar items that might have different classes */
+.navbar__item .navbar__link {
+  color: #091C84;
+  font-size: 1rem;
+  /* position: relative;
+  display: inline-block;
+  text-align: center; */
+  transition: all .3s ease-in-out;
+  font-family: "Space Mono", "Courier New", monaco, monospace;
+  font-weight: bold;
+  letter-spacing: 0.035rem;
+  /* -webkit-font-smoothing: antialiased; */
+  /* padding: 1.75rem 1.5vw; */
+  text-decoration: none;
+}
+
+.navbar__item .navbar__link:hover {
+  background-color: rgba(249,158,172,0.5);
+  color: #091C84;
+}
+
 /* Remove topography background from pagination navigation */
 .pagination-nav {
-  background: none !important;
+  background: none;
 }
 
 .pagination-nav__link {
-  background: white !important;
+  background: white;
 }
 
 /* Custom Footer Styles - Adapted from provided CSS */
