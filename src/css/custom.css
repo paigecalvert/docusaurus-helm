@@ -43,6 +43,16 @@ main, .theme-doc-breadcrumbs {
   background: white;
 }
 
+/* Override main background for homepage only */
+.homepage-wrapper main {
+  background: transparent;
+}
+
+/* Override hero background for homepage only */
+.homepage-wrapper .hero {
+  background: transparent;
+}
+
 h1,h2,h3,h4,h5,h6 {
   color: var(--ifm-color-primary);
 }

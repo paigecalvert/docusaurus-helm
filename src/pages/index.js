@@ -11,33 +11,23 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          <Translate
-            id="homepage.hero.title"
-            description="The main heading on the homepage">
-            My site
-          </Translate>
-        </Heading>
-        <p className="hero__subtitle">
-          <Translate
-            id="homepage.hero.subtitle"
-            description="The subtitle text on the homepage">
-            Dinosaurs are cool
-          </Translate>
-        </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            <Translate
-              id="homepage.hero.button"
-              description="The text for the main call-to-action button">
-              Docusaurus Tutorial - 5min ⏱️
-            </Translate>
-          </Link>
+        <div className={styles.heroContent}>
+          <img 
+            src="img/helm.svg" 
+            alt="Helm Logo" 
+            className={styles.heroLogo}
+          />
+          <h1 className={styles.heroText}>
+            The<br />
+            package manager<br />
+            for Kubernetes
+          </h1>
         </div>
+        <h2 className={styles.heroSubtitle}>
+          Helm is the best way to find, share, and use software built for Kubernetes.
+        </h2>
       </div>
     </header>
   );
@@ -56,8 +46,12 @@ export default function Home() {
         id: 'homepage.description',
         message: 'Description will go into a meta tag in <head />',
         description: 'The page description for SEO and social media sharing'
-      })}>
+      })}
+      wrapperClassName="homepage-wrapper">
       <HomepageHeader />
+      <section className={styles.newSection}>
+        {/* Content will be added here */}
+      </section>
       <main>
         <HomepageFeatures />
       </main>

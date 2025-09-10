@@ -4,10 +4,11 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 80vh;
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +21,62 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heroLogo {
+  height: 180px;
+  width: auto;
+}
+
+.heroText {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  margin: 0;
+  text-align: left;
+}
+
+.heroSubtitle {
+  background-color: rgba(255, 255, 255, 0.67);
+  padding: 2vw 5.5vw 2vw 2.5vw;
+  border: 5px solid #F4F4F4;
+  margin: .83333333em auto;
+  text-align: left;
+  width: 48vw;
+  letter-spacing: 0.05em;
+  color: #090E6F;
+  font-family: "Public Sans", Helvetica, Arial, sans-serif;
+  font-size: 2vw;
+  font-weight: 400;
+}
+
+.newSection {
+  background: url(/img/topography.png) repeat top left, linear-gradient(180deg, #07176c 0%, #091C84 100%);
+  background-blend-mode: color-burn;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 996px) {
+  .heroContent {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .heroLogo {
+    height: 120px;
+  }
+  
+  .heroText {
+    font-size: 2rem;
+    text-align: center;
+  }
 }

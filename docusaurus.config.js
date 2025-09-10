@@ -90,7 +90,7 @@ const config = {
           alt: 'Site Logo',
           src: 'img/helm.svg',
           srcDark: 'img/helm.svg',
-          href: 'https://paigecalvert.github.io/docusaurus-helm-test/',
+          href: '/',
           target: '_self',
           width: 55,
           height: 55,
@@ -100,10 +100,11 @@ const config = {
           {
             type: 'docsVersionDropdown',
             versions: ['current', '2.0', '1.0'],
+            position: 'right',
           },
           {
             type: 'localeDropdown',
-            position: 'left',
+            position: 'right',
           },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
@@ -115,7 +116,7 @@ const config = {
           //   label: 'Docs',
           //   position: 'left',
           // },
-          {to: '/docs', label: 'Docs', position: 'left'},
+          {to: '/docs/intro', label: 'Docs', position: 'left'},
           {
             href: 'https://artifacthub.io/',
             label: 'Charts',
