@@ -4,7 +4,7 @@
     "description": "The label for version 1.0"
   },
   "sidebar.tutorialSidebar.category.Example Category": {
-    "message": "Example Category",
-    "description": "The label for category Example Category in sidebar tutorialSidebar"
+    "message": "Categoría de Ejemplo",
+    "description": "La etiqueta para la categoría Categoría de Ejemplo en la barra lateral tutorialSidebar"
   }
 }
