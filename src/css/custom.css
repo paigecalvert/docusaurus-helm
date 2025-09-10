@@ -69,6 +69,15 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--ifm-color-primary);
 }
 
+/* Remove topography background from pagination navigation */
+.pagination-nav {
+  background: none !important;
+}
+
+.pagination-nav__link {
+  background: white !important;
+}
+
 /* Custom Footer Styles - Adapted from provided CSS */
 :root {
   --footer-navy: #001f3f;
