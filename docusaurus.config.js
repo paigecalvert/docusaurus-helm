@@ -84,6 +84,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'A0EQ8MMS8V',
+        // Public API key: it is safe to commit it
+        apiKey: '3ccfbf5fb8bc395cc5f09939fa69c0fe',
+        indexName: 'Docusaurus Helm 4 Docs Website',
+      },  
       navbar: {
         title: 'Helm',
         logo: {
@@ -106,16 +113,6 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           },
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'Home',
-          //   position: 'left',
-          // },
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'Docs',
-          //   position: 'left',
-          // },
           {to: '/docs/intro', label: 'Docs', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
