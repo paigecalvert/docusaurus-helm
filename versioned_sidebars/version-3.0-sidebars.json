@@ -7,6 +7,31 @@
       "items": [
         "example/lorem-ipsum"
       ]
+    },
+    {
+      "type": "category",
+      "label": "Best Practices",
+      "items": [
+        "best-practices/general-conventions",
+        "best-practices/custom-resource-definitions"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Chart Template Guide",
+      "items": [
+        "chart_template_guide/accessing_files",
+        "chart_template_guide/builtin_objects",
+        "chart_template_guide/control_structures",
+        "chart_template_guide/data_types",
+        "chart_template_guide/debugging",
+        "chart_template_guide/function_list",
+        "chart_template_guide/functions_and_pipelines",
+        "chart_template_guide/getting_started",
+        "chart_template_guide/helm_ignore_file",
+        "chart_template_guide/named_templates",
+        "chart_template_guide/notes_files"
+      ]
     }
   ]
 }
