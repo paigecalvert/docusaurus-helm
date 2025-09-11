@@ -13,7 +13,7 @@ To get going, let's take a brief look at a Helm chart.
 
 ## Charts
 
-As described in the [Charts Guide](../../topics/charts), Helm charts are
+As described in the Charts Guide, Helm charts are
 structured like this:
 
 ```
