@@ -70,6 +70,12 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--ifm-color-primary);
 }
 
+/* Remove navbar border */
+.navbar {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
 /* Navbar Link Styling */
 .navbar__link {
   color: #091C84;
@@ -405,7 +411,9 @@ body {
   line-height: 1.2;
   letter-spacing: -0.015rem;
   font-family: var(--mono-font);
-  font-weight: normal;
+  font-weight: bold; /* Changed from normal to bold to match klinicBold */
+  -webkit-font-smoothing: antialiased;
+  color: var(--navy); /* Added navy color to match original */
 }
 
 .home-intro h1 strong {
@@ -416,10 +424,11 @@ body {
 
 .home-intro h1 em {
   margin-bottom: -0.25vw;
+  font-style: normal; /* Remove italic styling - em is used for line breaks, not emphasis */
 }
 
 .home-intro h2 {
-  border: 5px solid var(--light1);
+  border: 5px solid #F4F4F4; /* Changed to lighter grey border to match original */
   font-size: 2vw;
   position: absolute;
   background: rgba(255,255,255,0.67);
@@ -428,9 +437,10 @@ body {
   width: 48vw;
   padding: 2vw 5.5vw 2vw 2.5vw;
   line-height: 1.5;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.015rem; /* Changed to match original negative letter spacing */
   color: var(--navyd);
   font-family: var(--base-font);
+  font-weight: normal; /* Explicitly set to normal weight */
   z-index: 1110;
 }
 
