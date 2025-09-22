@@ -257,6 +257,13 @@ export default function Home() {
                 <p>
                   Helm is a graduated project in the <a href="https://www.cncf.io">CNCF</a> and is maintained by the <a href="https://github.com/helm/community/blob/main/governance/governance.md">Helm community</a>.
                 </p>
+                
+                <h3>Learn more:</h3>
+                <ul>
+                  <li><a href="./docs/topics/architecture/">Helm Architecture</a></li>
+                  <li><a href="./docs/intro/quickstart/">Quick Start Guide</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=Zzwq9FmZdsU&t=2s">Video: An Introduction to Helm</a></li>
+                </ul>
               </article>
             </div>
             <div className="column is-hidden-mobile tile-features is-two-fifths">

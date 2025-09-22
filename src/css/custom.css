@@ -553,6 +553,22 @@ body {
   font-size: 1.25vw; /* Set paragraph font size to 1.25vw */
 }
 
+.home-overview-wrap .content-wrapper .lead ul {
+  color: white;
+  padding-right: 5vw;
+}
+
+.home-overview-wrap .content-wrapper .lead ul li {
+  font-size: 1.25vw;
+  margin-bottom: 0.75rem; /* Add spacing between list items */
+  line-height: 1.5;
+}
+
+.home-overview-wrap .content-wrapper .lead ul li a {
+  color: white;
+  text-decoration: underline;
+}
+
 .home-overview-wrap .content-wrapper .lead h3 {
   margin: 2.5rem 0 1.25rem;
 }
