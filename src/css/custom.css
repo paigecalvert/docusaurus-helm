@@ -522,7 +522,7 @@ body {
 .home-overview-wrap {
   background: 
     url('/img/topography.png') repeat top left,
-    linear-gradient(180deg, #060b5c 0%, var(--navyd) 100%);
+    linear-gradient(180deg, #091b7d 0%, var(--navyd) 100%);
   background-blend-mode: color-burn;
   background-attachment: fixed;
   padding-top: 7.5rem;
@@ -531,6 +531,7 @@ body {
 
 .home-overview-wrap .content-wrapper {
   max-width: 80vw;
+  margin: 0 auto; /* Center the content wrapper */
   padding-bottom: 5rem;
 }
 
@@ -542,6 +543,7 @@ body {
 
 .home-overview-wrap .content-wrapper .lead {
   text-align: left;
+  margin-top: 3rem; /* Align with top of feature cards which have 3rem top padding */
 }
 
 .home-overview-wrap .content-wrapper .lead p {
@@ -579,10 +581,12 @@ body {
 .home-overview-wrap h2 {
   font-weight: bold;
   color: white;
+  font-size: 2.25rem; /* Added proper size to match original (base-font-size * 2.25) */
 }
 
 .home-overview-wrap img.pyramid {
   max-width: 10vw;
+  margin-bottom: 2rem; /* Added spacing between pyramid and "What is Helm?" text */
 }
 
 /* Tile features section */
