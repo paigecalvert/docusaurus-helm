@@ -397,14 +397,14 @@ body {
   position: absolute;
   top: 50vh;
   margin-top: -14vw;
-  right: 60vw;
+  right: 64vw; /* Adjusted from 60vw to 64vw to maintain spacing with repositioned text */
   width: 10vw;
 }
 
 .home-intro h1 {
   font-size: 2.775vw;
   position: absolute;
-  left: 44vw;
+  left: 40vw; /* Moved from 44vw to 40vw to better center with h2 box */
   top: 50vh;
   margin-top: -13.25vw;
   max-width: 40vw;
@@ -450,6 +450,71 @@ body {
   display: inline-block;
   text-align: center;
   transition: all 0.3s ease-in-out;
+}
+
+/* Responsive styles for hero section */
+@media screen and (max-width: 1200px) {
+  .home-intro h1 {
+    font-size: 3.5vw; /* Slightly larger on medium screens */
+  }
+  
+  .home-intro h2 {
+    font-size: 2.2vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-intro {
+    height: calc(100vh - var(--ifm-navbar-height));
+    padding: 1rem;
+  }
+  
+  .home-intro img.logo {
+    position: relative; /* Change from absolute to relative */
+    top: auto;
+    margin: 2rem auto 1rem auto;
+    right: auto;
+    width: 20vw;
+    max-width: 80px;
+    display: block;
+  }
+  
+  .home-intro h1 {
+    position: relative; /* Change from absolute to relative */
+    left: auto;
+    top: auto;
+    margin: 0 auto 2rem auto;
+    max-width: 100%;
+    font-size: 2rem; /* Fixed size for mobile */
+    text-align: center;
+  }
+  
+  .home-intro h2 {
+    position: relative; /* Change from absolute to relative */
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1rem; /* Fixed size for mobile */
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-intro h1 {
+    font-size: 1.75rem; /* Even smaller for very small screens */
+  }
+  
+  .home-intro h2 {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+  
+  .home-intro img.logo {
+    width: 60px;
+    max-width: 60px;
+  }
 }
 
 
@@ -1335,6 +1400,20 @@ body {
 
 /* Responsive adjustments for boat badge */
 @media screen and (max-width: 768px) {
+  /* Keep boat positioning absolute to stay at bottom of hero section */
+  .boat {
+    position: absolute; /* Keep absolute positioning */
+    bottom: 0; /* Stay at bottom */
+    width: 100vw;
+  }
+  
+  .boat .boat-ship {
+    left: 3.25vw; /* Keep original positioning */
+    bottom: 2vw;
+    max-width: 15vw;
+    min-width: 80px; /* Add minimum size for mobile */
+  }
+  
   .boat.boat-badge {
     width: 60px;
     height: 60px;
@@ -1342,6 +1421,7 @@ body {
     max-height: 60px;
     top: calc(var(--ifm-navbar-height) + 0.5rem);
     left: 0.5rem;
+    position: fixed; /* Keep badge mode fixed */
   }
   
   .boat.boat-badge .boat-ship {
