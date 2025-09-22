@@ -550,6 +550,7 @@ body {
   color: white;
   padding-right: 5vw;
   line-height: 1.925;
+  font-size: 1.25vw; /* Set paragraph font size to 1.25vw */
 }
 
 .home-overview-wrap .content-wrapper .lead h3 {
