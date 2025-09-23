@@ -79,6 +79,10 @@ h1,h2,h3,h4,h5,h6 {
 .navbar__link:hover {
   background-color: rgba(249,158,172,0.5);
   color: #091C84;
+  margin-top: calc(-0.75rem - var(--ifm-navbar-padding-vertical, 0px));
+  margin-bottom: calc(-0.75rem - var(--ifm-navbar-padding-vertical, 0px));
+  padding-top: calc(0.75rem + var(--ifm-navbar-padding-vertical, 0px) + 0.75rem);
+  padding-bottom: calc(0.75rem + var(--ifm-navbar-padding-vertical, 0px) + 0.75rem);
 }
 
 /* Also target navbar items that might have different classes */
@@ -1071,10 +1075,6 @@ body {
 
 .navbar__brand:hover img {
   transform: translateY(-50%) rotate(180deg);
-}
-
-.navbar__brand:hover {
-  background-color: rgba(249,158,172,0.5);
 }
 
 /* Adjust navbar brand container for larger logo */
