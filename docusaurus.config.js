@@ -113,8 +113,8 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           },
-          {to: '/docs/intro', label: 'Docs', position: 'left'},
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: 'docs/intro', label: 'Docs', position: 'left' },
+          { to: 'blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/helm/community',
             label: 'Community',
@@ -147,7 +147,7 @@ const config = {
               },
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'blog',
               },
               {
                 label: 'Events',
@@ -164,15 +164,15 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/docs/topics/charts/',
+                to: 'docs/topics/charts/',
               },
               {
                 label: 'Chart tips & tricks',
-                to: '/docs/howto/charts_tips_and_tricks/',
+                to: 'docs/howto/charts_tips_and_tricks/',
               },
               {
                 label: 'Developing Charts',
-                to: '/docs/chart_template_guide/',
+                to: 'docs/chart_template_guide/',
               },
               {
                 label: 'Search 800+ Charts',

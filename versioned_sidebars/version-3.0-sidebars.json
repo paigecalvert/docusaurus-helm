@@ -3,15 +3,25 @@
     "intro",
     {
       "type": "category",
-      "label": "Example Category",
+      "label": "How-To",
       "items": [
-        "example/lorem-ipsum"
+        {
+          "type": "doc",
+          "id": "howto/index",
+          "label": "Guide"
+        },
+        "howto/charts_tips_and_tricks"
       ]
     },
     {
       "type": "category",
       "label": "Best Practices",
       "items": [
+        {
+          "type": "doc",
+          "id": "best-practices/index",
+          "label": "Guide"
+        },
         "best-practices/general-conventions",
         "best-practices/custom-resource-definitions"
       ]
@@ -20,6 +30,11 @@
       "type": "category",
       "label": "Chart Template Guide",
       "items": [
+        {
+          "type": "doc",
+          "id": "chart_template_guide/index",
+          "label": "Guide"
+        },
         "chart_template_guide/accessing_files",
         "chart_template_guide/builtin_objects",
         "chart_template_guide/control_structures",
