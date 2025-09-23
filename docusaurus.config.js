@@ -83,13 +83,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/helm-social-card.png',
       algolia: {
         // The application ID provided by Algolia
         appId: 'A0EQ8MMS8V',
         // Public API key: it is safe to commit it
         apiKey: '3ccfbf5fb8bc395cc5f09939fa69c0fe',
-        indexName: 'Docusaurus Helm 4 Docs Website',
+        indexName: 'Helm 4 Docs Website',
       },  
       navbar: {
         title: 'Helm',
@@ -139,11 +139,65 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Helm Project',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Source code',
+                href: 'https://github.com/helm/helm',
+              },
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
+                label: 'Events',
+                href: 'https://www.cncf.io/community/kubecon-cloudnativecon-events/',
+              },
+              {
+                label: 'Code of Conduct',
+                href: 'https://github.com/cncf/foundation/blob/master/code-of-conduct.md',
+              },
+            ],
+          },
+          {
+            title: 'Charts',
+            items: [
+              {
+                label: 'Introduction',
+                to: '/docs/topics/charts/',
+              },
+              {
+                label: 'Chart tips & tricks',
+                to: '/docs/howto/charts_tips_and_tricks/',
+              },
+              {
+                label: 'Developing Charts',
+                to: '/docs/chart_template_guide/',
+              },
+              {
+                label: 'Search 800+ Charts',
+                href: 'https://artifacthub.io/',
+              },
+            ],
+          },
+          {
+            title: 'Development',
+            items: [
+              {
+                label: 'Slack (#helm-dev)',
+                href: 'https://kubernetes.slack.com/messages/C51E88VDG',
+              },
+              {
+                label: 'Contribution Guide',
+                href: 'https://github.com/helm/helm/blob/main/CONTRIBUTING.md',
+              },
+              {
+                label: 'Maintainers',
+                href: 'https://github.com/helm/helm/blob/main/OWNERS',
+              },
+              {
+                label: 'Weekly Meetings',
+                href: 'https://github.com/helm/community/blob/main/communication.md#meetings',
               },
             ],
           },
@@ -155,7 +209,7 @@ const config = {
                 href: 'https://github.com/helm/community',
               },
               {
-                label: 'Slack',
+                label: 'Slack (#helm-users)',
                 href: 'https://kubernetes.slack.com/',
               },
               {
@@ -168,35 +222,12 @@ const config = {
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/helm',
-              },
-            ],
-          },
         ],
-        copyright: `
-          <div class="footer__bottom">
-            <div class="footer__cncf-section">
-              <div class="footer__cncf-text">
-                <p>We are a Cloud Native Computing Foundation graduated project.</p>
-              </div>
-              <div class="footer__cncf-logo">
-                <img src="/img/cncf-white.png" alt="CNCF Logo" />
-              </div>
-            </div>
-            <div class="footer__copyright-text">
-              Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.
-            </div>
-          </div>
-        `,
+        logo: {
+          alt: 'CNCF Logo',
+          src: '/img/cncf-white.png',
+        },
+        copyright: `<a href="https://www.cncf.io/">We are a Cloud Native Computing Foundation graduated project.</a><br/>© Helm Authors ${new Date().getFullYear()}. Documentation distributed under <a href="https://creativecommons.org/licenses/by/4.0">CC-BY-4.0.</a><br/>© ${new Date().getFullYear()} The Linux Foundation. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage page</a>.`,
       },
       prism: {
         theme: prismThemes.github,

@@ -5,6 +5,14 @@
   },
   "sidebar.tutorialSidebar.category.Example Category": {
     "message": "Categoría de Ejemplo",
-    "description": "La etiqueta para la categoría Categoría de Ejemplo en la barra lateral tutorialSidebar"
+    "description": "The label for category Example Category in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Best Practices": {
+    "message": "Best Practices",
+    "description": "The label for category Best Practices in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Chart Template Guide": {
+    "message": "Chart Template Guide",
+    "description": "The label for category Chart Template Guide in sidebar tutorialSidebar"
   }
 }
