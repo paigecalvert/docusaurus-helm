@@ -804,6 +804,11 @@ body {
 
 .level-faqs p.title {
   font-size: 1vw;
+  margin-bottom: 0;
+}
+
+.level-faqs .level-item {
+  padding: 0.5rem 0;
 }
 
 /* Home overview section */
@@ -941,6 +946,7 @@ body {
   font-weight: bold;
   letter-spacing: 0.035rem;
   -webkit-font-smoothing: antialiased;
+  font-size: 2vw;
   margin: 5rem auto 1rem;
 }
 
@@ -958,7 +964,7 @@ body {
 }
 
 .helm-community .community-boxes .box {
-  padding: 0.4rem 1.667vw;
+  padding: 1.5rem 1.667vw 0.4rem;
   box-shadow: 0 5px 12px var(--light2);
   margin-bottom: 2rem;
 }
@@ -977,9 +983,30 @@ body {
   border-bottom: 1px solid var(--navyl);
   position: relative;
   display: inline-block;
-  text-align: left;
+  text-align: center;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+}
+
+.helm-community .community-boxes .box a::after {
+  display: inline-block;
+  content: "";
+  background: var(--navyl);
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 10%;
+  opacity: 0;
+  margin: 0 0 0 -5%;
+  transition: all 0.3s ease-in-out;
+}
+
+.helm-community .community-boxes .box a:hover::after {
+  width: 100%;
+  left: 0;
+  margin-left: 0;
+  opacity: 1;
 }
 
 .helm-community .community-boxes .box dl,
@@ -1011,6 +1038,7 @@ body {
 
 .helm-community .community-boxes .box dd {
   padding: 0.25rem 0;
+  margin-left: 0;
 }
 
 .helm-community .community-boxes .box dd em {

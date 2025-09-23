@@ -143,23 +143,23 @@ function InstallationSection() {
 function CommunitySection() {
   return (
     <section className="helm-community">
-      <h2 className="has-text-centered">Community</h2>
+      <h2 className="has-text-centered">Join the Community</h2>
       <p className="has-text-centered">
-        The Helm Project was created by <a href="https://www.deis.com">Deis</a> (now part of <a href="https://azure.microsoft.com/en-us/services/kubernetes-service/">Microsoft Azure</a>) and is now part of the <a href="https://www.cncf.io">Cloud Native Computing Foundation</a>.
+        More information about the Helm project, and how to contribute.
       </p>
 
       <div className="columns is-desktop community-boxes">
         <div className="column is-one-third-desktop">
           <section className="box">
-            <h1 className="title">Next Release</h1>
+            <h1 className="title">Next Feature Release</h1>
             <dl>
               <dt>
-                Version <strong>v3.16.3</strong>
+                <strong>Version:</strong> v3.16.3
                 <br />
-                Date <strong>2024-11-12</strong>
+                <strong>Date:</strong> 2024-11-12
                 <br />
                 <br />
-                Please see our <a href="https://github.com/helm/helm/releases">release calendar</a> for upcoming releases.
+                <a href="https://helm.sh/calendar/release">Release Calendar</a>
               </dt>
             </dl>
           </section>
@@ -168,58 +168,69 @@ function CommunitySection() {
             <h1 className="title">Events</h1>
             <dl>
               <dt>Upcoming Events</dt>
-              <dd><small className="placeholder">No upcoming events at this time. Please check back!</small></dd>
+              <dd><small className="placeholder"><em>Nov 10-13th 2025</em> - <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/">KubeCon North America</a></small></dd>
               <dt>Past Events</dt>
-              <dd><a href="https://helm.sh/blog/2019-08-22-helm-turns-four/">Helm turned 4!</a></dd>
-              <dd><a href="https://github.com/helm/community/blob/main/events/2019-helm-summit-amsterdam.md">Helm Summit 2019 Amsterdam</a></dd>
-              <dd><a href="https://github.com/helm/community/blob/main/events/2018-helm-summit-portland.md">Helm Summit 2018 Portland</a></dd>
+              <dd><em>Apr 1-4th 2025</em> - <a href="https://events.linuxfoundation.org/archive/2025/kubecon-cloudnativecon-europe/">KubeCon Europe 2025</a></dd>
+              <dd><em>Nov 12-15th 2024</em> - <a href="https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-north-america/">KubeCon North America 2024</a></dd>
+              <dd><em>May 19-22nd 2024</em> - <a href="https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-europe/">KubeCon Europe 2024</a></dd>
             </dl>
           </section>
 
           <section className="box">
             <h1 className="title">SIG Apps</h1>
             <h2 className="subtitle">
-              Special Interest Group
+              A Special Interest Group for deploying and operating apps in Kubernetes.
             </h2>
-            <p>Helm is part of the <a href="https://github.com/kubernetes/community/tree/master/sig-apps">SIG Apps</a> community.</p>
+            <p>
+              <a href="https://github.com/kubernetes/community/blob/master/sig-apps/README.md">SIG-Apps</a> is a Special Interest Group for deploying and operating apps in Kubernetes.
+            </p>
+            <p>
+              They <a href="https://github.com/kubernetes/community/blob/master/sig-apps/README.md">meet each week</a> to demo and discuss tools and projects. Community meetings are recorded and <a href="https://www.youtube.com/results?search_query=kubernetes+sig+apps">shared to YouTube</a>.
+            </p>
           </section>
         </div>
 
         <div className="column is-one-third-desktop">
           <section className="box">
-            <h1 className="title">Developer Standup</h1>
+            <h1 className="title">Developer Standups</h1>
             <h2 className="subtitle">
-              <a href="https://zoom.us/j/696660622"><span className="icon"><i className="mdi mdi-message-video"></i></span> Thursdays 9:30-10am PT</a>
+              <a href="https://zoom.us/j/696660622"><span className="icon"><i className="mdi mdi-message-video"></i></span> Thursdays 9:30-10am (PT)</a>
             </h2>
-            <p>We hold a weekly developer standup. Everyone is welcome to <a href="https://zoom.us/j/696660622">join the call</a>.</p>
+            <p>These meetings are open to all. Check the <a href="https://github.com/helm/community/blob/main/communication.md#meetings">community repo</a> for notes and details.</p>
           </section>
           
           <section className="box">
             <h1 className="title">Slack</h1>
             <dl>
-              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/helm-users">#helm-users</a></dt>
-              <dd>General questions and community support</dd>
+              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/helm-users">Helm Users</a></dt>
+              <dd>Discussion around using Helm, working with charts and solving common errors.</dd>
 
-              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/helm-dev">#helm-dev</a></dt>
-              <dd>Chart and Helm development discussion</dd>
+              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/helm-dev">Helm Development</a></dt>
+              <dd>Topics regarding Helm development, ongoing PRs, releases, etc.</dd>
 
-              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/charts">#charts</a></dt>
-              <dd>Helm Charts development and discussion</dd>
+              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/charts">Charts</a></dt>
+              <dd>Discussion for users and contributors to Helm Charts.</dd>
             </dl>
 
             <h2 className="subtitle">
-              <a href="http://slack.k8s.io/">Click here to join the Kubernetes Slack team</a>
+              <a href="https://slack.k8s.io/">Request access here</a> to join the Kubernetes Slack team.
             </h2>
           </section>
         </div>
 
         <div className="column is-one-third-desktop">
           <section className="box">
-            <h1 className="title">Contribute</h1>
+            <h1 className="title">Contributing</h1>
             <h2 className="subtitle">
-              Your contribution is welcome!
+              Helm always welcomes new contributions to the project!
             </h2>
-            <p>Helm is a community project. We invite your participation through issues, pull requests, and community discussion. Check out our <a href="https://github.com/helm/helm/blob/main/CONTRIBUTING.md">contribution guidelines</a> for more information on how you can help.</p>
+            <h3>Where to begin?</h3>
+            <p>Helm is a big project with a lot of users and contributors. It can be a lot to take in!</p>
+            <p>We have a list of <a href="https://github.com/helm/helm/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A%22good+first+issue%22">good first issues</a> if you want to help but don't know where to start.</p>
+            
+            <h3>What do I do?</h3>
+            <p>Before you contribute some code, please read our <a href="https://github.com/helm/helm/blob/main/CONTRIBUTING.md">Contribution Guide</a>. It goes over the processes around creating and reviewing pull requests.</p>
+            <p>Once you write some code, please <a href="https://helm.sh/blog/helm-dco/index.html">sign your commits</a> to ensure Helm adheres to the <a href="https://developercertificate.org/">DCO</a> agreement used by the <a href="https://www.cncf.io/">CNCF</a>.</p>
           </section>
         </div>
       </div>
@@ -315,8 +326,8 @@ export default function Home() {
               </div>
               <div className="level-item has-text-centered">
                 <div>
-                  <p className="heading">Upgrading from v2?</p>
-                  <p className="title">Check out the migration guide.</p>
+                  <p className="heading"><a href="https://helm.sh/docs/topics/v2_v3_migration/">Upgrading from v2 to v3?</a></p>
+                  <p className="title"><a href="https://helm.sh/docs/topics/v2_v3_migration/">Read the migration doc for more details.</a></p>
                 </div>
               </div>
             </nav>
