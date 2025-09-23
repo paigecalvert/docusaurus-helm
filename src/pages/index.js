@@ -234,6 +234,77 @@ function CommunitySection() {
           </section>
         </div>
       </div>
+      
+      {/* Community Logos Section */}
+      <div className="helm-contrib-logos">
+        <img 
+          src="/img/helm.svg" 
+          alt="Helm is supported by and built with a community of over 400 contributors"
+          className="helm-logo"
+        />
+        
+        <hr />
+        <p className="contributors">Helm is supported by and built with a community of over 400 developers.</p>
+        <hr />
+
+        <div className="contrib-logos columns">
+          <div className="column">
+            <a target="_blank" href="https://bitnami.com/">
+              <img src="/img/logowall/bitnami.png" alt="Bitnami" />
+            </a>
+
+            <a target="_blank" href="https://www.codecentric.de">
+              <img src="/img/logowall/codecentric.png" alt="codecentric AG" />
+            </a>
+
+            <a target="_blank" href="https://codefresh.io/">
+              <img src="/img/logowall/codefresh.png" alt="Codefresh" />
+            </a>
+
+            <a target="_blank" href="https://google.com/">
+              <img src="/img/logowall/google.png" alt="Google" />
+            </a>
+
+            <a target="_blank" href="https://ibm.com">
+              <img src="/img/logowall/ibm.png" alt="IBM" />
+            </a>
+
+            <a target="_blank" href="https://www.jetbrains.com/community/opensource/#support">
+              <img src="/img/logowall/jetbrains.png" alt="Jetbrains" />
+            </a>
+
+            <a target="_blank" href="https://microsoft.com/">
+              <img src="/img/logowall/microsoft.png" alt="Microsoft" />
+            </a>
+
+            <a target="_blank" href="https://montreal.ca">
+              <img src="/img/logowall/montreal.png" alt="Montreal" />
+            </a>
+
+            <a target="_blank" href="https://www.redhat.com/">
+              <img src="/img/logowall/redhat.png" alt="Redhat" />
+            </a>
+
+            <a target="_blank" href="https://www.replicated.com">
+              <img src="/img/logowall/replicated.png" alt="Replicated" />
+            </a>
+
+            <a target="_blank" href="https://www.samsungsds.com">
+              <img src="/img/logowall/samsungsds.png" alt="Samsung SDS" />
+            </a>
+
+            <a target="_blank" href="https://suse.com/">
+              <img src="/img/logowall/suse.png" alt="SUSE" />
+            </a>
+
+            <a target="_blank" href="https://www.ticketmaster.com/">
+              <img src="/img/logowall/tm.png" alt="Ticketmaster" />
+            </a>
+          </div>
+        </div>
+
+        <p><small>...and many other wonderful <a href="https://github.com/helm/helm/blob/main/OWNERS">helm</a> core maintainers.</small></p>
+      </div>
     </section>
   );
 }

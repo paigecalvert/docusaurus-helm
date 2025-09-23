@@ -1066,13 +1066,97 @@ body {
   font-size: 0.925rem;
   margin: 0.25rem 0 1.5rem;
   font-weight: normal;
-  background: var(--light1);
+  background: #F4F4F4;
   display: inline-block;
   padding: 0.5rem 0.75rem;
   line-height: 1.4;
 }
 
 /* Helm Contrib Logos section */
+.helm-contrib-logos {
+  text-align: center;
+  padding-bottom: 8rem;
+  padding-top: 1.5rem;
+}
+
+.helm-contrib-logos img {
+  padding: 0;
+  display: inline-block;
+  margin: 0 2vw;
+  width: 23vw;
+  max-width: 12rem;
+}
+
+.helm-contrib-logos .helm-logo {
+  margin: 0 auto 2.25em;
+  display: block;
+  text-align: center;
+  padding: 3.5em 0 0;
+}
+
+.helm-contrib-logos hr {
+  background-color: var(--light1);
+  height: 2px;
+  opacity: 0.25;
+  width: 50%;
+  margin: 1rem 25%;
+  border: none;
+}
+
+.helm-contrib-logos p {
+  color: var(--dark1);
+  text-align: center;
+  font-size: 1.125rem;
+  margin: 2rem 0;
+}
+
+.helm-contrib-logos .contributors {
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.helm-contrib-logos .contrib-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.helm-contrib-logos .contrib-logos .column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.helm-contrib-logos .contrib-logos a {
+  display: inline-block;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.helm-contrib-logos .contrib-logos a:hover {
+  transform: scale(1.1);
+}
+
+/* Override ripple effect for text links in helm-contrib-logos */
+.helm-contrib-logos p a {
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  color: var(--navy);
+  transition: color 0.3s ease;
+}
+
+.helm-contrib-logos p a::after {
+  display: none;
+}
+
+.helm-contrib-logos p a:hover {
+  color: var(--navyl);
+  text-decoration: underline;
+}
 .helm-contrib-logos {
   text-align: center;
   padding-bottom: 8rem;
@@ -1118,9 +1202,6 @@ body {
   border-bottom: 2px solid transparent;
 }
 
-.helm-contrib-logos p a:hover {
-  border-bottom: 2px solid #3FB1E5;
-}
 
 .helm-contrib-logos p small {
   padding-top: 1rem;
