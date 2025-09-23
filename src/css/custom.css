@@ -167,14 +167,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .footer__copyright a {
-  color: var(--footer-blue1);
+  color: white;
   text-decoration: none;
 }
 
 .footer__copyright a:hover {
-  color: var(--footer-blue2);
+  color: var(--footer-blue3);
 }
 
+.footer__copyright a:first-child {
+  margin-bottom: 0.5rem;
+  display: block;
+}
 /* New CNCF Footer Section */
 .footer__bottom {
   margin-top: 2rem;
