@@ -84,7 +84,7 @@ function InstallationSection() {
     <section className="tile tile-actions is-parent is-horizontal">
       <div className="tile is-child">
         <h2>Get Helm</h2>
-        <p>Helm can be installed from <a href="/docs/intro/install/">multiple sources</a>.</p>
+        <p>Install Helm with a package manager, or <a href="https://github.com/helm/helm/releases/latest">download a binary</a>.</p>
 
         <ul className="tabs" data-tabgroup="tab-group">
           {Object.keys(installCommands).map(tab => (
@@ -124,13 +124,13 @@ function InstallationSection() {
           ))}
         </div>
 
-        <p>Want to use a different package manager? See <a href="/docs/intro/install/">installation methods</a> for other options.</p>
+        <p>Once installed, unpack the helm binary and add it to your PATH and you are good to go! Check the <a href="./docs/intro/install/">docs</a> for further <a href="./docs/intro/install/">installation</a> and <a href="./docs/intro/using_helm/">usage instructions</a>.</p>
       </div>
 
       <div className="tile is-child is-centered has-text-centered">
         <h2>Get Charts</h2>
 
-        <p>Looking for Helm charts? Try <a href="https://artifacthub.io/">Artifact Hub</a>.</p>
+        <p>Visit <a href="https://artifacthub.io">Artifact Hub</a> to explore <a href="https://artifacthub.io/packages/search?kind=0">Helm charts</a> from numerous public repositories.</p>
 
         <div className="has-text-center is-centered">
           <p><a href="https://artifacthub.io/"><img src="/img/artifact-hub.jpg" alt="Artifact Hub" className="is-centered" /></a></p>
