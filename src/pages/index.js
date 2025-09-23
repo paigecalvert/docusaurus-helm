@@ -250,55 +250,55 @@ function CommunitySection() {
         <div className="contrib-logos columns">
           <div className="column">
             <a target="_blank" href="https://bitnami.com/">
-              <img src="/img/logowall/bitnami.png" alt="Bitnami" />
+              <img src="/img/bitnami.png" alt="Bitnami" />
             </a>
 
             <a target="_blank" href="https://www.codecentric.de">
-              <img src="/img/logowall/codecentric.png" alt="codecentric AG" />
+              <img src="/img/codecentric.png" alt="codecentric AG" />
             </a>
 
             <a target="_blank" href="https://codefresh.io/">
-              <img src="/img/logowall/codefresh.png" alt="Codefresh" />
+              <img src="/img/codefresh.png" alt="Codefresh" />
             </a>
 
             <a target="_blank" href="https://google.com/">
-              <img src="/img/logowall/google.png" alt="Google" />
+              <img src="/img/google.png" alt="Google" />
             </a>
 
             <a target="_blank" href="https://ibm.com">
-              <img src="/img/logowall/ibm.png" alt="IBM" />
+              <img src="/img/ibm.png" alt="IBM" />
             </a>
 
             <a target="_blank" href="https://www.jetbrains.com/community/opensource/#support">
-              <img src="/img/logowall/jetbrains.png" alt="Jetbrains" />
+              <img src="/img/jetbrains.png" alt="Jetbrains" />
             </a>
 
             <a target="_blank" href="https://microsoft.com/">
-              <img src="/img/logowall/microsoft.png" alt="Microsoft" />
+              <img src="/img/microsoft.png" alt="Microsoft" />
             </a>
 
             <a target="_blank" href="https://montreal.ca">
-              <img src="/img/logowall/montreal.png" alt="Montreal" />
+              <img src="/img/montreal.png" alt="Montreal" />
             </a>
 
             <a target="_blank" href="https://www.redhat.com/">
-              <img src="/img/logowall/redhat.png" alt="Redhat" />
+              <img src="/img/redhat.png" alt="Redhat" />
             </a>
 
             <a target="_blank" href="https://www.replicated.com">
-              <img src="/img/logowall/replicated.png" alt="Replicated" />
+              <img src="/img/replicated.png" alt="Replicated" />
             </a>
 
             <a target="_blank" href="https://www.samsungsds.com">
-              <img src="/img/logowall/samsungsds.png" alt="Samsung SDS" />
+              <img src="/img/samsungsds.png" alt="Samsung SDS" />
             </a>
 
             <a target="_blank" href="https://suse.com/">
-              <img src="/img/logowall/suse.png" alt="SUSE" />
+              <img src="/img/suse.png" alt="SUSE" />
             </a>
 
             <a target="_blank" href="https://www.ticketmaster.com/">
-              <img src="/img/logowall/tm.png" alt="Ticketmaster" />
+              <img src="/img/tm.png" alt="Ticketmaster" />
             </a>
           </div>
         </div>
