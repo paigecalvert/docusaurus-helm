@@ -128,7 +128,7 @@ const config = {
           {
             href: 'https://github.com/helm',
             label: 'GitHub',
-            position: 'right',
+            position: 'left',
           },
         ],
       },

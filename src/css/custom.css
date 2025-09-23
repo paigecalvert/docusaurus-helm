@@ -1085,6 +1085,17 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
+/* Remove hover background from right-side navbar items (dropdowns and icons) */
+.navbar__items--right .navbar__item .navbar__link:hover,
+.navbar__item.dropdown .navbar__link:hover,
+.navbar__link--icon:hover {
+  background-color: transparent !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
 /* Hide the navbar title text, keep only the logo */
 .navbar__title {
   display: none;
