@@ -6,7 +6,6 @@ import Translate, {translate} from '@docusaurus/Translate';
 import { useState, useEffect } from 'react';
 
 import Heading from '@theme/Heading';
-import styles from './index.module.css';
 
 function BoatComponent() {
   const [isBadgeMode, setIsBadgeMode] = useState(false);
@@ -342,8 +341,8 @@ export default function Home() {
                 
                 <h3>Learn more:</h3>
                 <ul>
-                  <li><a href="./docs/topics/architecture/">Helm Architecture</a></li>
-                  <li><a href="./docs/intro/quickstart/">Quick Start Guide</a></li>
+                  <li><a href="./docs/topics/architecture">Helm Architecture</a></li>
+                  <li><a href="./docs/intro/quickstart">Quick Start Guide</a></li>
                   <li><a href="https://www.youtube.com/watch?v=Zzwq9FmZdsU&t=2s">Video: An Introduction to Helm</a></li>
                 </ul>
               </article>
