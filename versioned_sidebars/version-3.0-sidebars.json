@@ -15,6 +15,18 @@
     },
     {
       "type": "category",
+      "label": "Topics",
+      "items": [
+        {
+          "type": "doc",
+          "id": "topics/index",
+          "label": "Guide"
+        },
+        "topics/charts"
+      ]
+    },
+    {
+      "type": "category",
       "label": "Best Practices",
       "items": [
         {
