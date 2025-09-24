@@ -57,11 +57,6 @@
   color: var(--navy);
 }
 
-.home-intro h1 em {
-  margin-bottom: -0.25vw;
-  font-style: normal;
-}
-
 .home-intro h2 {
   border: 5px solid #F4F4F4;
   font-size: 2vw;

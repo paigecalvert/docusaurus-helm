@@ -1,7 +1,7 @@
 /* Import component-specific stylesheets */
 @import './main.css';
-@import './docs-navbar.css';
-@import './docs-footer.css';
-@import './helm-landing-page.css';
-@import './helm-boat.css';
-@import './helm-responsive.css';
+@import './navbar.css';
+@import './footer.css';
+@import './landing-page.css';
+@import './boat.css';
+@import './responsive.css';

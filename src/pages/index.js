@@ -52,7 +52,7 @@ function HomepageHeader() {
         <img src="/img/helm.svg" alt="Helm" className="logo" />
         <h1>
           <strong>The</strong>
-          <em>package manager</em>
+          <strong>package manager</strong>
           <strong>for Kubernetes</strong>
         </h1>
         <h2>
