@@ -1,4 +1,8 @@
-# Appendix: Go Data Types and Templates
+---
+title: "Appendix: Go Data Types and Templates"
+description: "A quick overview on variables in templates."
+sidebar_position: 16
+---
 
 The Helm template language is implemented in the strongly typed Go programming
 language. For that reason, variables in templates are _typed_. For the most

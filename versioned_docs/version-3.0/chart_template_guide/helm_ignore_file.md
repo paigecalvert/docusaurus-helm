@@ -1,4 +1,8 @@
-# The .helmignore file
+---
+title: "The .helmignore file"
+description: "The `.helmignore` file is used to specify files you don't want to include in your helm chart."
+sidebar_position: 12
+---
 
 The `.helmignore` file is used to specify files you don't want to include in
 your helm chart.

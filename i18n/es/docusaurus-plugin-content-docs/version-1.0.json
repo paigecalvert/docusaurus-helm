@@ -3,8 +3,8 @@
     "message": "1.0",
     "description": "The label for version 1.0"
   },
-  "sidebar.tutorialSidebar.category.Example Category": {
+  "sidebar.sidebar.category.Example Category": {
     "message": "Categoría de Ejemplo",
-    "description": "La etiqueta para la categoría Categoría de Ejemplo en la barra lateral tutorialSidebar"
+    "description": "La etiqueta para la categoría Categoría de Ejemplo en la barra lateral sidebar"
   }
 }

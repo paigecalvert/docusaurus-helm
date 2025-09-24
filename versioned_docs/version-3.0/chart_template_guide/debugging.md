@@ -1,4 +1,8 @@
-# Debugging Templates
+---
+title: "Debugging Templates"
+description: "Troubleshooting charts that are failing to deploy."
+sidebar_position: 13
+---
 
 Debugging templates can be tricky because the rendered templates are sent to the
 Kubernetes API server, which may reject the YAML files for reasons other than
@@ -23,7 +27,7 @@ template, and then re-run `helm install --dry-run --debug`:
 ```yaml
 apiVersion: v2
 # some: problem section
-# {/* {{ .Values.foo | quote }} */}
+# {{ .Values.foo | quote }}
 ```
 
 The above will be rendered and returned with the comments intact:

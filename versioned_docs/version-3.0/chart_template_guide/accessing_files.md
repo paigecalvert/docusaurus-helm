@@ -1,4 +1,8 @@
-# Accessing Files Inside Templates
+---
+title: "Accessing Files Inside Templates"
+description: "How to access files from within a template."
+sidebar_position: 10
+---
 
 In the previous section we looked at several ways to create and access named
 templates. This makes it easy to import one template from within another
@@ -17,9 +21,14 @@ this works:
   security reasons.
   - Files in `templates/` cannot be accessed.
   - Files excluded using `.helmignore` cannot be accessed.
+  - Files outside of a Helm application [subchart](./subcharts_and_globals), including those of the parent, cannot be accessed
 - Charts do not preserve UNIX mode information, so file-level permissions will
   have no impact on the availability of a file when it comes to the `.Files`
   object.
+
+<!-- (see https://github.com/jonschlinkert/markdown-toc) -->
+
+<!-- toc -->
 
 - [Basic example](#basic-example)
 - [Path helpers](#path-helpers)
@@ -27,6 +36,8 @@ this works:
 - [ConfigMap and Secrets utility functions](#configmap-and-secrets-utility-functions)
 - [Encoding](#encoding)
 - [Lines](#lines)
+
+<!-- tocstop -->
 
 ## Basic example
 

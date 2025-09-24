@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-weight: 2
+sidebar_position: 2
 description: "A quick guide on Chart templates."
 aliases: ["/intro/getting_started/"]
 ---
@@ -13,7 +13,7 @@ To get going, let's take a brief look at a Helm chart.
 
 ## Charts
 
-As described in the Charts Guide, Helm charts are
+As described in the [Charts Guide](../../topics/charts), Helm charts are
 structured like this:
 
 ```
@@ -273,6 +273,6 @@ Using `--dry-run` will make it easier to test your code, but it won't ensure
 that Kubernetes itself will accept the templates you generate. It's best not to
 assume that your chart will install just because `--dry-run` works.
 
-In the Chart Template Guide, we take the basic chart we defined
+In the [Chart Template Guide](_index.md), we take the basic chart we defined
 here and explore the Helm template language in detail. And we'll get started
 with built-in objects.

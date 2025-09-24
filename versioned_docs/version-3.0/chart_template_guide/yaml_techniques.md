@@ -1,7 +1,7 @@
 ---
 title: "Appendix: YAML Techniques"
 description: "A closer look at the YAML specification and how it applies to Helm."
-weight: 15
+sidebar_position: 15
 ---
 
 Most of this guide has been focused on writing the template language. Here,
