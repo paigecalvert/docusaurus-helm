@@ -17,7 +17,7 @@ To load completions in your current shell session:
 
 To load completions for every new session, execute once:
 
-    helm completion zsh > "${fpath[1]}/_helm"
+    helm completion zsh > "$\{fpath[1]}/_helm"
 
 
 ```

@@ -32,7 +32,7 @@ The following hooks are defined:
 | `post-upgrade`   | Executes on an upgrade request after all resources have been upgraded                                 |
 | `pre-rollback`   | Executes on a rollback request after templates are rendered, but before any resources are rolled back |
 | `post-rollback`  | Executes on a rollback request after all resources have been modified                                 |
-| `test`           | Executes when the Helm test subcommand is invoked ([view test docs](/docs/chart_tests/))              |
+| `test`           | Executes when the Helm test subcommand is invoked ([view test docs](./chart_tests))              |
 
 _Note that the `crd-install` hook has been removed in favor of the `crds/`
 directory in Helm 3._

@@ -18,8 +18,8 @@ chart repository, you may want to consider using an
 
 ## Prerequisites
 
-* Go through the [Quickstart](./quickstart) Guide
-* Read through the [Charts](../charts) document
+* Go through the [Quickstart](../intro/quickstart) Guide
+* Read through the [Charts](./charts) document
 
 ## Create a chart repository
 

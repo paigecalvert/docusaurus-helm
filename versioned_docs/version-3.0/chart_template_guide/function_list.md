@@ -2321,7 +2321,7 @@ Helm includes functions for working with Kubernetes including
 `helm template` command it always returns an empty response.
 
 You can find more detail in the [documentation on the lookup
-function](functions_and_pipelines.md/#using-the-lookup-function).
+function](./functions_and_pipelines/#using-the-lookup-function).
 
 ### .Capabilities.APIVersions.Has
 
