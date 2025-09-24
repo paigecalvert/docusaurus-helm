@@ -529,7 +529,7 @@
   margin: 1rem 0;
   display: inline-block;
   width: 100%;
-  color: var(--grey2);
+  color: #999;
   border-radius: 0.5rem;
 }
 

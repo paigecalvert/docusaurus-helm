@@ -6,9 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css');
 
-/* You can override the default Infima variables here. */
 :root {
-  /* Helm style guide colors */
+  /* Helm style guide colors https://github.com/helm/community/tree/main/art */
   
   /* Primary */
   --navy: #0F1689;
@@ -30,15 +29,11 @@
   
   /* Additional colors not in style guide */
   --light2: #E5E5E5;
-  --grey1: #ccc;
-  --grey2: #999;
-  --grey3: #666;
-  --grey4: #333333;
   --dark1: #4E4E4E;
-  --salmon: #F99EAC;
-  --salmonl: #F8DCDF;
+  --salmon: #F8DCDF;
 
   /* Docusaurus/Infima variables */
+  /* You can override the default Infima variables here. */
   --ifm-color-primary: var(--navy);
   --ifm-color-primary-dark: var(--navy);
   --ifm-color-primary-light: var(--blue-light);
@@ -57,7 +52,6 @@
   --footer-blue2: #4A90E2;
   --footer-blue3: #7FB3D3;
   --footer-grey1: #8E9AAF;
-  --footer-light2: #CBD2D9;
 }
 
 /* [data-theme='dark'] {
