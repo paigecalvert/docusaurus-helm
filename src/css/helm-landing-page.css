@@ -93,7 +93,7 @@
 .home-overview-wrap {
   background: 
     url('/img/topography.png') repeat top left,
-    linear-gradient(180deg, #091b7d 0%, var(--blue-dark) 100%);
+    linear-gradient(180deg, var(--navy) 0%, var(--blue-dark) 100%);
   background-blend-mode: color-burn;
   background-attachment: fixed;
   padding-top: 7.5rem;
@@ -233,13 +233,13 @@
 .tile-actions .tile.is-child p {
   font-size: 1.25vw;
   line-height: 1.7;
-  color: var(--dark1);
+  color: var(--grey);
 }
 
 .tile-actions .tile.is-child img {
   max-width: 66.67%;
   margin: 2.5vw auto 0;
-  box-shadow: 0 2px 5px var(--dark1);
+  box-shadow: 0 2px 5px var(--grey);
 }
 
 .tile-actions h2 {
@@ -306,7 +306,7 @@
   word-wrap: break-word;
   word-break: break-all;
   white-space: normal;
-  background: var(--light2);
+  background: var(--light);
   border: none;
   outline: none;
   color: var(--blue-dark);
@@ -350,7 +350,7 @@
    5. MIGRATION NOTICE - Helm upgrade call-to-action
    ============================================================================= */
 .level-faqs {
-  background-color: var(--light2);
+  background-color: var(--light);
   min-width: 37.5vw;
   margin: 1rem auto 7.5rem;
   padding: 1vw;
@@ -423,12 +423,12 @@
 
 .helm-community .community-boxes .box {
   padding: 1.5rem 1.667vw 0.4rem;
-  box-shadow: 0 5px 12px var(--light2);
+  box-shadow: 0 5px 12px var(--light);
   margin-bottom: 2rem;
 }
 
 .helm-community .community-boxes .box:hover {
-  box-shadow: 0 1px 10px var(--light2);
+  box-shadow: 0 1px 10px var(--light);
   transition: all 0.3s ease-in-out;
 }
 
@@ -615,7 +615,7 @@
   display: inline;
   text-decoration: none;
   font-weight: bold;
-  color: #27759A;
+  color: var(--accent-green);
   border-bottom: 2px solid transparent;
   transition: color 0.3s ease;
 }
@@ -698,7 +698,7 @@
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-  color: #4a4a4a;
+  color: var(--grey);
   display: block;
   padding: 1.25rem;
 }
