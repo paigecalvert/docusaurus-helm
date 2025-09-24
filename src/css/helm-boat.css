@@ -111,7 +111,7 @@
   content: " ";
   height: 3.5vw;
   width: 100%;
-  background: var(--navyl);
+  background: var(--blue-light);
   transition: all 0.3s ease-in-out;
 }
 

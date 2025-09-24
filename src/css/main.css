@@ -8,31 +8,28 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #091C84;
-  --ifm-color-primary-dark: #091C84;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #1B53C2;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest:#f3fafd;
-  --ifm-link-color:#090E6F;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: "Public Sans", Helvetica, Arial, sans-serif;
-  --ifm-heading-font-family: "Space Mono", "Courier New", monaco, monospace;
-  --ifm-heading-font-weight: 700;
-
-  /* Helm specific color variables */
-  --navy: #091C84;
-  --navyd: #090E6F;
-  --navyl: #1B53C2;
-  --dark: #050843;
+  /* Helm style guide colors */
+  
+  /* Primary */
+  --navy: #0F1689;
+  
+  /* Secondary */
+  --blue-dark: #090E6F;
+  --blue-light: #1B53C2;
+  
+  /* Shades */
+  --shade-dark: #050843;
+  --shade-mid: #B7C2E9;
+  --shade-light: #DBE1F3;
+  
+  /* Accents */
+  --accent-blue: #3B82BF;
+  --accent-green: #2F84A7;
+  --accent-red: #95297C;
+  --accent-yellow: #D1AA9B;
+  
+  /* Additional colors not in style guide */
   --light2: #E5E5E5;
-  --light1: #DBE1F3;
-  --blue: #3B82BF;
-  --green: #2F84A7;
-  --red: #95297C;
-  --yellow: #D1AA9B;
   --grey1: #ccc;
   --grey2: #999;
   --grey3: #666;
@@ -41,27 +38,30 @@
   --salmon: #F99EAC;
   --salmonl: #F8DCDF;
 
+  /* Docusaurus/Infima variables */
+  --ifm-color-primary: var(--navy);
+  --ifm-color-primary-dark: var(--navy);
+  --ifm-color-primary-light: var(--blue-light);
+  --ifm-color-primary-lightest: #f3fafd;
+  --ifm-link-color: var(--blue-dark);
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: "Public Sans", Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: "Space Mono", "Courier New", monaco, monospace;
+  --ifm-heading-font-weight: 700;
+
   /* Footer specific variables */
   --footer-navy: #001f3f;
   --footer-navy-dark: #001833;
-  --footer-blue1: #1B53C2;
+  --footer-blue1: var(--blue-light);
   --footer-blue2: #4A90E2;
   --footer-blue3: #7FB3D3;
   --footer-grey1: #8E9AAF;
   --footer-light2: #CBD2D9;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #091C84;
-  --ifm-color-primary-dark: #091C84;
-  /* --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870; */
-  --ifm-color-primary-light: #1B53C2;
-  /* --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf; */
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
+/* [data-theme='dark'] {
+} */
 
 /* Global page wrapper styles */
 html,
