@@ -70,7 +70,7 @@
 
 .boat:after {
   content: "ahoy!";
-  font-family: var(--mono-font);
+  font-family: var(--ifm-heading-font-family);
   font-size: 0.75rem;
   padding: 0.75em;
   color: var(--navy);

@@ -1,39 +1,38 @@
 /**
- * Helm landing page styles including hero section, overview, tiles, and community sections.
  * This file contains all the homepage-specific styling for the Helm documentation site.
  */
 
 /* Homepage intro section */
 .home-intro {
-  height: calc(100vh - var(--ifm-navbar-height)); /* Use fixed height instead of min-height */
+  height: calc(100vh - var(--ifm-navbar-height));
   background: url('/img/topography.png') left top repeat;
   background-attachment: fixed;
   position: relative;
-  margin-bottom: 0; /* Remove negative margin that might cause overflow */
-  overflow: hidden; /* Ensure content doesn't extend beyond container */
+  margin-bottom: 0;
+  overflow: hidden;
 }
 
 .home-intro img.logo {
   position: absolute;
   top: 50vh;
   margin-top: -14vw;
-  right: 64vw; /* Adjusted from 60vw to 64vw to maintain spacing with repositioned text */
+  right: 64vw;
   width: 10vw;
 }
 
 .home-intro h1 {
   font-size: 2.775vw;
   position: absolute;
-  left: 40vw; /* Moved from 44vw to 40vw to better center with h2 box */
+  left: 40vw;
   top: 50vh;
   margin-top: -13.25vw;
   max-width: 40vw;
   line-height: 1.2;
   letter-spacing: -0.015rem;
-  font-family: var(--mono-font);
-  font-weight: bold; /* Changed from normal to bold to match klinicBold */
+  font-family: var(--ifm-heading-font-family);
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  color: var(--navy); /* Added navy color to match original */
+  color: var(--navy);
 }
 
 .home-intro h1 strong {
@@ -44,11 +43,11 @@
 
 .home-intro h1 em {
   margin-bottom: -0.25vw;
-  font-style: normal; /* Remove italic styling - em is used for line breaks, not emphasis */
+  font-style: normal;
 }
 
 .home-intro h2 {
-  border: 5px solid #F4F4F4; /* Changed to lighter grey border to match original */
+  border: 5px solid #F4F4F4;
   font-size: 2vw;
   position: absolute;
   background: rgba(255,255,255,0.67);
@@ -57,10 +56,10 @@
   width: 48vw;
   padding: 2vw 5.5vw 2vw 2.5vw;
   line-height: 1.5;
-  letter-spacing: -0.015rem; /* Changed to match original negative letter spacing */
+  letter-spacing: -0.015rem;
   color: var(--navyd);
-  font-family: var(--base-font);
-  font-weight: normal; /* Explicitly set to normal weight */
+  font-family: var(--ifm-font-family-base);
+  font-weight: normal;
   z-index: 1110;
 }
 
@@ -97,14 +96,14 @@
 
 .home-overview-wrap .content-wrapper .lead {
   text-align: left;
-  margin-top: 3rem; /* Align with top of feature cards which have 3rem top padding */
+  margin-top: 3rem;
 }
 
 .home-overview-wrap .content-wrapper .lead p {
   color: white;
   padding-right: 5vw;
   line-height: 1.925;
-  font-size: 1.25vw; /* Set paragraph font size to 1.25vw */
+  font-size: 1.25vw;
 }
 
 .home-overview-wrap .content-wrapper .lead ul {
@@ -114,7 +113,7 @@
 
 .home-overview-wrap .content-wrapper .lead ul li {
   font-size: 1.25vw;
-  margin-bottom: 0.75rem; /* Add spacing between list items */
+  margin-bottom: 0.75rem;
   line-height: 1.5;
 }
 
@@ -152,12 +151,12 @@
 .home-overview-wrap h2 {
   font-weight: bold;
   color: white;
-  font-size: 2.25rem; /* Added proper size to match original (base-font-size * 2.25) */
+  font-size: 2.25rem;
 }
 
 .home-overview-wrap img.pyramid {
   max-width: 10vw;
-  margin-bottom: 2rem; /* Added spacing between pyramid and "What is Helm?" text */
+  margin-bottom: 2rem;
 }
 
 /* Tile features section */
@@ -246,7 +245,7 @@
 }
 
 .tile-actions ul.tabs li a {
-  font-family: var(--mono-font);
+  font-family: var(--ifm-heading-font-family);
   font-weight: bold;
   letter-spacing: 0.035rem;
   font-size: 1vw;
@@ -347,7 +346,7 @@
 }
 
 .level-faqs p.heading {
-  font-family: var(--mono-font);
+  font-family: var(--ifm-heading-font-family);
   font-weight: bold;
   letter-spacing: 0.035rem;
   -webkit-font-smoothing: antialiased;
@@ -372,7 +371,7 @@
 
 
 .home-overview h2 {
-  font-family: var(--mono-font);
+  font-family: var(--ifm-heading-font-family);
   font-weight: bold;
   letter-spacing: 0.035rem;
   -webkit-font-smoothing: antialiased;
@@ -391,7 +390,7 @@
   font-size: 1.5rem;
   padding-top: 90px;
   position: relative;
-  font-family: var(--mono-font);
+  font-family: var(--ifm-heading-font-family);
   font-weight: bold;
   letter-spacing: 0.035rem;
   -webkit-font-smoothing: antialiased;
@@ -440,7 +439,7 @@
 }
 
 .helm-community h2 {
-  font-family: var(--mono-font);
+  font-family: var(--ifm-heading-font-family);
   font-weight: bold;
   letter-spacing: 0.035rem;
   -webkit-font-smoothing: antialiased;
@@ -546,7 +545,7 @@
 
 .helm-community .community-boxes .box h3,
 .helm-community .community-boxes .box dl dt {
-  font-family: var(--mono-font);
+  font-family: var(--ifm-heading-font-family);
   font-weight: bold;
   letter-spacing: 0.035rem;
   -webkit-font-smoothing: antialiased;
@@ -648,7 +647,6 @@
 }
 
 
-/* Override ripple effect for text links in helm-contrib-logos */
 .helm-contrib-logos p a {
   position: relative;
   display: inline;
