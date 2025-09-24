@@ -370,9 +370,6 @@
   position: relative;
 }
 
-.home-overview .large-3 {
-  min-height: 280px;
-}
 
 .home-overview h2 {
   font-family: var(--mono-font);
@@ -431,60 +428,7 @@
   border: none;
 }
 
-.home-overview .row {
-  background-color: white;
-}
 
-.home-overview .row:first-child {
-  border-radius: 0.5em 0.5em 0 0;
-}
-
-.home-overview .row:last-child {
-  padding-bottom: 0.5em;
-  border-radius: 0 0 0.5em 0.5em;
-}
-
-/* Get Helm section */
-.get-helm {
-  padding: 2em;
-  padding-bottom: 50px;
-  border: 2px dashed #7FCCF0;
-  margin-bottom: 4em;
-  position: relative;
-  z-index: 100;
-}
-
-.get-helm:after {
-  position: absolute;
-  display: block;
-  content: " ";
-  top: 0.667em;
-  left: -0.25em;
-  width: 100%;
-  height: 375px;
-  z-index: -5;
-  background-color: #27759A;
-  transform: rotateX(12deg);
-  opacity: 0.425;
-}
-
-.get-helm h2 {
-  margin: 0 0 0.5em;
-  padding: 0;
-}
-
-.get-helm img {
-  margin: 0.333em 0;
-}
-
-.get-charts {
-  padding-left: 3.5rem;
-}
-
-.get-charts h2 {
-  margin: 2.5rem 0 1rem;
-  padding: 0;
-}
 
 /* Helm Community section */
 .helm-community {
@@ -658,15 +602,24 @@
 }
 
 .helm-contrib-logos p {
-  color: var(--dark1);
+  color: #9B9B9B;
   text-align: center;
-  font-size: 1.125rem;
-  margin: 2rem 0;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1.333em;
+  line-height: 2;
+  letter-spacing: 0.025em;
 }
 
 .helm-contrib-logos .contributors {
+  color: #9B9B9B;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1.333em;
+  line-height: 2;
+  letter-spacing: 0.025em;
   font-weight: normal;
-  font-size: 1.25rem;
 }
 
 .helm-contrib-logos .contrib-logos {
@@ -694,12 +647,15 @@
   transform: scale(1.1);
 }
 
+
 /* Override ripple effect for text links in helm-contrib-logos */
 .helm-contrib-logos p a {
   position: relative;
   display: inline;
   text-decoration: none;
-  color: var(--navy);
+  font-weight: bold;
+  color: #27759A;
+  border-bottom: 2px solid transparent;
   transition: color 0.3s ease;
 }
 
@@ -712,35 +668,11 @@
   text-decoration: underline;
 }
 
-/* Additional styles from duplicate section */
-.helm-contrib-logos hr {
-  background-color: #7FCCF0;
-  height: 2px;
-  opacity: 0.25;
-  width: 50%;
-  margin: 1rem 25%;
-}
-
-.helm-contrib-logos p {
-  color: #9B9B9B;
-  text-align: center;
-  padding: 0;
-  margin: 0 auto;
-  font-size: 1.333em;
-  line-height: 2;
-  letter-spacing: 0.025em;
-}
-
-.helm-contrib-logos p a {
-  font-weight: bold;
-  color: #27759A;
-  border-bottom: 2px solid transparent;
-}
-
 .helm-contrib-logos p small {
   padding-top: 1rem;
   font-size: 0.925em;
 }
+
 
 /* Bulma-style grid classes used on landing page */
 .columns {
