@@ -113,6 +113,10 @@ h1,h2,h3,h4,h5,h6 {
   color: #091C84;
 }
 
+.anchor {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem) !important;
+}
+
 /* Remove topography background from pagination navigation */
 .pagination-nav {
   background: none;
