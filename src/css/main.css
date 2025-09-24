@@ -37,8 +37,7 @@
   --ifm-color-primary: var(--navy);
   --ifm-color-primary-dark: var(--navy);
   --ifm-color-primary-light: var(--blue-light);
-  --ifm-color-primary-lightest: #f3fafd;
-  --ifm-link-color: var(--blue-dark);
+  --ifm-link-color: var(--navy);
   --ifm-font-family-base: "Public Sans", Helvetica, Arial, sans-serif;
   --ifm-heading-font-family: "Space Mono", "Courier New", monaco, monospace;
   --ifm-heading-font-weight: 700;
