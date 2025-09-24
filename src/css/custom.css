@@ -1,12 +1,6 @@
-/**
- * Main CSS file for the Helm documentation site.
- * This file imports all component-specific stylesheets to maintain modularity.
- */
-
 /* Import component-specific stylesheets */
 @import './main.css';
 @import './docs-navbar.css';
-@import './docs-sidebar.css';
 @import './docs-footer.css';
 @import './helm-landing-page.css';
 @import './helm-boat.css';

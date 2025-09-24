@@ -1,10 +1,7 @@
 /**
- * Helm boat animation and positioning styles.
- * Contains all styles related to the animated boat element including animations,
- * positioning, and responsive behavior.
+ * Helm boat animation styles.
  */
 
-/* Boat Animation Styles */
 @keyframes boat-bob {
   0% {
     bottom: 2vw;
@@ -44,12 +41,11 @@
   }
 }
 
-/* Boat full width default */
 .boat {
   width: 100vw;
   position: absolute;
   top: auto;
-  bottom: 0; /* Changed from 8px to 0 since we removed borders */
+  bottom: 0;
   left: 0;
   right: 0;
   min-height: 10vw;
@@ -94,8 +90,8 @@
   position: absolute;
   margin: 0;
   left: 0;
-  right: 0; /* Changed from 15px to 0 since no border offset needed */
-  bottom: 0; /* Changed from -8px to 0 since no border offset needed */
+  right: 0; 
+  bottom: 0; 
   height: 15vw;
   overflow: hidden;
   z-index: 1014;
@@ -153,12 +149,12 @@
 /* Boat fixed nav 'badge' mode */
 .boat.boat-badge {
   position: fixed;
-  top: calc(var(--ifm-navbar-height) + 1rem); /* Position below navbar with some spacing */
+  top: calc(var(--ifm-navbar-height) + 1rem);
   left: 1rem;
   width: 7.5vw;
   height: 7.5vw;
   z-index: 1000; /* Lower z-index to stay below navbar */
-  max-width: 80px; /* Set max size for larger screens */
+  max-width: 80px; 
   max-height: 80px;
 }
 
@@ -203,5 +199,5 @@
 }
 
 .boat.boat-badge:hover:after {
-  display: none; /* Keep it hidden even on hover in badge mode */
+  display: none;
 }

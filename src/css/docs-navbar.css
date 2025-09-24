@@ -1,6 +1,5 @@
 /**
  * Navbar styles for the Helm documentation site.
- * Includes styling for navigation links, brand logo, and navbar behavior.
  */
 
 /* Remove navbar border */
@@ -13,7 +12,7 @@
 
 /* Navbar Link Styling */
 .navbar__link {
-  color: #091C84;
+  color: var(--navy);
   font-size: 1rem;
   transition: all .3s ease-in-out;
   font-family: "Space Mono", "Courier New", monaco, monospace;
@@ -25,7 +24,7 @@
 
 .navbar__link:hover {
   background-color: rgba(249,158,172,0.5);
-  color: #091C84;
+  color: var(--navy);
   margin-top: calc(-0.75rem - var(--ifm-navbar-padding-vertical, 0px));
   margin-bottom: calc(-0.75rem - var(--ifm-navbar-padding-vertical, 0px));
   padding-top: calc(0.75rem + var(--ifm-navbar-padding-vertical, 0px) + 0.75rem);
@@ -34,7 +33,7 @@
 
 /* Also target navbar items that might have different classes */
 .navbar__item .navbar__link {
-  color: #091C84;
+  color: var(--navy);
   font-size: 1rem;
   transition: all .3s ease-in-out;
   font-family: "Space Mono", "Courier New", monaco, monospace;
@@ -45,19 +44,19 @@
 
 .navbar__item .navbar__link:hover {
   background-color: rgba(249,158,172,0.5);
-  color: #091C84;
+  color: var(--navy);
 }
 
 /* Navbar Brand/Title Styling */
 .navbar__brand .navbar__title {
-  color: #091C84;
+  color: var(--navy);
   font-family: "Space Mono", "Courier New", monaco, monospace;
   font-weight: bold;
   letter-spacing: 0.035rem;
 }
 
 .navbar__brand:hover .navbar__title {
-  color: #091C84;
+  color: var(--navy);
 }
 
 /* Make Helm logo bigger to match original site and center it */
