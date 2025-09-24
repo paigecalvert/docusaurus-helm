@@ -1,23 +1,63 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    github: yangshun
-
+adamkorczynski:
+  name: Adam Korczynski
+andrewblock:
+  name: Andrew Block
+bridgetkromhout:
+  name: Bridget Kromhout
+davidkorczynski:
+  name: David Korczynski
+helmmaintainers:
+  name: Helm Maintainers
+joshdolitsky:
+  name: Josh Dolitsky
+karenchu:
+  image_url: https://github.com/karenchu.png
+  name: Karen Chu
+  url: https://bsky.app/profile/karenchu.online
+martinhickey:
+  name: Martin Hickey
+mattbutcher:
+  image_url: https://github.com/technosophos.png
+  name: Matt Butcher
+  url: https://twitter.com/technosophos
+mattfarina:
+  image_url: https://github.com/mattfarina.png
+  name: Matt Farina
+  url: https://mattfarina.com/
+mattfisher:
+  name: Matt Fisher
+matthewfisher:
+  name: Matthew Fisher
+rimasmocevicius:
+  name: Rimas Mocevicius
+scottrigby:
+  image_url: https://github.com/scottrigby.png
+  name: Scott Rigby
+  url: http://basekamp.com/
 slorber:
+  image_url: https://github.com/slorber.png
   name: Sébastien Lorber
+  page:
+    permalink: /all-sebastien-lorber-articles
+  socials:
+    github: slorber
+    linkedin: sebastienlorber
+    newsletter: https://thisweekinreact.com
+    x: sebastienlorber
   title: Docusaurus maintainer
   url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+terryhowe:
+  image_url: https://github.com/terryhowe.png
+  name: Terry Howe
+  url: https://terryhowe.wordpress.com/
+viciglesias:
+  name: Vic Iglesias
+yangshun:
+  image_url: https://github.com/yangshun.png
+  name: Yangshun Tay
+  page: true
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    github: yangshun
+    x: yangshunz
+  title: Front End Engineer @ Facebook
+  url: https://github.com/yangshun

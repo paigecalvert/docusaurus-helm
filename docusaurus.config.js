@@ -14,6 +14,10 @@ const config = {
   tagline: 'The Kubernetes Package Manager',
   favicon: 'img/helm-icon-color.svg',
 
+  markdown: {
+    format: "detect",
+  },
+
   // Set the production url of your site here
   url: 'https://helm4docs.r6by.com/',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -67,6 +71,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarCount: 10,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
