@@ -1,0 +1,125 @@
+/**
+ * Main global styles and CSS variables for the Helm documentation site.
+ * This file contains base styles, color variables, typography, and global layout.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #091C84;
+  --ifm-color-primary-dark: #091C84;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #1B53C2;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest:#f3fafd;
+  --ifm-link-color:#090E6F;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: "Public Sans", Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: "Space Mono", "Courier New", monaco, monospace;
+  --ifm-heading-font-weight: 700;
+
+  /* Helm specific color variables */
+  --navy: #091C84;
+  --navyd: #090E6F;
+  --navyl: #1B53C2;
+  --dark: #050843;
+  --light2: #E5E5E5;
+  --light1: #DBE1F3;
+  --blue: #3B82BF;
+  --green: #2F84A7;
+  --red: #95297C;
+  --yellow: #D1AA9B;
+  --grey1: #ccc;
+  --grey2: #999;
+  --grey3: #666;
+  --grey4: #333333;
+  --dark1: #4E4E4E;
+  --salmon: #F99EAC;
+  --salmonl: #F8DCDF;
+  --base-font: "Public Sans", Helvetica, Arial, sans-serif;
+  --mono-font: "Space Mono", "Courier New", monaco, monospace;
+
+  /* Footer specific variables */
+  --footer-navy: #001f3f;
+  --footer-navy-dark: #001833;
+  --footer-blue1: #1B53C2;
+  --footer-blue2: #4A90E2;
+  --footer-blue3: #7FB3D3;
+  --footer-grey1: #8E9AAF;
+  --footer-light2: #CBD2D9;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #091C84;
+  --ifm-color-primary-dark: #091C84;
+  /* --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870; */
+  --ifm-color-primary-light: #1B53C2;
+  /* --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf; */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Global page wrapper styles */
+html,
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  background: white;
+}
+
+.page-wrapper {
+  position: relative;
+  background: white;
+}
+
+body, nav {
+  background-image: url("/img/topography.png");
+}
+
+main, .theme-doc-breadcrumbs {
+  background: white;
+}
+
+/* Override main background for homepage only */
+.homepage-wrapper main {
+  background: transparent;
+}
+
+/* Override hero background for homepage only */
+.homepage-wrapper .hero {
+  background: transparent;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--ifm-color-primary);
+}
+
+.anchor {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem) !important;
+}
+
+/* Remove topography background from pagination navigation */
+.pagination-nav {
+  background: none;
+}
+
+.pagination-nav__link {
+  background: white;
+}
+
+
+/* Material Design Icons support */
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+}
