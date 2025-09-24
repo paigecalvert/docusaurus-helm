@@ -39,8 +39,6 @@
   --ifm-color-primary-light: var(--blue-light);
   --ifm-color-primary-lightest: #f3fafd;
   --ifm-link-color: var(--blue-dark);
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: "Public Sans", Helvetica, Arial, sans-serif;
   --ifm-heading-font-family: "Space Mono", "Courier New", monaco, monospace;
   --ifm-heading-font-weight: 700;
@@ -90,7 +88,7 @@ main, .theme-doc-breadcrumbs {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  color: var(--ifm-color-primary);
+  color: var(--navy);
 }
 
 .anchor {

@@ -522,7 +522,7 @@
 }
 
 .helm-community .community-boxes .box .placeholder {
-  background: var(--salmonl);
+  background: var(--salmon);
   font-style: italic;
   padding: 1.125rem 0;
   text-align: center;
