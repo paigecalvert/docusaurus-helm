@@ -1,4 +1,8 @@
-# Built-in Objects
+---
+title: "Built-in Objects"
+description: "Built-in objects available to templates."
+sidebar_position: 3
+---
 
 Objects are passed into a template from the template engine. And your code can
 pass objects around (we'll see examples when we look at the `with` and `range`
@@ -31,8 +35,13 @@ access in your templates.
 - `Chart`: The contents of the `Chart.yaml` file. Any data in `Chart.yaml` will
   be accessible here. For example `{{ .Chart.Name }}-{{ .Chart.Version }}` will
   print out the `mychart-0.1.0`.
+  - The available fields are listed in the [Charts Guide](../topics/charts.md#the-chartyaml-file)
+- `Subcharts`: This provides access to the scope (.Values, .Charts, .Releases etc.)
+  of subcharts to the parent. For example `.Subcharts.mySubChart.myValue` to access
+  the `myValue` in the `mySubChart` chart.
 - `Files`: This provides access to all non-special files in a chart. While you
-  cannot use it to access templates, you can use it to access other files in the chart
+  cannot use it to access templates, you can use it to access other files in the
+  chart. See the section [Accessing Files](./accessing_files) for more.
   - `Files.Get` is a function for getting a file by name (`.Files.Get
     config.ini`)
   - `Files.GetBytes` is a function for getting the contents of a file as an

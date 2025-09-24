@@ -1,4 +1,8 @@
-# Template Function List
+---
+title: "Template Function List"
+description: "A list of template functions available in Helm"
+sidebar_position: 6
+---
 
 Helm includes many template functions you can take advantage of in templates.
 They are listed here and broken down by the following categories:
@@ -83,7 +87,7 @@ lt .Arg1 .Arg2
 ### le
 
 Returns a boolean true if the first argument is less than or equal to the
-second. False is returned otherwise.
+second. False is returned otherwise (e.g., Arg1 \<= Arg2).
 
 ```
 le .Arg1 .Arg2
@@ -2317,7 +2321,7 @@ Helm includes functions for working with Kubernetes including
 `helm template` command it always returns an empty response.
 
 You can find more detail in the [documentation on the lookup
-function](functions_and_pipelines#using-the-lookup-function).
+function](./functions_and_pipelines/#using-the-lookup-function).
 
 ### .Capabilities.APIVersions.Has
 

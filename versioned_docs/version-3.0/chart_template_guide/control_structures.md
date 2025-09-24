@@ -1,4 +1,8 @@
-# Flow Control
+---
+title: "Flow Control"
+description: "A quick overview on the flow structure within templates."
+sidebar_position: 7
+---
 
 Control structures (called "actions" in template parlance) provide you, the
 template author, with the ability to control the flow of a template's

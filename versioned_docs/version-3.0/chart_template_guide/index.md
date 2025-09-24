@@ -1,6 +1,6 @@
 ---
 title: "Chart Template Guide"
-weight: 5
+sidebar_position: 5
 aliases: ["/topics/chart_template_guide/"]
 ---
 

@@ -90,7 +90,13 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: '3ccfbf5fb8bc395cc5f09939fa69c0fe',
         indexName: 'Helm 4 Docs Website',
-      },  
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
         title: 'Helm',
         logo: {
@@ -113,7 +119,7 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           },
-          { to: 'docs/intro', label: 'Docs', position: 'left' },
+          { to: 'docs', label: 'Docs', position: 'left' },
           { to: 'blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/helm/community',
