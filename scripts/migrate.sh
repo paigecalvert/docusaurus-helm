@@ -233,10 +233,16 @@ import_sdk() {
     mv "$file.tmp" "$file"
 }
 
-delete_deprecated_files() {
+function delete_deprecated_files() {
     grep -rl 'section: deprecated' "$VERSION_DIR" --include="*.md" --include="*.mdx" | while read -r file; do
         rm "$file"
     done
+}
+
+function truncate_blog() {
+    old='<!--more-->'
+    new='<!-- truncate -->'
+    find blog -type f \( -name "*.md" -o -name "*.mdx" \) -exec perl -0777 -pi -e "s@\Q$old\E@$new@g" {} +
 }
 
 # TODO
@@ -251,3 +257,4 @@ replace_text
 replace_text_per_file
 add_metadata_lines
 import_sdk
+truncate_blog
