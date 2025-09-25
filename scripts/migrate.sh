@@ -82,7 +82,6 @@ function replace_text() {
 function replace_text_per_file() {
     # Each entry: "category/filename|old_text|new_text". Use "\n" for multiline
     local replacements=(
-        'commands/helm_inspect.md|../helm_show/|helm_show.md'
         'chart_best_practices/dependencies.md|{{< ref "../topics/plugins#downloader-plugins" >}}|../topics/plugins.md#downloader-plugins'
         'chart_template_guide/accessing_files.md|{{< ref\n"/docs/chart_template_guide/subcharts_and_globals.md" >}}|subcharts_and_globals.md'
         'chart_template_guide/builtin_objects.md|{{< ref\n    "/docs/topics/charts.md#the-chartyaml-file" >}}|../topics/charts.md#the-chartyaml-file'
@@ -95,7 +94,6 @@ function replace_text_per_file() {
         'chart_template_guide/wrapping_up.md|../../topics/charts_hooks/|../topics/charts_hooks.md'
         'chart_template_guide/wrapping_up.md|../../howto/charts_tips_and_tricks/|../howto/charts_tips_and_tricks.md'
         'chart_template_guide/function_list.md|functions_and_pipelines.md/#using-the-lookup-function|functions_and_pipelines.md#using-the-lookup-function'
-        'commands/helm_inspect.md|../helm_show.md|helm_show.md'
         'howto/chart_repository_sync_example.md|{{< ref\n"/docs/topics/chart_repository.md" >}}|../topics/chart_repository.md'
         'howto/chart_repository_sync_example.md|{{< ref "/docs/topics/chart_repository.md" >}}|../topics/chart_repository.md'
         'intro/quickstart.md|{{< ref\n"install.md" >}}|install.md'
@@ -235,12 +233,16 @@ import_sdk() {
     mv "$file.tmp" "$file"
 }
 
+delete_deprecated_files() {
+    grep -rl 'section: deprecated' "$VERSION_DIR" --include="*.md" --include="*.mdx" | while read -r file; do
+        rm "$file"
+    done
+}
+
 # TODO
 # are there other metadata keys from hugo that aren't used by docusaurous?
 
-## TODO
-# omit pages with `section: deprecated` metadata
-
+delete_deprecated_files
 rename_categories
 rename_files
 rename_files_per_category
