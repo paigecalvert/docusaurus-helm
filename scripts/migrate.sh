@@ -94,6 +94,7 @@ function replace_text_per_file() {
         'chart_template_guide/wrapping_up.md|../../topics/charts/|../topics/charts.md'
         'chart_template_guide/wrapping_up.md|../../topics/charts_hooks/|../topics/charts_hooks.md'
         'chart_template_guide/wrapping_up.md|../../howto/charts_tips_and_tricks/|../howto/charts_tips_and_tricks.md'
+        'chart_template_guide/function_list.md|functions_and_pipelines.md/#using-the-lookup-function|functions_and_pipelines.md#using-the-lookup-function'
         'commands/helm_inspect.md|../helm_show.md|helm_show.md'
         'howto/chart_repository_sync_example.md|{{< ref\n"/docs/topics/chart_repository.md" >}}|../topics/chart_repository.md'
         'howto/chart_repository_sync_example.md|{{< ref "/docs/topics/chart_repository.md" >}}|../topics/chart_repository.md'
