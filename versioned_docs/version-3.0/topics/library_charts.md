@@ -5,7 +5,7 @@ aliases: ["docs/library_charts/"]
 sidebar_position: 4
 ---
 
-A library chart is a type of [Helm chart](./charts)
+A library chart is a type of [Helm chart](charts.md)
 that defines chart primitives or definitions which can be shared by Helm
 templates in other charts. This allows users to share snippets of code that can
 be re-used across charts, avoiding repetition and keeping charts
@@ -27,7 +27,7 @@ the chart type.
 
 ## Create a Simple Library Chart
 
-As mentioned previously, a library chart is a type of [Helm chart](./charts). This means that you can start off by creating a
+As mentioned previously, a library chart is a type of [Helm chart](charts.md). This means that you can start off by creating a
 scaffold chart:
 
 ```console
@@ -49,7 +49,7 @@ $ rm -f mylibchart/values.yaml
 ```
 
 Before we jump into creating common code, lets do a quick review of some
-relevant Helm concepts. A [named template](../chart_template_guide/named_templates) (sometimes called a partial
+relevant Helm concepts. A [named template](../chart_template_guide/named_templates.md) (sometimes called a partial
 or a subtemplate) is simply a template defined inside of a file, and given a
 name.  In the `templates/` directory, any file that begins with an underscore(_)
 is not expected to output a Kubernetes manifest file. So by convention, helper
@@ -311,7 +311,7 @@ metadata:
 ## Library Chart Benefits
 Because of their inability to act as standalone charts, library charts can leverage the following functionality:
 - The `.Files` object references the file paths on the parent chart, rather than the path local to the library chart
-- The `.Values` object is the same as the parent chart, in contrast to application [subcharts](../chart_template_guide/subcharts_and_globals) which receive the section of values configured under their header in the parent.
+- The `.Values` object is the same as the parent chart, in contrast to application [subcharts](../chart_template_guide/subcharts_and_globals.md) which receive the section of values configured under their header in the parent.
 
 
 ## The Common Helm Helper Chart

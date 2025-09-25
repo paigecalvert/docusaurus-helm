@@ -37,7 +37,7 @@ or
 
 or
 
-    $ helm install --set-json 'master.sidecars=[\{"name":"sidecar","image":"myImage","imagePullPolicy":"Always","ports":[\{"name":"portname","containerPort":1234}]}]' myredis ./redis
+    $ helm install --set-json 'master.sidecars=[{"name":"sidecar","image":"myImage","imagePullPolicy":"Always","ports":[{"name":"portname","containerPort":1234}]}]' myredis ./redis
 
 
 You can specify the '--values'/'-f' flag multiple times. The priority will be given to the
@@ -56,9 +56,9 @@ Similarly, in the following example 'foo' is set to '["four"]':
 
     $ helm install --set-json='foo=["one", "two", "three"]' --set-json='foo=["four"]' myredis ./redis
 
-And in the following example, 'foo' is set to '\{"key1":"value1","key2":"bar"}':
+And in the following example, 'foo' is set to '{"key1":"value1","key2":"bar"}':
 
-    $ helm install --set-json='foo=\{"key1":"value1","key2":"value2"}' --set-json='foo.key2="bar"' myredis ./redis
+    $ helm install --set-json='foo={"key1":"value1","key2":"value2"}' --set-json='foo.key2="bar"' myredis ./redis
 
 To check the generated manifests of a release without installing the chart,
 the --debug and --dry-run flags can be combined.

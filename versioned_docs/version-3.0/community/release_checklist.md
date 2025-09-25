@@ -47,7 +47,7 @@ process for three different kinds of releases:
 ### Set Up Git Remote
 
 It is important to note that this document assumes that the git remote in your
-repository that corresponds to \<https://github.com/helm/helm> is named
+repository that corresponds to <https://github.com/helm/helm> is named
 "upstream". If yours is not (for example, if you've chosen to name it "origin"
 or something similar instead), be sure to adjust the listed snippets for your
 local environment accordingly. If you are not sure what your upstream remote is

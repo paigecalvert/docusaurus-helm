@@ -28,7 +28,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-    // Even if you don't use internationalization, you can use this field to set
+  // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
@@ -43,6 +43,14 @@ const config = {
         label: 'Español',
       },
     },
+  },
+
+  // Opt-in to less strict, standard CommonMark support with options
+  // Automatically detects .md and .mdx extensions
+  // See https://docusaurus.io/docs/markdown-features/react#markdown-and-jsx-interoperability
+  // See https://github.com/prettier/prettier/issues/17089
+  markdown: {
+    format: "detect",
   },
 
   presets: [
