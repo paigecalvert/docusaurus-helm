@@ -1,9 +1,32 @@
+# firstnamelastname:
+#   image_url: https://github.com/slorber.png
+#   name: Firstname Lastname
+#   page:
+#     permalink: /all-firstname-lastname-articles
+#   socials:
+#     github: firstnamelastname
+#     linkedin: firstnamelastname
+#     newsletter: https://firstnamelastname.com
+#     x: firstnamelastname
+#   title: Title
+#   url: https://firstnamelastname.com
+# yangshun:
+#   image_url: https://github.com/yangshun.png
+#   name: Yangshun Tay
+#   page: true
+#   socials:
+#     github: yangshun
+#     x: yangshunz
+#   title: Front End Engineer @ Facebook
+#   url: https://github.com/yangshun
+
 adamkorczynski:
   name: Adam Korczynski
 andrewblock:
   name: Andrew Block
 bridgetkromhout:
   name: Bridget Kromhout
+  image_url: https://github.com/bridgetkromhout.png
 davidkorczynski:
   name: David Korczynski
 helmmaintainers:
@@ -26,38 +49,17 @@ mattfarina:
   url: https://mattfarina.com/
 mattfisher:
   name: Matt Fisher
-matthewfisher:
-  name: Matthew Fisher
+  image_url: https://github.com/bacongobbler.png
+  url: https://blog.bacongobbler.com/
 rimasmocevicius:
   name: Rimas Mocevicius
 scottrigby:
   image_url: https://github.com/scottrigby.png
   name: Scott Rigby
   url: http://basekamp.com/
-slorber:
-  image_url: https://github.com/slorber.png
-  name: Sébastien Lorber
-  page:
-    permalink: /all-sebastien-lorber-articles
-  socials:
-    github: slorber
-    linkedin: sebastienlorber
-    newsletter: https://thisweekinreact.com
-    x: sebastienlorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
 terryhowe:
   image_url: https://github.com/terryhowe.png
   name: Terry Howe
   url: https://terryhowe.wordpress.com/
 viciglesias:
   name: Vic Iglesias
-yangshun:
-  image_url: https://github.com/yangshun.png
-  name: Yangshun Tay
-  page: true
-  socials:
-    github: yangshun
-    x: yangshunz
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun

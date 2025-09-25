@@ -1,5 +1,5 @@
 ---
-authors: matthewfisher
+authors: mattfisher
 date: '2019-11-13'
 slug: helm-3-released
 title: Helm 3.0.0 has been released!
