@@ -87,7 +87,7 @@ lt .Arg1 .Arg2
 ### le
 
 Returns a boolean true if the first argument is less than or equal to the
-second. False is returned otherwise (e.g., Arg1 \<= Arg2).
+second. False is returned otherwise (e.g., Arg1 <= Arg2).
 
 ```
 le .Arg1 .Arg2
@@ -2321,7 +2321,7 @@ Helm includes functions for working with Kubernetes including
 `helm template` command it always returns an empty response.
 
 You can find more detail in the [documentation on the lookup
-function](./functions_and_pipelines/#using-the-lookup-function).
+function](functions_and_pipelines.md/#using-the-lookup-function).
 
 ### .Capabilities.APIVersions.Has
 

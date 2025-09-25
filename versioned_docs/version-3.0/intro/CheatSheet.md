@@ -11,7 +11,7 @@ Helm cheatsheet featuring all the necessary commands required to manage an appli
 
 Chart:
 - It is the name of your chart in case it has been pulled and untarred.
-- It is `<repo_name>/<chart_name>` in case the repository has been added but chart not pulled.
+- It is <repo_name>/<chart_name> in case the repository has been added but chart not pulled.
 - It is the URL/Absolute path to the chart.
 
 Name:

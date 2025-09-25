@@ -13,7 +13,7 @@ Update gets the latest information about charts from the respective chart reposi
 Information is cached locally, where it is used by commands like 'helm search'.
 
 You can optionally specify a list of repositories you want to update.
-	$ helm repo update \<repo_name> ...
+	$ helm repo update <repo_name> ...
 To update all the repositories, use 'helm repo update'.
 
 

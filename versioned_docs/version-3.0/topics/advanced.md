@@ -151,7 +151,7 @@ export HELM_DRIVER_SQL_CONNECTION_STRING=postgresql://helm-postgres:5432/helm?us
 
 **PRODUCTION NOTES**: It is recommended to:
 - Make your database production ready. For PostgreSQL, refer to the [Server Administration](https://www.postgresql.org/docs/12/admin.html) docs for more details
-- Enable [permission management](./permissions_sql_storage_backend/) to
+- Enable [permission management](permissions_sql_storage_backend.md) to
 mirror Kubernetes RBAC for release information
 
 If you want to switch from the default backend to the SQL backend, you'll have

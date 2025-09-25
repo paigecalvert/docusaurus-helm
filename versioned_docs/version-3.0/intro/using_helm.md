@@ -5,10 +5,10 @@ sidebar_position: 3
 ---
 
 This guide explains the basics of using Helm to manage packages on your
-Kubernetes cluster. It assumes that you have already [installed](./install) the Helm client.
+Kubernetes cluster. It assumes that you have already [installed](install.md) the Helm client.
 
 If you are simply interested in running a few quick commands, you may wish to
-begin with the [Quickstart Guide](./quickstart). This chapter
+begin with the [Quickstart Guide](quickstart.md). This chapter
 covers the particulars of Helm commands, and explains how to use Helm.
 
 ## Three Big Concepts
@@ -506,7 +506,7 @@ Repositories can be removed with `helm repo remove`.
 
 ## Creating Your Own Charts
 
-The [Chart Development Guide](../topics/charts) explains how
+The [Chart Development Guide](../topics/charts.md) explains how
 to develop your own charts. But you can get started quickly by using the `helm
 create` command:
 
@@ -538,7 +538,7 @@ $ helm install deis-workflow ./deis-workflow-0.1.0.tgz
 
 Charts that are packaged can be loaded into chart repositories. See the
 documentation for [Helm chart
-repositories](../topics/chart_repository) for more details.
+repositories](../topics/chart_repository.md) for more details.
 
 ## Conclusion
 

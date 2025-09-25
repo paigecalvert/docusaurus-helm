@@ -13,7 +13,7 @@ Generate the autocompletion script for Helm for the bash shell.
 
 To load completions in your current shell session:
 
-    source \<(helm completion bash)
+    source <(helm completion bash)
 
 To load completions for every new session, execute once:
 - Linux:
