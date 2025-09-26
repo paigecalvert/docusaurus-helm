@@ -9,6 +9,7 @@ title: Helm 2 and the Charts Project Are Now Unsupported
 A year ago, we [introduced Helm 3](https://helm.sh/blog/helm-3-released/), a major evolution in Helm's development. And we [announced](https://helm.sh/blog/2019-10-22-helm-2150-released/) at that time that Helm 2 would receive patches and security updates for a year.
 
 Here we are, one year later. Friday the 13th, 2020 seems like a fitting day to end support for a major version. And today, we are announcing the official end of support for Helm 2. The charts repository is also now read-only, with no further changes.
+<!-- truncate -->
 
 From this point forward, the Helm team will devote all of its energy to Helm 3 and our ecosystem tools.
 

@@ -12,6 +12,7 @@ title: 'Helm 3 Preview: Charting Our Future – Part 5: Changes to Chart Depende
 This is part 5 of 7 of our *Helm 3 Preview: Charting Our Future* blog series about chart dependencies and some subtle differences between Helm 2 and Helm 3. (Check out our previous blog post on release management [here](https://helm.sh/blog/helm-3-preview-pt4/).)
 
 Charts that were packaged (with `helm package`) for use with Helm 2 can be installed with Helm 3, but the chart development workflow received an overhaul, so some changes are necessary to continue developing charts with Helm 3. One of the components that changed was the chart dependency management system.
+<!-- truncate -->
 
 The Chart dependency management system moved from requirements.yaml and requirements.lock to Chart.yaml and Chart.lock, meaning that charts that relied on the `helm dependency` command will need some tweaking to work in Helm 3.
 

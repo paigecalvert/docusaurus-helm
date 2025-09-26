@@ -12,6 +12,7 @@ title: 'Helm 3 Preview: Charting Our Future – Part 4: Release Management'
 This is part 4 of 7 of our *Helm 3 Preview: Charting Our Future* blog series on release management. (Check out our previous blog post on the Helm chart repositories [here](https://helm.sh/blog/helm-3-preview-pt3/.).
 
 In Helm 3, an application's state is tracked in-cluster by a pair of objects:
+<!-- truncate -->
 
 - The release object: represents an instance of an application
 - The release version secret: represents an application's desired state at a particular instance of time (the release of a new version, for example)

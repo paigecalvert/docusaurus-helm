@@ -7,7 +7,7 @@ title: Introducing the Helm Org Maintainers
 ---
 
 
-The first major action under the [new Helm governance](https://www.helm.sh/blog/new-gov-and-elections/index.html) was to elect a set of [Helm Org Maintainers](https://github.com/helm/community/blob/52161625acabf4187ae052f4e5fdd36daea91684/governance/governance.md#helm-org-maintainers). In the initial election we were looking to select 7 people to represent Helm core, charts, and other projects under the Helm umbrella. The election is now complete and I would like to introduce the first set of Org Maintainers.  <!--more-->
+The first major action under the [new Helm governance](https://www.helm.sh/blog/new-gov-and-elections/index.html) was to elect a set of [Helm Org Maintainers](https://github.com/helm/community/blob/52161625acabf4187ae052f4e5fdd36daea91684/governance/governance.md#helm-org-maintainers). In the initial election we were looking to select 7 people to represent Helm core, charts, and other projects under the Helm umbrella. The election is now complete and I would like to introduce the first set of Org Maintainers.  <!-- truncate -->
 
 In alphabetical order, by first name, they are:
 

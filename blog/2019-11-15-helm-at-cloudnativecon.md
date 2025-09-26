@@ -6,6 +6,7 @@ title: Helm at KubeCon + CloudNativeCon NA 2019
 
 
 Next week is the annual [KubeCon and CloudNativeCon in North America](https://events19.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2019/). The Helm project and maintainers have several things going on and we wanted to invite you to them.
+<!-- truncate -->
 
 Helm will have two maintainer track sessions that focus on an [_Introduction to Helm_](https://sched.co/UajI) and a [_Helm 3 Deep Dive_](https://sched.co/Uagg). Anyone who is new to Helm or would be interested in learning how and why they should use Helm, please consider attending the _Introduction to Helm_. If you are curious about the [recently released Helm 3](https://helm.sh/blog/helm-3-released/), the _Helm 3 Deep Dive_ is for you. Please let others know about these talks if you think they will interest them!
 

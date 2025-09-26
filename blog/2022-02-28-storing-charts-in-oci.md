@@ -8,7 +8,7 @@ title: Storing Helm Charts in OCI Registries
 
 With the release of Helm 3.8.0, Helm is able to store and work with charts in container registries, as an alternative to [Helm repositories](https://helm.sh/docs/topics/chart_repository/). This feature, which used to be an experimental feature, is now generally available.
 
-<!--more-->
+<!-- truncate -->
 
 Over the past several years container registry developers have been working on ways to store other artifacts in container registries. To facilitate this in a cross platform manner, the Open Containers Initiative (OCI) - the organization that defines the specifications for containers - released their [distribution specification](https://specs.opencontainers.org/distribution-spec/?v=v1.0.0) which allowed other "artifacts" to be stored in registries.
 

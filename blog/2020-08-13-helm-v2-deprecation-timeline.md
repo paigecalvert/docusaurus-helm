@@ -15,10 +15,11 @@ _[with a nod to Lewis Carroll...](https://www.jabberwocky.com/carroll/walrus.htm
       Of bugfixes -- and k8s --”
 
 [Helm v3 was released in November 2019](/blog/helm-3-released/), the result of ongoing community effort to evolve Helm to meet the community’s needs. With a streamlined client-only experience, a renewed focus on security, and tighter integration with Kubernetes APIs, Helm v3 continues to provide production-tested package management for Kubernetes. And as a [graduated CNCF project](/blog/celebrating-helms-cncf-graduation/), Helm is a key part of the cloud native ecosystem.
+<!-- truncate -->
 
 We recognize that rolling out a major version change in production requires time. The Helm maintainers committed to providing bugfixes for Helm v2 until May 2020 (which they [extended to August 2020](/blog/covid-19-extending-helm-v2-bug-fixes/)) and security patches for Helm v2 until November 2020. And now the bugfix window is closing; [Helm v2.16.10](https://github.com/helm/helm/releases/tag/v2.16.10) will be the final bugfix release and 2.17.0 will follow with the [download location updated](https://github.com/helm/helm/issues/8346).
-<!--more-->
-What does this mean for Helm users?
+
+## What does this mean for Helm users?
 
 _After August 13, 2020, you will see these changes:_
 - If you’re still using Helm v2, you will want to [migrate to Helm v3](/blog/migrate-from-helm-v2-to-helm-v3/) now. Helm 3.2.4 is widely used and production-ready. While largely backwards-compatible, there are specific changes you’ll want to be aware of when carrying out your migration.

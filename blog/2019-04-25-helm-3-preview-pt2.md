@@ -12,6 +12,7 @@ title: 'Helm 3 Preview: Charting Our Future – Part 2: A Gentle Farewell to Til
 This is part 2 of 7 of our *Helm 3 Preview: Charting Our Future* blog series. (Check out our previous blog post on the history of Helm [here](https://helm.sh/blog/helm-3-preview-pt1/).)
 
 During the Helm 2 development cycle, we introduced Tiller as part of our integration with Google's Deployment Manager. Tiller played an important role for teams working on a shared cluster - it made it possible for multiple different operators to interact with the same set of releases.
+<!-- truncate -->
 
 With role-based access controls (RBAC) enabled by default in Kubernetes 1.6, locking down Tiller for use in a production scenario became more difficult to manage. Due to the vast number of possible security policies, our stance was to provide a permissive default configuration. This allowed first-time users to start experimenting with Helm and Kubernetes without having to dive headfirst into the security controls. Unfortunately, this permissive configuration could grant a user a broad range of permissions they weren't intended to have. DevOps and SREs had to learn additional operational steps when installing Tiller into a multi-tenant cluster.
 

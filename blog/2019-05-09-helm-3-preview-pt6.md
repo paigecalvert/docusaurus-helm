@@ -12,6 +12,7 @@ title: 'Helm 3 Preview: Charting Our Future – Part 6: Introducing Library Char
 This is part 6 of 7 of our *Helm 3 Preview: Charting Our Future* blog series on library charts. You can find our previous blog post on the Helm chart dependencies [here](https://helm.sh/blog/helm-3-preview-pt5/).
 
 Helm 3 supports a class of chart called a "library chart". This is a chart that is shared by other charts, but does not create any release artifacts of its own. A library chart's templates can only declare `define` elements. Globally scoped non-define content is simply ignored. This allows users to re-use and share snippets of code that can be re-used across many charts, avoiding redundancy and keeping charts [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
+<!-- truncate -->
 
 Library charts are declared in the `dependencies` directive in Chart.yaml, and are installed and managed like any other chart.
 

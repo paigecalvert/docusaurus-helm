@@ -6,7 +6,7 @@ title: Helm’s First Patch Wednesday
 ---
 
 
-Helm recently adopted [a release schedule for minor and patch releases](https://github.com/helm/community/blob/main/hips/hip-0002.md). Today, the second Wednesday in November 2020, marks the first release under the new schedule. This release schedule provides predictability to those who use Helm, contribute to Helm, and maintain Helm.<!--more-->
+Helm recently adopted [a release schedule for minor and patch releases](https://github.com/helm/community/blob/main/hips/hip-0002.md). Today, the second Wednesday in November 2020, marks the first release under the new schedule. This release schedule provides predictability to those who use Helm, contribute to Helm, and maintain Helm.<!-- truncate -->
 
 The release schedule generally follows these rules:
 

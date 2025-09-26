@@ -11,13 +11,14 @@ title: 'Helm Vulnerability: Client Unpacking Chart that Contains Malicious Conte
 Security researcher Bernard Wagner of [Entersekt](https://www.entersekt.com/) discovered a vulnerability in the Helm client, impacting **all versions of Helm between Helm >=2.0.0 and < 2.12.2**. Two Helm client commands may be coerced into unpacking unsafe content from a maliciously designed chart.
 
 A specially crafted chart may be able to unpack content into locations on the filesystem outside of the chart’s path, potentially overwriting existing files.
+<!-- truncate -->
 
 No version of Tiller is known to be impacted. This is a client-only issue.
 
 The following Helm commands may unsafely unpack malformed charts onto a local folder: `helm fetch --untar` and `helm lint some.tgz`.
 
 
-We are unaware of any public exploits caused by this issue.<!--more-->
+We are unaware of any public exploits caused by this issue.
 
 ## Details
 

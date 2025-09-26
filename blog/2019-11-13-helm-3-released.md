@@ -9,6 +9,7 @@ title: Helm 3.0.0 has been released!
 The Helm Team is proud to announce the first stable release of Helm 3.
 
 Helm 3 is the latest major release of the CLI tool. Helm 3 builds upon the success of Helm 2, continuing to meet the needs of the evolving ecosystem.
+<!-- truncate -->
 
 The internal implementation of Helm 3 has changed considerably from Helm 2. The most apparent change is the removal of Tiller, but it's worth checking out the other changes by diving into the new release. A rich set of new features have been added as a result of the community's input and requirements. Some features have been deprecated or refactored in ways that make them incompatible with Helm 2. Some new experimental features have also been introduced, including OCI support.
 

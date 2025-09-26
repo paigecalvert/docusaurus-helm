@@ -9,7 +9,7 @@ title: ' Helm Turns 5, and GitHub Gives the Gift of Charts'
 {{< figure src="https://helm.sh/blog/images/happy-5th.png" alt="Happy 5th Birthday Helm" >}}
 
 Five years ago, in a hackathon at Deis (who has since been acquired by Microsoft) Helm was born.
-<!--more-->
+<!-- truncate -->
 
 ```
 commit ecad6e2ef9523a0218864ec552bbfc724f0b9d3d

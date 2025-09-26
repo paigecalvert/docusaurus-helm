@@ -10,10 +10,11 @@ title: 'ChartMuseum Vulnerability: Authorization Bypass [CVE-2019-1000009]'
 Security researcher Bernard Wagner of [Entersekt](https://www.entersekt.com/) discovered a vulnerability in ChartMuseum, impacting **all versions of ChartMuseum between ChartMuseum >=0.1.0 and < 0.8.1**. A specially crafted chart could be uploaded that caused the uploaded archive to be saved outside of the intended location.
 
 When ChartMuseum is configured for multitenancy the specially crafted chart could be uploaded to one tenant but saved in the location of another tenant. This includes overwriting a chart at a version in the other tenant.
+<!-- truncate -->
 
 Additionally, if ChartMuseum is configured to use a file system the uploaded Chart archive may be uploaded to locations outside of the storage directory. It could be uploaded to any place the ChartMuseum application binary has write permission to.
 
-We are unaware of any public exploits caused by this issue.<!--more-->
+We are unaware of any public exploits caused by this issue.
 
 ## Details
 

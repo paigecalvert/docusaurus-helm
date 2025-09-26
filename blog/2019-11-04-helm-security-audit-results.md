@@ -10,6 +10,7 @@ Today, the Helm Maintainers are proud to announce that we have successfully comp
 A security audit is part of the graduation criteria for CNCF projects. Specifically, the [graduation criteria](https://github.com/cncf/toc/blob/main/process/graduation_criteria.adoc#graduation-stage) says:
 
 > Have completed an independent and third party security audit with results published of similar scope and quality as the following example (including critical vulnerabilities addressed): https://github.com/envoyproxy/envoy#security-audit and all critical vulnerabilities need to be addressed before graduation.
+<!-- truncate -->
 
 During October, the CNCF funded [Cure53](https://cure53.de/) to perform a security audit of Helm version 3. Cure53 has performed audits of other CNCF projects including Prometheus, Envoy, Jaeger, Notary, and others.
 

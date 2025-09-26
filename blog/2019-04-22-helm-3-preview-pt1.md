@@ -11,6 +11,7 @@ title: 'Helm 3 Preview: Charting Our Future – Part 1: A History of Helm'
 On October 15th, 2015, the project now known as Helm was born. Only one year later, the Helm community joined the Kubernetes organization as Helm 2 was fast approaching. In June 2018, the Helm community [joined the CNCF](https://www.cncf.io/blog/2018/06/01/cncf-to-host-helm/) as an incubating project. Fast forward to today, and Helm 3 is nearing its first alpha release.
 
 In this series of seven blog posts over the next four weeks, I'll provide some history on Helm's beginnings, illustrate how we got where we are today, showcase some of the new features available for the first alpha release of Helm 3, and explain how we move forward from here.
+<!-- truncate -->
 
 In order, I'll discuss:
 

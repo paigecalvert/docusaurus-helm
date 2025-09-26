@@ -8,7 +8,7 @@ title: Tools You Can Use To Manage Your Helm Releases Declaratively
 
 We regularly get questions from people who want tools or methods to manage their Helm releases in an environment. This post provides some insight and direction to help people get started.
 
-<!--more-->
+<!-- truncate -->
 
 ## Why Helm Doesn't Have Tools To Do This
 
