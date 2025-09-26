@@ -6,7 +6,7 @@ title: ' Helm Turns 5, and GitHub Gives the Gift of Charts'
 ---
 
 
-{{< figure src="https://helm.sh/blog/images/happy-5th.png" alt="Happy 5th Birthday Helm" >}}
+![Happy 5th Birthday Helm](images/happy-5th.png)
 
 Five years ago, in a hackathon at Deis (who has since been acquired by Microsoft) Helm was born.
 <!-- truncate -->
@@ -27,7 +27,7 @@ But when it came to hosting the packaged charts, we stored them in an object sto
 
 Recently, Google’s time of supporting the official Helm chart repository has come to a close. We are grateful for Google’s hosting the Helm chart repository these last few years. But this event has given us an opportunity to further integrate our chart development pipeline with GitHub.
 
-{{< figure src="../images/octocat.png" alt="Hello Github Octocat!" width="350px" >}}
+![Hello Github Octocat!](images/octocat.png)
 
 So for today’s birthday celebration, we would like to announce that the Helm `stable` and `incubator` chart repositories will be directly hosted out of GitHub. Furthermore, GitHub Actions will power the pipeline for publishing charts. And thanks to GitHub’s blazingly fast network, chart downloads are faster than ever!
 
