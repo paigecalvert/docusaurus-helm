@@ -9,7 +9,7 @@ Helm has now completed a second security audit, funded by the [CNCF](https://cnc
 
 The following diagram is from the [threat model](https://github.com/helm/community/blob/main/security-audit/Helm%20Threat%20Model%202020.pdf) and looks at the connections Helm makes along with how it stores files on the local filesystem.
 
-![](/img/arch.png)
+![Thread model diagram](arch.png)
 
 As a result of the audit, the Helm security team worked on [a release](https://github.com/helm/helm/releases/tag/v3.3.2).
 

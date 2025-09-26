@@ -5,7 +5,7 @@ authors: mattfarina
 date: "2024-11-07"
 ---
 
-![KubeCon / CloudNativeCon Logo](/img/kubecon.png)
+![KubeCon / CloudNativeCon Logo](kubecon.png)
 
 Helm is going to be at KubeCon / CloudNativeCon North America in Salt Lake City. There will be something happening each day of the main conference, including:
 <!-- truncate -->
