@@ -14,6 +14,14 @@ const config = {
   tagline: 'The Kubernetes Package Manager',
   favicon: 'img/helm-icon-color.svg',
 
+  // Opt-in to less strict, standard CommonMark support with options
+  // Automatically detects .md and .mdx extensions
+  // See https://docusaurus.io/docs/markdown-features/react#markdown-and-jsx-interoperability
+  // See https://github.com/prettier/prettier/issues/17089
+  markdown: {
+    format: "detect",
+  },
+
   // Set the production url of your site here
   url: 'https://helm4docs.r6by.com/',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -45,14 +53,6 @@ const config = {
     },
   },
 
-  // Opt-in to less strict, standard CommonMark support with options
-  // Automatically detects .md and .mdx extensions
-  // See https://docusaurus.io/docs/markdown-features/react#markdown-and-jsx-interoperability
-  // See https://github.com/prettier/prettier/issues/17089
-  markdown: {
-    format: "detect",
-  },
-
   presets: [
     [
       'classic',
@@ -67,6 +67,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
