@@ -1,11 +1,8 @@
 ---
-aliases: /blog/2018-09-25-chart-testing-intro/
-authors: mattfarina
-date: '2018-09-25'
-slug: chart-testing-intro
-title: Using the Community Chart Testing Tools Yourself
+title: "Using the Community Chart Testing Tools Yourself"
+slug: "chart-testing-intro"
+date: "2018-09-25"
 ---
-
 
 The Helm community charts, [available as the stable and incubator repositories](https://github.com/helm/charts), have long had testing. That testing has grown and improved a significant amount in the past year; from Helm linting and testing if an application runs in a cluster to now include YAML linting, some validation on maintainers, `Chart.yaml` schema validation, tests on chart version increments, and more.  <!-- truncate -->
 

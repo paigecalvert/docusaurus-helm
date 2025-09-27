@@ -1,7 +1,7 @@
 ---
 title: "Helm 2nd Security Audit"
 slug: "helm-2nd-security-audit"
-authors: mattfarina
+authors: ["mattfarina"]
 date: "2021-03-05"
 ---
 

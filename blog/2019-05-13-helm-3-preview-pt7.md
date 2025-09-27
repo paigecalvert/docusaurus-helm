@@ -1,18 +1,13 @@
 ---
-aliases:
-- /blog/2019-05-13-helm-3-preview-pt7/
-- /helm-3-preview-pt7/
-authors: mattfisher
-date: '2019-05-13'
-slug: helm-3-preview-pt7
-title: 'Helm 3 Preview: Charting Our Future – Part 7: What''s Next?'
+title: "Helm 3 Preview: Charting Our Future – Part 7: What's Next?"
+slug: "helm-3-preview-pt7"
+authors: ["mattfisher"]
+date: "2019-05-13"
 ---
-
 
 This is the seventh and final part of our *Helm 3 Preview: Charting Our Future* blog series. Read our previous blog post on library charts [here](https://helm.sh/blog/helm-3-preview-pt6/).
 
-Helm 3.0.0-alpha.1 is the foundation upon which we'll begin to build the next version of Helm. The features shared over the last few weeks were some of the big promises we made for Helm 3. Many of those features are still in their early stages and that is OK; the idea of an alpha release is to test out an idea, gather feedback from early adopters, and validate those assumptions.
-<!-- truncate -->
+Helm 3.0.0-alpha.1 is the foundation upon which we'll begin to build the next version of Helm. The features shared over the last few weeks were some of the big promises we made for Helm 3. Many of those features are still in their early stages and that is OK; the idea of an alpha release is to test out an idea, gather feedback from early adopters, and validate those assumptions.<!-- truncate -->
 
 Once the alpha has been released, we can start accepting patches from the community for Helm 3. We should have a stable foundation on which to build and accept new features, and users should feel empowered to open tickets and contribute fixes.
 

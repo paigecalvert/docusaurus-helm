@@ -1,11 +1,8 @@
 ---
-aliases: /blog/2019-01-14-chartmuseum-security-notice/
-authors: [mattfarina, joshdolitsky]
-date: '2019-01-14'
-slug: chartmuseum-security-notice-2019
-title: 'ChartMuseum Vulnerability: Authorization Bypass [CVE-2019-1000009]'
+title: "ChartMuseum Vulnerability: Authorization Bypass [CVE-2019-1000009]"
+slug: "chartmuseum-security-notice-2019"
+date: "2019-01-14"
 ---
-
 
 Security researcher Bernard Wagner of [Entersekt](https://www.entersekt.com/) discovered a vulnerability in ChartMuseum, impacting **all versions of ChartMuseum between ChartMuseum >=0.1.0 and < 0.8.1**. A specially crafted chart could be uploaded that caused the uploaded archive to be saved outside of the intended location.
 

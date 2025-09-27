@@ -1,13 +1,11 @@
 ---
-authors: mattfarina
-date: '2020-10-07'
-slug: helm-hub-moving-to-artifact-hub
-title: Helm Hub Moving To Artifact Hub
+title: "Helm Hub Moving To Artifact Hub"
+slug: "helm-hub-moving-to-artifact-hub"
+authors: ["mattfarina"]
+date: "2020-10-07"
 ---
 
-
-Today, we are happy to announce that the Helm Hub is moving to the [Artifact Hub](https://artifacthub.io/). That means, when you go to the Helm Hub you will be redirected to the Artifact Hub.
-<!-- truncate -->
+Today, we are happy to announce that the Helm Hub is moving to the [Artifact Hub](https://artifacthub.io/). That means, when you go to the Helm Hub you will be redirected to the Artifact Hub.<!-- truncate -->
 
 ## What This Means For You
 

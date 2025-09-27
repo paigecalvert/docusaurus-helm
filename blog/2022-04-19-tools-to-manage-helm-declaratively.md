@@ -1,10 +1,9 @@
 ---
-authors: [scottrigby, mattfarina]
-date: '2022-04-19'
-slug: tools-to-manage-helm-declaratively
-title: Tools You Can Use To Manage Your Helm Releases Declaratively
+title: "Tools You Can Use To Manage Your Helm Releases Declaratively"
+slug: "tools-to-manage-helm-declaratively"
+authors: ["scottrigby", "mattfarina"]
+date: "2022-04-19"
 ---
-
 
 We regularly get questions from people who want tools or methods to manage their Helm releases in an environment. This post provides some insight and direction to help people get started.
 

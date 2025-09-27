@@ -1,12 +1,9 @@
 ---
-aliases: /blog/2019-01-14-helm-security-notice/
-authors: mattbutcher
-date: '2019-01-14'
-slug: helm-security-notice-2019
-title: 'Helm Vulnerability: Client Unpacking Chart that Contains Malicious Content
-  [CVE-2019-1000008]'
+title: "Helm Vulnerability: Client Unpacking Chart that Contains Malicious Content [CVE-2019-1000008]"
+slug: "helm-security-notice-2019"
+authors: ["mattbutcher"]
+date: "2019-01-14"
 ---
-
 
 Security researcher Bernard Wagner of [Entersekt](https://www.entersekt.com/) discovered a vulnerability in the Helm client, impacting **all versions of Helm between Helm >=2.0.0 and < 2.12.2**. Two Helm client commands may be coerced into unpacking unsafe content from a maliciously designed chart.
 
