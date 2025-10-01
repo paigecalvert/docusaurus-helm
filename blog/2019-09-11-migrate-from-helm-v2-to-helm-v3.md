@@ -1,8 +1,8 @@
 ---
-authors: rimasmocevicius
-date: '2019-09-11'
-slug: migrate-from-helm-v2-to-helm-v3
-title: How to migrate from Helm v2 to Helm v3
+title: "How to migrate from Helm v2 to Helm v3"
+slug: "migrate-from-helm-v2-to-helm-v3"
+authors: ["rimasmocevicius"]
+date: "2019-09-11"
 ---
 
 

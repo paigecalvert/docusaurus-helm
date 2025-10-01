@@ -1,15 +1,13 @@
 ---
-authors: mattfisher
-date: '2019-06-10'
-slug: get-helm-sh
-title: Announcing get.helm.sh
+title: "Announcing get.helm.sh"
+slug: "get-helm-sh"
+authors: ["mattfisher"]
+date: "2019-06-10"
 ---
-
 
 The Helm Client has long been available to download from Google Cloud Storage at the bucket <https://kubernetes-helm.storage.googleapis.com>. This bucket in Google Cloud has been used by Helm since before Kubernetes was part of the CNCF. The first release hosted on this bucket was Helm v2.0.0-alpha.5!
 
-Google has long been gracious in providing funding for this location. Since Helm started using it, Helm (as part of Kubernetes) moved into the CNCF, and then moved out from under the Kubernetes umbrella, becoming a sister project to Kubernetes within the CNCF.
-<!-- truncate -->
+Google has long been gracious in providing funding for this location. Since Helm started using it, Helm (as part of Kubernetes) moved into the CNCF, and then moved out from under the Kubernetes umbrella, becoming a sister project to Kubernetes within the CNCF.<!-- truncate -->
 
 The CNCF is in the process of taking over the infrastructure for Kubernetes. It was time for Helm to move from a location funded by Google to one funded by the CNCF. Google Cloud buckets cannot be transferred between projects, which meant we could not transfer the bucket over to a CNCF account. We needed to move to a new location as part of the move.
 

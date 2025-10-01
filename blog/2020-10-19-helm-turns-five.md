@@ -1,15 +1,13 @@
 ---
-authors: [mattbutcher, mattfarina]
-date: '2020-10-19'
-slug: helm-turns-five
-title: ' Helm Turns 5, and GitHub Gives the Gift of Charts'
+title: " Helm Turns 5, and GitHub Gives the Gift of Charts"
+slug: "helm-turns-five"
+authors: ["mattbutcher", "mattfarina"]
+date: "2020-10-19"
 ---
-
 
 ![Happy 5th Birthday Helm](images/happy-5th.png)
 
-Five years ago, in a hackathon at Deis (who has since been acquired by Microsoft) Helm was born.
-<!-- truncate -->
+Five years ago, in a hackathon at Deis (who has since been acquired by Microsoft) Helm was born.<!-- truncate -->
 
 ```
 commit ecad6e2ef9523a0218864ec552bbfc724f0b9d3d

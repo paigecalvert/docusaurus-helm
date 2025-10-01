@@ -1,15 +1,13 @@
 ---
-authors: mattfarina
-date: '2020-10-26'
-slug: new-location-stable-incubator-charts
-title: New Location For Stable and Incubator Charts
+title: "New Location For Stable and Incubator Charts"
+slug: "new-location-stable-incubator-charts"
+authors: ["mattfarina"]
+date: "2020-10-26"
 ---
-
 
 [As previously announced](https://helm.sh/blog/helm-turns-five/), the stable and incubator repositories have moved to a new location. This post will update you on the new locations and provide directions to start using them.
 
-_**Important Note:** This does not affect the obsolescence timeline for the stable and incubator repositories that was announced in 2019. On November 13, 2020 the stable and incubator charts repository will reach the end of development and become archives. You can find that many of the charts have moved to other, community managed, repositories. You can discover these on the [Artifact Hub](https://artifacthub.io/). More information on the obsolescence will follow in future blog posts and communications._
-<!-- truncate -->
+_**Important Note:** This does not affect the obsolescence timeline for the stable and incubator repositories that was announced in 2019. On November 13, 2020 the stable and incubator charts repository will reach the end of development and become archives. You can find that many of the charts have moved to other, community managed, repositories. You can discover these on the [Artifact Hub](https://artifacthub.io/). More information on the obsolescence will follow in future blog posts and communications._<!-- truncate -->
 
 The new location for the stable repository is https://charts.helm.sh/stable and the new location for the incubator repository is https://charts.helm.sh/incubator. If you use charts in either of these old locations below you MUST update the repositories you use before November 13, 2020. The new locations are hosted using GitHub pages.
 
@@ -19,7 +17,7 @@ The new location for the stable repository is https://charts.helm.sh/stable and 
 | incubator | https://kubernetes-charts-incubator.storage.googleapis.com | https://charts.helm.sh/incubator |
 
 
-Along with the new locations, Helm v2.17.0 and v3.4.0 have been released to help you use the new location. You are encouraged to upgrade to the latest versions.<!-- truncate -->
+Along with the new locations, Helm v2.17.0 and v3.4.0 have been released to help you use the new location. You are encouraged to upgrade to the latest versions.
 
 ## Helm v3.4.0
 

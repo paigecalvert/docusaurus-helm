@@ -1,0 +1,18 @@
+blog/2018-12-11-helm-hub.md:aliases: "/blog/2018-12-11-helm-hub/"
+blog/2018-09-07-new-gov-and-elections.md:aliases: "/blog/2018-09-07-new-gov-and-elections/"
+blog/2019-01-14-chartmuseum-security-notice.md:aliases: "/blog/2019-01-14-chartmuseum-security-notice/"
+blog/2019-05-06-helm-3-preview-pt5.md:aliases: ["/blog/2019-05-06-helm-3-preview-pt5/", "/helm-3-preview-pt5/"]
+blog/2019-05-09-helm-3-preview-pt6.md:aliases: ["/blog/2019-05-09-helm-3-preview-pt6/", "/helm-3-preview-pt6/"]
+blog/2018-08-27-helm-switch-dco.md:aliases: "/blog/2018-08-27-helm-switch-dco/"
+blog/2019-04-29-helm-3-preview-pt3.md:aliases: ["/blog/2019-04-29-helm-3-preview-pt3/", "/helm-3-preview-pt3/"]
+blog/2019-04-25-helm-3-preview-pt2.md:aliases: ["/blog/2019-04-25-helm-3-preview-pt2/", "/helm-3-preview-pt2/"]
+blog/2019-05-13-helm-3-preview-pt7.md:aliases: ["/blog/2019-05-13-helm-3-preview-pt7/", "/helm-3-preview-pt7/"]
+blog/2019-05-02-helm-3-preview-pt4.md:aliases: ["/blog/2019-05-02-helm-3-preview-pt4/", "/helm-3-preview-pt4/"]
+blog/2019-04-22-helm-3-preview-pt1.md:aliases: ["/blog/2019-04-22-helm-3-preview-pt1/", "/helm-3-preview-pt1/"]
+blog/2018-10-04-helm-org-maintainers.md:aliases: "/blog/2018-10-04-helm-org-maintainers/"
+blog/2018-06-01-cncf.md:aliases: ["/blog/2018-06-01-cncf/", "/helm-enters-the-cncf/"]
+blog/2019-04-18-helm-summit-eu-2019.md:aliases: ["/blog/2019-04-18-helm-summit-eu-2019/", "/helm-summit-eu-2019/"]
+blog/2019-01-14-helm-security-notice.md:aliases: "/blog/2019-01-14-helm-security-notice/"
+blog/2018-07-23-bring-helm-home.md:aliases: "/blog/2018-07-23-bring-helm-home/"
+blog/2018-09-25-chart-testing-intro.md:aliases: "/blog/2018-09-25-chart-testing-intro/"
+blog/2018-07-24-helm-emeritus-rimus.md:aliases: ["/blog/2018-07-24-helm-emeritus-rimus/", "/helm-emeritus-maintainer-rimas-mocevicius/"]

@@ -1,13 +1,11 @@
 ---
-authors: helmmaintainers
-date: '2024-07-10'
-slug: the-road-to-helm-4
-title: The Road to Helm 4
+title: "The Road to Helm 4"
+slug: "the-road-to-helm-4"
+authors: ["helmmaintainers"]
+date: "2024-07-10"
 ---
 
-
-We have been saying it for a while now – Helm is "stable software". That should not come as a surprise to anyone familiar with Kubernetes and the surrounding ecosystem as many within the Kubernetes community consider Helm to be the de-facto package manager. The use of Helm is far reaching: from open source community projects, to startups, to Fortune 500 organizations. Helm has become an essential component of build and deployment workflows that handle mission critical workloads.
-<!-- truncate -->
+We have been saying it for a while now – Helm is "stable software". That should not come as a surprise to anyone familiar with Kubernetes and the surrounding ecosystem as many within the Kubernetes community consider Helm to be the de-facto package manager. The use of Helm is far reaching: from open source community projects, to startups, to Fortune 500 organizations. Helm has become an essential component of build and deployment workflows that handle mission critical workloads.<!-- truncate -->
 
 One of the primary tenets that the Helm project takes very seriously is its policy related to [backwards compatibility](https://github.com/helm/helm/blob/main/CONTRIBUTING.md#semantic-versioning). This strict adherence towards limiting impacts that could adversely affect end consumers is one of the primary reasons why Helm has become such a stable project that the community can count on. Unfortunately, Helm’s backwards compatibility policy does impose limitations to the types of changes or features that can be introduced. It is important to note that Helm is not just a CLI tool, but it is also an SDK. The Helm SDK supports an entire ecosystem of solutions that have been developed to manage Helm content. Any breaking change could negatively impact one of those integrations.
 

@@ -1,14 +1,13 @@
 ---
 title: "Helm at KubeCon/CloudNativeCon SLC"
 slug: "kubecon-slc"
-authors: mattfarina
+authors: ["mattfarina"]
 date: "2024-11-07"
 ---
 
 ![KubeCon / CloudNativeCon Logo](kubecon.png)
 
-Helm is going to be at KubeCon / CloudNativeCon North America in Salt Lake City. There will be something happening each day of the main conference, including:
-<!-- truncate -->
+Helm is going to be at KubeCon / CloudNativeCon North America in Salt Lake City. There will be something happening each day of the main conference, including:<!-- truncate -->
 
 * Wednesday: 
   * At a booth in the project pavilion from 3:15pm - 8pm.

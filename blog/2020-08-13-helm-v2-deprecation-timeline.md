@@ -1,10 +1,9 @@
 ---
-authors: bridgetkromhout
-date: '2020-08-12'
-slug: helm-v2-deprecation-timeline
-title: Helm v2 Deprecation Timeline
+title: "Helm v2 Deprecation Timeline"
+slug: "helm-v2-deprecation-timeline"
+authors: ["bridgetkromhout"]
+date: "2020-08-12"
 ---
-
 
 
 _[with a nod to Lewis Carroll...](https://www.jabberwocky.com/carroll/walrus.html)_

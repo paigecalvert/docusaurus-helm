@@ -1,10 +1,9 @@
 ---
-authors: [scottrigby, joshdolitsky, mattfarina]
-date: '2022-02-28'
-slug: storing-charts-in-oci
-title: Storing Helm Charts in OCI Registries
+title: "Storing Helm Charts in OCI Registries"
+slug: "storing-charts-in-oci"
+authors: ["scottrigby", "joshdolitsky", "mattfarina"]
+date: "2022-02-28"
 ---
-
 
 With the release of Helm 3.8.0, Helm is able to store and work with charts in container registries, as an alternative to [Helm repositories](https://helm.sh/docs/topics/chart_repository/). This feature, which used to be an experimental feature, is now generally available.
 

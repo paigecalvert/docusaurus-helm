@@ -1,18 +1,13 @@
 ---
-aliases:
-- /blog/2019-04-29-helm-3-preview-pt3/
-- /helm-3-preview-pt3/
-authors: mattfisher
-date: '2019-04-29'
-slug: helm-3-preview-pt3
-title: 'Helm 3 Preview: Charting Our Future – Part 3: Chart Repositories'
+title: "Helm 3 Preview: Charting Our Future – Part 3: Chart Repositories"
+slug: "helm-3-preview-pt3"
+authors: ["mattfisher"]
+date: "2019-04-29"
 ---
-
 
 This is part 3 of 7 of our *Helm 3 Preview: Charting Our Future* blog series, discussing chart repositories. (Check out our previous blog post on the gentle goodbye to Tiller [here](https://helm.sh/blog/helm-3-preview-pt2/).)
 
-At a high level, a Chart Repository is a location where Charts can be stored and shared. The Helm client packs and ships Helm Charts to a Chart Repository. Simply put, a Chart Repository is a basic HTTP server that houses an index.yaml file and some packaged charts.
-<!-- truncate -->
+At a high level, a Chart Repository is a location where Charts can be stored and shared. The Helm client packs and ships Helm Charts to a Chart Repository. Simply put, a Chart Repository is a basic HTTP server that houses an index.yaml file and some packaged charts.<!-- truncate -->
 
 While there are several benefits to the Chart Repository API meeting the most basic storage requirements, a few drawbacks have started to show:
 

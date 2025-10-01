@@ -1,10 +1,9 @@
 ---
-authors: karenchu
-date: '2022-10-14'
-slug: helm-at-kubecon-na-22
-title: Helm @ KubeCon + CloudNativeCon NA '22
+title: "Helm @ KubeCon + CloudNativeCon NA '22"
+slug: "helm-at-kubecon-na-22"
+authors: ["karenchu"]
+date: "2022-10-14"
 ---
-
 
 The Helm maintainers are excited to be headed to KubeCon + CloudNativeCon NA '22 in Detroit, MI in a couple of weeks! As always, there will be a few different places you can find us!
 

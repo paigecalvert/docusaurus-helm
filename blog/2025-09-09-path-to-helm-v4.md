@@ -1,8 +1,8 @@
 ---
-title: Path To Releasing Helm v4
-slug: path-to-helm-v4
-authors: mattfarina
-date: 2025-09-09
+title: "Path To Releasing Helm v4"
+slug: "path-to-helm-v4"
+authors: ["mattfarina"]
+date: "2025-09-09"
 ---
 
 The [first Alpha for Helm v4](https://github.com/helm/helm/releases/tag/v4.0.0-alpha.1) has been released. Now that Helm v4 development is in the home stretch, we wanted to share the details on what's happening and how the broader community can get involved.<!-- truncate -->

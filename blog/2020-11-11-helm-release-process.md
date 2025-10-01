@@ -1,10 +1,9 @@
 ---
-authors: mattfarina
-date: '2020-11-11'
-slug: helm-release-process
-title: Helm’s First Patch Wednesday
+title: "Helm’s First Patch Wednesday"
+slug: "helm-release-process"
+authors: ["mattfarina"]
+date: "2020-11-11"
 ---
-
 
 Helm recently adopted [a release schedule for minor and patch releases](https://github.com/helm/community/blob/main/hips/hip-0002.md). Today, the second Wednesday in November 2020, marks the first release under the new schedule. This release schedule provides predictability to those who use Helm, contribute to Helm, and maintain Helm.<!-- truncate -->
 

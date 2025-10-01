@@ -1,15 +1,12 @@
 ---
-authors: mattfarina
-date: '2019-10-30'
-title: 'Helm Vulnerability: Client Loading and Packaging Chart Directory Containing
-  Malicious Symlinked Content [CVE-2019-18658]'
+title: "Helm Vulnerability: Client Loading and Packaging Chart Directory Containing Malicious Symlinked Content [CVE-2019-18658]"
+authors: ["mattfarina"]
+date: "2019-10-30"
 ---
-
 
 Part of the process for Helm to become a graduated CNCF project is to complete an independent and third party security audit with the results being published. As part of the audit of Helm 3 a security issue was found that also impacts Helm v2. [Cure53](https://cure53.de/) performed the audit and found the issue. More about the audit will be covered in a future post.
 
-The vulnerability found impacts **all versions of Helm between Helm >=2.0.0 and < 2.15.2**. Helm commands that deal with loading a chart as a directory or packaging a chart provide an opportunity for a maliciously designed chart to include content not intended in the chart or to execute a denial of service (DOS) on the computer performing the packaging via the use of symlinks.
-<!-- truncate -->
+The vulnerability found impacts **all versions of Helm between Helm >=2.0.0 and < 2.15.2**. Helm commands that deal with loading a chart as a directory or packaging a chart provide an opportunity for a maliciously designed chart to include content not intended in the chart or to execute a denial of service (DOS) on the computer performing the packaging via the use of symlinks.<!-- truncate -->
 
 No version of Tiller is known to be impacted. This is a client-only issue.
 

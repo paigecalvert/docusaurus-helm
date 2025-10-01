@@ -1,44 +1,74 @@
 #!/bin/bash
 
 : "${VERSION_DIR:=versioned_docs/version-3.0}"
+: "${BLOG_DIR:=blog}"
 
-# TODO add the correct HOME string
-function generate_docs() {
-    local HOME='~'
-    helm docs --type markdown --generate-headers
+# Check if rules file exists, return 0 if found, 1 if not found
+function is_rules_file() {
+    local rules_file="$1"
+    local calling_function="$2"
+    if [[ ! -f "$rules_file" ]]; then
+        echo "Warning: Rules file $rules_file not found, skipping $calling_function"
+        return 1
+    fi
+    return 0
+}
+
+# run before renaming categories
+# arg 1 (optional): helm binary version (eg, v3.19.0, v4.0.0-alpha.1, etc). defaults to latest
+function regenerate_docs() {
+    local version="${1:-}"
+    if [[ -n $version ]]; then
+        export DESIRED_VERSION=$version
+    fi
+    local tmpdir=$(mktemp -d)
+    pushd $tmpdir
+    export HELM_INSTALL_DIR=$(pwd)
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    chmod +x get_helm.sh
+    ./get_helm.sh
+    # set env vars to match linux environments (the helm-www docs default)
+    export HOME='~'
+    export HELM_CACHE_HOME='~/.cache/helm'
+    export HELM_CONFIG_HOME='~/.config/helm'
+    export HELM_DATA_HOME='~/.local/share/helm'
+    popd
+    pushd "$VERSION_DIR/helm"
+    "$tmpdir/helm" docs --type markdown --generate-headers
+    popd
 }
 
 function rename_categories() {
-    local renames=(
-        "helm|commands"
-    )
+    local rules_file="${1:-scripts/rules/docs_rename_categories.txt}"
+    is_rules_file "$rules_file" "${FUNCNAME[0]}" || return 0
 
-    for entry in "${renames[@]}"; do
+    while IFS= read -r entry || [[ -n "$entry" ]]; do
+        [[ -z "$entry" || "$entry" == \#* ]] && continue
         local old="${entry%%|*}"
         local new="${entry#*|}"
         mv "$VERSION_DIR/$old" "$VERSION_DIR/$new" 2>/dev/null
-    done
+    done < "$rules_file"
 }
 
 function rename_files() {
-    local renames=(
-        "_index.md|index.md"
-    )
+    local rules_file="${1:-scripts/rules/docs_rename_files.txt}"
+    is_rules_file "$rules_file" "${FUNCNAME[0]}" || return 0
 
-    for entry in "${renames[@]}"; do
+    while IFS= read -r entry || [[ -n "$entry" ]]; do
+        [[ -z "$entry" || "$entry" == \#* ]] && continue
         local old="${entry%%|*}"
         local new="${entry#*|}"
         # Find and rename in all subdirectories
         find "$VERSION_DIR" -type f -name "$old" -execdir mv "$old" "$new" \;
-    done
+    done < "$rules_file"
 }
 
 function rename_files_per_category() {
-    local renames=(
-        "sdk|examples.md|examples.mdx"
-    )
+    local rules_file="${1:-scripts/rules/docs_rename_files_per_category.txt}"
+    is_rules_file "$rules_file" "${FUNCNAME[0]}" || return 0
 
-    for entry in "${renames[@]}"; do
+    while IFS= read -r entry || [[ -n "$entry" ]]; do
+        [[ -z "$entry" || "$entry" == \#* ]] && continue
         local category="${entry%%|*}"
         local rest="${entry#*|}"
         local old="${rest%%|*}"
@@ -47,26 +77,27 @@ function rename_files_per_category() {
         if [ -f "$dir/$old" ]; then
             mv "$dir/$old" "$dir/$new"
         fi
-    done
+    done < "$rules_file"
 }
 
 function remove_lines() {
-    local patterns=(
-        "^[[:space:]]*slug:"
-    )
+    local basedir="${1:-$VERSION_DIR}"
+    local rules_file="${2:-scripts/rules/docs_remove_lines.txt}"
+    is_rules_file "$rules_file" "${FUNCNAME[0]}" || return 0
 
-    for pattern in "${patterns[@]}"; do
-        find "$VERSION_DIR" -type f \( -name "*.md" -o -name "*.mdx" \) -exec sed -i '' "/$pattern/d" {} +
-    done
+    while IFS= read -r pattern || [[ -n "$pattern" ]]; do
+        [[ -z "$pattern" || "$pattern" == \#* ]] && continue
+        find "$basedir" -type f \( -name "*.md" -o -name "*.mdx" \) -exec sed -i '' "/$pattern/d" {} +
+    done < "$rules_file"
 }
 
 function replace_text() {
-    # Each entry: "old_text|new_text". Use "\n" for multiline
-    local replacements=(
-        "weight:|sidebar_position:"
-    )
+    local basedir="${1:-$VERSION_DIR}"
+    local rules_file="${2:-scripts/rules/docs_replace_text.txt}"
+    is_rules_file "$rules_file" "${FUNCNAME[0]}" || return 0
 
-    for entry in "${replacements[@]}"; do
+    while IFS= read -r entry || [[ -n "$entry" ]]; do
+        [[ -z "$entry" || "$entry" == \#* ]] && continue
         local old="${entry%%|*}"
         local new="${entry#*|}"
 
@@ -74,67 +105,18 @@ function replace_text() {
         old=$(printf '%b' "${old//\\n/$'\n'}")
         new=$(printf '%b' "${new//\\n/$'\n'}")
 
-        # Use a delimiter unlikely to appear in your patterns (here, @)
-        find "$VERSION_DIR" -type f \( -name "*.md" -o -name "*.mdx" \) -exec perl -0777 -pi -e "s@\Q$old\E@$new@g" {} +
-    done
+        # Use a delimiter unlikely to appear in your patterns (here, %)
+        find "$basedir" -type f \( -name "*.md" -o -name "*.mdx" \) -exec perl -0777 -pi -e "s%$old%$new%g" {} +
+    done < "$rules_file"
 }
 
 function replace_text_per_file() {
-    # Each entry: "category/filename|old_text|new_text". Use "\n" for multiline
-    local replacements=(
-        'chart_best_practices/dependencies.md|{{< ref "../topics/plugins#downloader-plugins" >}}|../topics/plugins.md#downloader-plugins'
-        'chart_template_guide/accessing_files.md|{{< ref\n"/docs/chart_template_guide/subcharts_and_globals.md" >}}|subcharts_and_globals.md'
-        'chart_template_guide/builtin_objects.md|{{< ref\n    "/docs/topics/charts.md#the-chartyaml-file" >}}|../topics/charts.md#the-chartyaml-file'
-        'chart_template_guide/builtin_objects.md|{{< ref\n    "/docs/chart_template_guide/accessing_files.md" >}}|accessing_files.md'
-        'chart_template_guide/getting_started.md|../../topics/charts|../topics/charts'
-        'chart_template_guide/getting_started.md|(_index.md)|(../)'
-        'chart_template_guide/subcharts_and_globals.md|{{< ref\n"/docs/topics/library_charts.md" >}}|../topics/library_charts.md'
-        'chart_template_guide/subcharts_and_globals.md|{{< ref "../topics/charts.md" >}}|../topics/charts.md'
-        'chart_template_guide/wrapping_up.md|../../topics/charts/|../topics/charts.md'
-        'chart_template_guide/wrapping_up.md|../../topics/charts_hooks/|../topics/charts_hooks.md'
-        'chart_template_guide/wrapping_up.md|../../howto/charts_tips_and_tricks/|../howto/charts_tips_and_tricks.md'
-        'chart_template_guide/function_list.md|functions_and_pipelines.md/#using-the-lookup-function|functions_and_pipelines.md#using-the-lookup-function'
-        'howto/chart_repository_sync_example.md|{{< ref\n"/docs/topics/chart_repository.md" >}}|../topics/chart_repository.md'
-        'howto/chart_repository_sync_example.md|{{< ref "/docs/topics/chart_repository.md" >}}|../topics/chart_repository.md'
-        'intro/quickstart.md|{{< ref\n"install.md" >}}|install.md'
-        'intro/quickstart.md|{{< ref "using_helm.md">}}|using_helm.md'
-        'intro/quickstart.md|{{< ref "using_helm.md"\n>}}|using_helm.md'
-        'intro/using_helm.md|{{< ref\n"install.md" >}}|install.md'
-        'intro/using_helm.md|{{< ref "quickstart.md" >}}|quickstart.md'
-        'intro/using_helm.md|{{< ref "../topics/charts.md" >}}|../topics/charts.md'
-        'intro/using_helm.md|{{< ref "/docs/topics/chart_repository.md" >}}|../topics/chart_repository.md'
-        'sdk/examples.mdx|{{< highlightexamplego file="sdkexamples/install.go" >}}|<Install />'
-        'sdk/examples.mdx|{{< highlightexamplego file="sdkexamples/upgrade.go" >}}|<Upgrade />'
-        'sdk/examples.mdx|{{< highlightexamplego file="sdkexamples/uninstall.go" >}}|<Uninstall />'
-        'sdk/examples.mdx|{{< highlightexamplego file="sdkexamples/list.go" >}}|<List />'
-        'sdk/examples.mdx|{{< highlightexamplego file="sdkexamples/pull.go" >}}|<Pull />'
-        'sdk/examples.mdx|{{< highlightexamplego file="sdkexamples/main.go" >}}|<Main />'
-        'sdk/gosdk.md|./examples.md|examples.mdx'
-        'topics/advanced.md|/docs/permissions_sql_storage_backend/|permissions_sql_storage_backend.md'
-        'topics/chart_repository.md|{{< ref "/docs/topics/registries.md" >}}|registries.md'
-        'topics/chart_repository.md|{{< ref "quickstart.md" >}}|../intro/quickstart.md'
-        'topics/chart_repository.md|{{< ref "/docs/topics/charts.md" >}}|charts.md'
-        'topics/chart_repository.md|{{< ref "provenance.md" >}}|provenance.md'
-        'topics/chart_repository.md|{{< ref "/docs/howto/chart_releaser_action.md" >}}|../howto/chart_releaser_action.md'
-        'topics/chart_repository.md|{{< ref "/docs/howto/chart_repository_sync_example.md" >}}|../howto/chart_repository_sync_example.md'
-        'topics/chart_tests.md|/docs/helm/helm_create|../commands/helm_create.md'
-        'topics/chart_tests.md|/docs/charts_hooks/|charts_hooks.md'
-        'topics/charts.md|{{< ref\n"/docs/topics/library_charts.md" >}}|library_charts.md'
-        'topics/charts.md|{{< ref "/docs/howto/charts_tips_and_tricks.md" >}}|../howto/charts_tips_and_tricks.md'
-        'topics/charts.md|{{< ref\n"/docs/howto/charts_tips_and_tricks.md" >}}|../howto/charts_tips_and_tricks.md'
-        'topics/charts_hooks.md|/docs/chart_tests/|chart_tests.md'
-        'topics/library_charts.md|{{< ref "/docs/topics/charts.md" >}}|charts.md'
-        'topics/library_charts.md|{{< ref\n"/docs/topics/charts.md" >}}|charts.md'
-        'topics/library_charts.md|{{< ref\n"/docs/chart_template_guide/named_templates.md" >}}|../chart_template_guide/named_templates.md'
-        'topics/library_charts.md|{{< ref\n"/docs/chart_template_guide/subcharts_and_globals.md" >}}|../chart_template_guide/subcharts_and_globals.md'
-        'topics/plugins.md|{{< ref "related.md#helm-plugins"\n>}}|../community/related.md#helm-plugins'
-        'topics/provenance.md|{{< ref "registries.md" >}}|registries.md'
-        'topics/registries.md|{{< ref "chart_repository.md" >}}|chart_repository.md'
-        'topics/registries.md|{{< ref "provenance.md" >}}|provenance.md'
-        'topics/registries.md|{{< ref "chart_repository.md" >}}|chart_repository.md'
-    )
+    local basedir="${1:-$VERSION_DIR}"
+    local rules_file="${2:-scripts/rules/docs_replace_text_per_file.txt}"
+    is_rules_file "$rules_file" "${FUNCNAME[0]}" || return 0
 
-    for entry in "${replacements[@]}"; do
+    while IFS= read -r entry || [[ -n "$entry" ]]; do
+        [[ -z "$entry" || "$entry" == \#* ]] && continue
         local file="${entry%%|*}"
         local rest="${entry#*|}"
         local old="${rest%%|*}"
@@ -144,19 +126,17 @@ function replace_text_per_file() {
         old=$(printf '%b' "${old//\\n/$'\n'}")
         new=$(printf '%b' "${new//\\n/$'\n'}")
 
-        # Use a delimiter unlikely to appear in your patterns (here, @)
-        perl -0777 -pi -e "s@\Q$old\E@$new@g" "$VERSION_DIR/$file"
-    done
+        # Use a delimiter unlikely to appear in your patterns (here, %)
+        perl -0777 -pi -e "s%$old%$new%g" "$basedir/$file"
+    done < "$rules_file"
 }
 
 function add_metadata_lines() {
-    # Each entry: 'filename|metadata_string'
-    local entries=(
-        'index.md|sidebar_position: 1'
-        'index.md|hide_table_of_contents: true'
-    )
+    local rules_file="${1:-scripts/rules/docs_add_metadata_lines.txt}"
+    is_rules_file "$rules_file" "${FUNCNAME[0]}" || return 0
 
-    for entry in "${entries[@]}"; do
+    while IFS= read -r entry || [[ -n "$entry" ]]; do
+        [[ -z "$entry" || "$entry" == \#* ]] && continue
         local file="$VERSION_DIR/${entry%%|*}"
         local meta="${entry#*|}"
 
@@ -186,7 +166,7 @@ function add_metadata_lines() {
         fi
 
         mv "$file.tmp" "$file"
-    done
+    done < "$rules_file"
 }
 
 # copy sdk example go files to partials
@@ -239,22 +219,80 @@ function delete_deprecated_files() {
     done
 }
 
-function truncate_blog() {
-    old='<!--more-->'
-    new='<!-- truncate -->'
-    find blog -type f \( -name "*.md" -o -name "*.mdx" \) -exec perl -0777 -pi -e "s@\Q$old\E@$new@g" {} +
+# run before removing aliases field
+function blog_save_aliases() {
+    grep -r aliases: blog/ > scripts/blog_aliases.txt
 }
 
-# TODO
-# are there other metadata keys from hugo that aren't used by docusaurous?
+# examples:
+#   generate_netlify_redirects redirects.yaml > _redirects
+#   generate_netlify_redirects redirects.yaml 301 > _redirects
+generate_netlify_redirects() {
+  local input="${1:-/dev/stdin}"
+  local code="${REDIRECT_CODE:-302}"
 
+  if ! [[ "$code" =~ ^[0-9]{3}$ ]]; then
+    echo "Error: invalid status code '$code'. Set REDIRECT_CODE to a 3-digit HTTP code." >&2
+    return 1
+  fi
+  if ! command -v yq >/dev/null 2>&1; then
+    echo "Error: mikefarah yq v4 not found in PATH." >&2
+    return 1
+  fi
+
+  # Convert properties-like lines to valid YAML sequence with items:
+  # - path: "<path>"
+  # - aliases: <string|array>
+  REDIRECT_CODE="$code" awk '
+    function trim(s) { sub(/^[ \t\r\n]+/, "", s); sub(/[ \t\r\n]+$/, "", s); return s }
+    {
+      # skip empty/comment lines
+      if ($0 ~ /^[ \t\r\n]*$/) next
+      if ($0 ~ /^[ \t]*#/) next
+
+      sep = ":aliases:"
+      idx = index($0, sep)
+      if (idx == 0) next
+
+      path = substr($0, 1, idx - 1)
+      val  = substr($0, idx + length(sep))
+
+      path = trim(path)
+      val  = trim(val)
+
+      print "- path: \"" path "\""
+      print "  aliases: " val
+    }
+  ' "$input" | yq -o=tsv '
+    .[] |
+    .path as $to |
+    .aliases as $aliases |
+    (
+      # string aliases -> one record
+      (select(($aliases | type) == "string") | [$aliases, $to, strenv(REDIRECT_CODE)])
+      ,
+      # array aliases -> expand each item
+      (select(($aliases | type) == "array") | ($aliases | map([., $to, strenv(REDIRECT_CODE)])[]))
+    )
+    | @tsv
+  ' | awk -F'\t' 'NF>=2 { printf "%s %s %s\n", $1, $2, (ENVIRON["REDIRECT_CODE"] ? ENVIRON["REDIRECT_CODE"] : "302") }'
+}
+
+function blog_apply_patch() {
+    git apply --reverse scripts/blog-import-reverse-diff.patch
+}
+
+# regenerate_docs
 delete_deprecated_files
 rename_categories
 rename_files
 rename_files_per_category
-remove_lines
-replace_text
-replace_text_per_file
+remove_lines "$VERSION_DIR" "scripts/rules/docs_remove_lines.txt"
+replace_text "$VERSION_DIR" "scripts/rules/docs_replace_text.txt"
+replace_text_per_file "$VERSION_DIR" "scripts/rules/docs_replace_text_per_file.txt"
 add_metadata_lines
 import_sdk
-truncate_blog
+blog_save_aliases
+# TODO: change to 301 (permanent) when we know we're happy with the redirects
+generate_netlify_redirects scripts/blog_aliases.txt > _redirects
+blog_apply_patch

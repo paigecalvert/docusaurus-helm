@@ -1,0 +1,1185 @@
+diff --git a/blog/2018-06-01-cncf.md b/blog/2018-06-01-cncf.md
+index c6eb406..e09246a 100755
+--- a/blog/2018-06-01-cncf.md
++++ b/blog/2018-06-01-cncf.md
+@@ -1,11 +1,14 @@
+ ---
+ title: "Helm Enters the CNCF"
+ slug: "helm-enters-the-cncf"
+-authors: ["mattbutcher"]
++aliases: ["/blog/2018-06-01-cncf/", "/helm-enters-the-cncf/"]
++authorname: "Matt Butcher"
++author: "@technosophos"
++authorlink: "https://twitter.com/technosophos"
+ date: "2018-06-01"
+ ---
+ 
+-Today we are happy to announce that Helm has become an official top-level [CNCF](https://www.cncf.io/) project, joining the ranks of Prometheus, Linkerd, OpenTracing, and others. Helm will enter the CNCF as an incubating project as we continue to work on the next-generation Helm 3 cloud-native package manager.  <!-- truncate -->
++Today we are happy to announce that Helm has become an official top-level [CNCF](https://www.cncf.io/) project, joining the ranks of Prometheus, Linkerd, OpenTracing, and others. Helm will enter the CNCF as an incubating project as we continue to work on the next-generation Helm 3 cloud-native package manager.  <!--more-->
+ 
+ We are grateful to the Helm community, which has diligently contributed to the core Helm project, to the official charts repository, Monocular, to Chart Museum, and to other Helm-related projects. As a CNCF project, we look forward to expanding the Helm ecosystem. Over the coming months, we will be re-organizing as we ease our way out of the Kubernetes org and into CNCF.
+ 
+diff --git a/blog/2018-07-23-bring-helm-home.md b/blog/2018-07-23-bring-helm-home.md
+index 09ad4a1..00981f9 100755
+--- a/blog/2018-07-23-bring-helm-home.md
++++ b/blog/2018-07-23-bring-helm-home.md
+@@ -1,11 +1,14 @@
+ ---
+ title: "Bringing Helm Home"
+ slug: "bringing-helm-home"
+-authors: ["mattbutcher"]
++aliases: "/blog/2018-07-23-bring-helm-home/"
++authorname: "Matt Butcher"
++author: "@technosophos"
++authorlink: "https://twitter.com/technosophos"
+ date: "2018-07-23"
+ ---
+ 
+-Earlier this summer, we announced that [Helm joined the CNCF](https://www.cncf.io/blog/2018/06/01/cncf-to-host-helm/) as an official incubating project. Part of that transition involves moving the Helm project out of the Kubernetes GitHub org and into its org. We’re excited to announce that we’ve completed that process. As of last week, we have moved the Helm code repository to [https://github.com/helm/helm](https://github.com/helm/helm).  <!-- truncate -->
++Earlier this summer, we announced that [Helm joined the CNCF](https://www.cncf.io/blog/2018/06/01/cncf-to-host-helm/) as an official incubating project. Part of that transition involves moving the Helm project out of the Kubernetes GitHub org and into its org. We’re excited to announce that we’ve completed that process. As of last week, we have moved the Helm code repository to [https://github.com/helm/helm](https://github.com/helm/helm).  <!--more-->
+ 
+ Fun fact: This is the same GitHub repository where the Helm project first started. When we started Helm in 2015, we created the Helm organization in GitHub. But thanks to the enthusiastic support of the Kubernetes community, we migrated the entire codebase into the Kubernetes org in 2016. As a separate CNCF project with its own vibrant and growing ecosystem, it makes sense to once again have Helm back home in its own GitHub org.
+ 
+diff --git a/blog/2018-07-24-helm-emeritus-rimus.md b/blog/2018-07-24-helm-emeritus-rimus.md
+index f319964..b0120e3 100755
+--- a/blog/2018-07-24-helm-emeritus-rimus.md
++++ b/blog/2018-07-24-helm-emeritus-rimus.md
+@@ -1,10 +1,13 @@
+ ---
+ title: "Helm Emeritus Maintainer Rimas Mocevicius"
+ slug: "helm-emeritus-maintainer-rimas-mocevicius"
+-authors: ["mattbutcher"]
++aliases: ["/blog/2018-07-24-helm-emeritus-rimus/", "/helm-emeritus-maintainer-rimas-mocevicius/"]
++authorname: "Matt Butcher"
++author: "@technosophos"
++authorlink: "https://twitter.com/technosophos"
+ date: "2018-07-24"
+ ---
+ 
+-Rimas Mocevicius ([rimusz](https://github.com/rimusz)) has become the fourth Helm Emeritus Maintainer.<!-- truncate --> Rimas is one of the three original founders of Helm. Author of [CoreOS Essentials](https://rimusz.net/coreos-essential-book/) (Packt, 2016) and creator of [Kube Solo](https://github.com/TheNewNormal/kube-solo-osx), Rimas is a long-time member of the Kubernetes ecosystem. Rimas was an active contributor on Helm Classic, and has been a leading voice in the community ever since.
++Rimas Mocevicius ([rimusz](https://github.com/rimusz)) has become the fourth Helm Emeritus Maintainer. Rimas is one of the three original founders of Helm. Author of [CoreOS Essentials](https://rimusz.net/coreos-essential-book/) (Packt, 2016) and creator of [Kube Solo](https://github.com/TheNewNormal/kube-solo-osx), Rimas is a long-time member of the Kubernetes ecosystem. Rimas was an active contributor on Helm Classic, and has been a leading voice in the community ever since.
+ 
+ Check out Rimas' latest blog post on [Tillerless Helm](https://rimusz.net/tillerless-helm).
+diff --git a/blog/2018-08-27-helm-switch-dco.md b/blog/2018-08-27-helm-switch-dco.md
+index 618b3bf..489ea4e 100755
+--- a/blog/2018-08-27-helm-switch-dco.md
++++ b/blog/2018-08-27-helm-switch-dco.md
+@@ -1,10 +1,13 @@
+ ---
+ title: "Helm Moves To DCO"
+ slug: "helm-dco"
++aliases: "/blog/2018-08-27-helm-switch-dco/"
++authorname: "Matt Farina"
++authorlink: "https://mattfarina.com"
+ date: "2018-08-27"
+ ---
+ 
+-When Helm was part of the Kubernetes project it, like the rest of Kubernetes, used the [CNCF Contributor License Agreement (CLA)](https://github.com/cncf/cla). This served Helm well for years. But, most of the CNCF projects use a [Developers Certificate of Origin (DCO)](https://developercertificate.org/) instead of a CLA. The exceptions are Kubernetes and gRPC. Upon Helm becoming a CNCF project itself we were asked if we wanted to move Helm to a DCO. After some careful consideration and a little research, the Helm maintainers voted to move to a DCO.  <!-- truncate -->
++When Helm was part of the Kubernetes project it, like the rest of Kubernetes, used the [CNCF Contributor License Agreement (CLA)](https://github.com/cncf/cla). This served Helm well for years. But, most of the CNCF projects use a [Developers Certificate of Origin (DCO)](https://developercertificate.org/) instead of a CLA. The exceptions are Kubernetes and gRPC. Upon Helm becoming a CNCF project itself we were asked if we wanted to move Helm to a DCO. After some careful consideration and a little research, the Helm maintainers voted to move to a DCO.  <!--more-->
+ ## What Does This Solve? Why Switch?
+ 
+ Making a change like this should have a good reason and we have one. It is often easier to get started contributing under a DCO than a CLA.
+diff --git a/blog/2018-09-07-new-gov-and-elections.md b/blog/2018-09-07-new-gov-and-elections.md
+index 10517e0..6bc4431 100755
+--- a/blog/2018-09-07-new-gov-and-elections.md
++++ b/blog/2018-09-07-new-gov-and-elections.md
+@@ -1,10 +1,13 @@
+ ---
+ title: "New Governance And Elections"
+ slug: "new-gov-and-elections"
++aliases: "/blog/2018-09-07-new-gov-and-elections/"
++authorname: "Matt Farina"
++authorlink: "https://mattfarina.com"
+ date: "2018-09-07"
+ ---
+ 
+-Being a top level incubating CNCF project requires having a governance structure to ensure that there is a publicly documented process for making decisions regarding the project and the community. While Helm was under Kubernetes, we relied on Kubernetes governance. As part of the transition to CNCF, the Helm project is required to have its own governance structure. To handle this we set up a [provisional governance](https://github.com/helm/community/blob/aa0586011786dfbc3993e7edd959a841241c96e3/governance/provisional-governance.md) with a goal of creating a long term one. After a few months we are happy to announce that the new governance structure has been written and approved.  <!-- truncate -->
++Being a top level incubating CNCF project requires having a governance structure to ensure that there is a publicly documented process for making decisions regarding the project and the community. While Helm was under Kubernetes, we relied on Kubernetes governance. As part of the transition to CNCF, the Helm project is required to have its own governance structure. To handle this we set up a [provisional governance](https://github.com/helm/community/blob/aa0586011786dfbc3993e7edd959a841241c96e3/governance/provisional-governance.md) with a goal of creating a long term one. After a few months we are happy to announce that the new governance structure has been written and approved.  <!--more-->
+ 
+ The gist of the new governance is that it organizes those responsible into a couple groups (org and project maintainers), spells out their responsibilities, and provides for decision making processes. You can read all the details in the [governance doc (here)](https://github.com/helm/community/blob/main/governance/governance.md).
+ 
+diff --git a/blog/2018-09-25-chart-testing-intro.md b/blog/2018-09-25-chart-testing-intro.md
+index f2fa97f..ccc6f91 100755
+--- a/blog/2018-09-25-chart-testing-intro.md
++++ b/blog/2018-09-25-chart-testing-intro.md
+@@ -1,10 +1,13 @@
+ ---
+ title: "Using the Community Chart Testing Tools Yourself"
+ slug: "chart-testing-intro"
++aliases: "/blog/2018-09-25-chart-testing-intro/"
++authorname: "Matt Farina"
++authorlink: "https://mattfarina.com"
+ date: "2018-09-25"
+ ---
+ 
+-The Helm community charts, [available as the stable and incubator repositories](https://github.com/helm/charts), have long had testing. That testing has grown and improved a significant amount in the past year; from Helm linting and testing if an application runs in a cluster to now include YAML linting, some validation on maintainers, `Chart.yaml` schema validation, tests on chart version increments, and more.  <!-- truncate -->
++The Helm community charts, [available as the stable and incubator repositories](https://github.com/helm/charts), have long had testing. That testing has grown and improved a significant amount in the past year; from Helm linting and testing if an application runs in a cluster to now include YAML linting, some validation on maintainers, `Chart.yaml` schema validation, tests on chart version increments, and more.  <!--more-->
+ 
+ These testing tools are useful for more than the community charts. They could be used in development workflows, in other testing systems, and for private charts. To make the testing more accessible we (mostly [Reinhard Nägele](https://github.com/unguiculus/)) refactored the tools into a container image that can be run outside of the community charts testing infrastructure.
+ 
+diff --git a/blog/2018-10-04-helm-org-maintainers.md b/blog/2018-10-04-helm-org-maintainers.md
+index 2579963..26cab79 100755
+--- a/blog/2018-10-04-helm-org-maintainers.md
++++ b/blog/2018-10-04-helm-org-maintainers.md
+@@ -1,10 +1,13 @@
+ ---
+ title: "Introducing the Helm Org Maintainers"
+ slug: "intro-helm-org-maintainers"
++aliases: "/blog/2018-10-04-helm-org-maintainers/"
++authorname: "Matt Farina & Matt Butcher"
++authorlink: "https://helm.sh"
+ date: "2018-10-04"
+ ---
+ 
+-The first major action under the [new Helm governance](https://www.helm.sh/blog/new-gov-and-elections/index.html) was to elect a set of [Helm Org Maintainers](https://github.com/helm/community/blob/52161625acabf4187ae052f4e5fdd36daea91684/governance/governance.md#helm-org-maintainers). In the initial election we were looking to select 7 people to represent Helm core, charts, and other projects under the Helm umbrella. The election is now complete and I would like to introduce the first set of Org Maintainers.  <!-- truncate -->
++The first major action under the [new Helm governance](https://www.helm.sh/blog/new-gov-and-elections/index.html) was to elect a set of [Helm Org Maintainers](https://github.com/helm/community/blob/52161625acabf4187ae052f4e5fdd36daea91684/governance/governance.md#helm-org-maintainers). In the initial election we were looking to select 7 people to represent Helm core, charts, and other projects under the Helm umbrella. The election is now complete and I would like to introduce the first set of Org Maintainers.  <!--more-->
+ 
+ In alphabetical order, by first name, they are:
+ 
+diff --git a/blog/2018-12-11-helm-hub.md b/blog/2018-12-11-helm-hub.md
+index 629e9e4..0b721f4 100755
+--- a/blog/2018-12-11-helm-hub.md
++++ b/blog/2018-12-11-helm-hub.md
+@@ -1,12 +1,15 @@
+ ---
+ title: "Introducing the Helm Hub"
+ slug: "intro-helm-hub"
++aliases: "/blog/2018-12-11-helm-hub/"
++authorname: "Matt Farina"
++authorlink: "https://mattfarina.com"
+ date: "2018-12-11"
+ ---
+ 
+ Helm was designed with many distributed repositories in mind. Like Homebrew Taps and Debian APT repositories, Helm has the ability to add and work with many repositories. While the Helm [stable and incubator repositories](https://github.com/helm/charts) have been front and center from the beginning it was never our intent for these to be the only public repositories.
+ 
+-With this in mind, we are delighted to announce the launch of the [Helm Hub](https://hub.helm.sh). This hub provides a means for you to find charts hosted in many distributed repositories hosted by numerous people and organizations. <!-- truncate -->
++With this in mind, we are delighted to announce the launch of the [Helm Hub](https://hub.helm.sh). This hub provides a means for you to find charts hosted in many distributed repositories hosted by numerous people and organizations. <!--more-->
+ 
+ ![Helm Hub](https://helm.sh/img/blog/helm-hub.png)
+ 
+diff --git a/blog/2019-01-14-chartmuseum-security-notice.md b/blog/2019-01-14-chartmuseum-security-notice.md
+index c88c96c..1e0e324 100755
+--- a/blog/2019-01-14-chartmuseum-security-notice.md
++++ b/blog/2019-01-14-chartmuseum-security-notice.md
+@@ -1,17 +1,19 @@
+ ---
+ title: "ChartMuseum Vulnerability: Authorization Bypass [CVE-2019-1000009]"
+ slug: "chartmuseum-security-notice-2019"
++aliases: "/blog/2019-01-14-chartmuseum-security-notice/"
++authorname: "Matt Farina & Josh Dolitsky"
++authorlink: "https://helm.sh"
+ date: "2019-01-14"
+ ---
+ 
+ Security researcher Bernard Wagner of [Entersekt](https://www.entersekt.com/) discovered a vulnerability in ChartMuseum, impacting **all versions of ChartMuseum between ChartMuseum >=0.1.0 and < 0.8.1**. A specially crafted chart could be uploaded that caused the uploaded archive to be saved outside of the intended location.
+ 
+ When ChartMuseum is configured for multitenancy the specially crafted chart could be uploaded to one tenant but saved in the location of another tenant. This includes overwriting a chart at a version in the other tenant.
+-<!-- truncate -->
+ 
+ Additionally, if ChartMuseum is configured to use a file system the uploaded Chart archive may be uploaded to locations outside of the storage directory. It could be uploaded to any place the ChartMuseum application binary has write permission to.
+ 
+-We are unaware of any public exploits caused by this issue.
++We are unaware of any public exploits caused by this issue.<!--more-->
+ 
+ ## Details
+ 
+diff --git a/blog/2019-01-14-helm-security-notice.md b/blog/2019-01-14-helm-security-notice.md
+index fb8e366..a8290e4 100755
+--- a/blog/2019-01-14-helm-security-notice.md
++++ b/blog/2019-01-14-helm-security-notice.md
+@@ -1,21 +1,23 @@
+ ---
+ title: "Helm Vulnerability: Client Unpacking Chart that Contains Malicious Content [CVE-2019-1000008]"
+ slug: "helm-security-notice-2019"
+-authors: ["mattbutcher"]
++aliases: "/blog/2019-01-14-helm-security-notice/"
++authorname: "Matt Butcher"
++author: "@technosophos"
++authorlink: "https://twitter.com/technosophos"
+ date: "2019-01-14"
+ ---
+ 
+ Security researcher Bernard Wagner of [Entersekt](https://www.entersekt.com/) discovered a vulnerability in the Helm client, impacting **all versions of Helm between Helm >=2.0.0 and < 2.12.2**. Two Helm client commands may be coerced into unpacking unsafe content from a maliciously designed chart.
+ 
+ A specially crafted chart may be able to unpack content into locations on the filesystem outside of the chart’s path, potentially overwriting existing files.
+-<!-- truncate -->
+ 
+ No version of Tiller is known to be impacted. This is a client-only issue.
+ 
+ The following Helm commands may unsafely unpack malformed charts onto a local folder: `helm fetch --untar` and `helm lint some.tgz`.
+ 
+ 
+-We are unaware of any public exploits caused by this issue.
++We are unaware of any public exploits caused by this issue.<!--more-->
+ 
+ ## Details
+ 
+diff --git a/blog/2019-04-18-helm-summit-eu-2019.md b/blog/2019-04-18-helm-summit-eu-2019.md
+index a457dc4..a8ad23f 100755
+--- a/blog/2019-04-18-helm-summit-eu-2019.md
++++ b/blog/2019-04-18-helm-summit-eu-2019.md
+@@ -1,11 +1,14 @@
+ ---
+ title: "Helm Summit EU 2019"
+ slug: "helm-summit-eu-2019"
+-authors: ["karenchu"]
++aliases: ["/blog/2019-04-18-helm-summit-eu-2019/", "/helm-summit-eu-2019/"]
++authorname: "Karen Chu"
++author: "@karenhchu"
++authorlink: "https://twitter.com/karenhchu"
+ date: "2019-04-18"
+ ---
+ 
+-We're beyond excited to share that [Helm Summit EU 2019](https://events.linuxfoundation.org/events/helm-summit-2019/) is now official (h/t to [CNCF](https://cncf.io/))! Join the Helm community on September 11 - 12 in Amsterdam, The Netherlands at Pakhuis de Zwijger for our first European Helm Summit. Over the course of two days, we'll discuss all things Helm and hold tutorials, working sessions, and small group discussions with new and exisiting users.<!-- truncate -->
++We're beyond excited to share that [Helm Summit EU 2019](https://events.linuxfoundation.org/events/helm-summit-2019/) is now official (h/t to [CNCF](https://cncf.io/))! Join the Helm community on September 11 - 12 in Amsterdam, The Netherlands at Pakhuis de Zwijger for our first European Helm Summit. Over the course of two days, we'll discuss all things Helm and hold tutorials, working sessions, and small group discussions with new and exisiting users. 
+ 
+ Interested in... 
+ 
+diff --git a/blog/2019-04-22-helm-3-preview-pt1.md b/blog/2019-04-22-helm-3-preview-pt1.md
+index 360da5f..bd79aaa 100755
+--- a/blog/2019-04-22-helm-3-preview-pt1.md
++++ b/blog/2019-04-22-helm-3-preview-pt1.md
+@@ -1,12 +1,15 @@
+ ---
+ title: "Helm 3 Preview: Charting Our Future – Part 1: A History of Helm"
+ slug: "helm-3-preview-pt1"
+-authors: ["mattfisher"]
++aliases: ["/blog/2019-04-22-helm-3-preview-pt1/", "/helm-3-preview-pt1/"]
++authorname: "Matt Fisher"
++author: "@bacongobbler"
++authorlink: "https://twitter.com/bacongobbler"
+ date: "2019-04-22"
+ ---
+ On October 15th, 2015, the project now known as Helm was born. Only one year later, the Helm community joined the Kubernetes organization as Helm 2 was fast approaching. In June 2018, the Helm community [joined the CNCF](https://www.cncf.io/blog/2018/06/01/cncf-to-host-helm/) as an incubating project. Fast forward to today, and Helm 3 is nearing its first alpha release.
+ 
+-In this series of seven blog posts over the next four weeks, I'll provide some history on Helm's beginnings, illustrate how we got where we are today, showcase some of the new features available for the first alpha release of Helm 3, and explain how we move forward from here.<!-- truncate -->
++In this series of seven blog posts over the next four weeks, I'll provide some history on Helm's beginnings, illustrate how we got where we are today, showcase some of the new features available for the first alpha release of Helm 3, and explain how we move forward from here.
+ 
+ In order, I'll discuss:
+ 
+diff --git a/blog/2019-04-25-helm-3-preview-pt2.md b/blog/2019-04-25-helm-3-preview-pt2.md
+index 3fe604e..d7d4ffd 100755
+--- a/blog/2019-04-25-helm-3-preview-pt2.md
++++ b/blog/2019-04-25-helm-3-preview-pt2.md
+@@ -1,13 +1,16 @@
+ ---
+ title: "Helm 3 Preview: Charting Our Future – Part 2: A Gentle Farewell to Tiller"
+ slug: "helm-3-preview-pt2"
+-authors: ["mattfisher"]
++aliases: ["/blog/2019-04-25-helm-3-preview-pt2/", "/helm-3-preview-pt2/"]
++authorname: "Matt Fisher"
++author: "@bacongobbler"
++authorlink: "https://twitter.com/bacongobbler"
+ date: "2019-04-25"
+ ---
+ 
+ This is part 2 of 7 of our *Helm 3 Preview: Charting Our Future* blog series. (Check out our previous blog post on the history of Helm [here](https://helm.sh/blog/helm-3-preview-pt1/).)
+ 
+-During the Helm 2 development cycle, we introduced Tiller as part of our integration with Google's Deployment Manager. Tiller played an important role for teams working on a shared cluster - it made it possible for multiple different operators to interact with the same set of releases.<!-- truncate -->
++During the Helm 2 development cycle, we introduced Tiller as part of our integration with Google's Deployment Manager. Tiller played an important role for teams working on a shared cluster - it made it possible for multiple different operators to interact with the same set of releases.
+ 
+ With role-based access controls (RBAC) enabled by default in Kubernetes 1.6, locking down Tiller for use in a production scenario became more difficult to manage. Due to the vast number of possible security policies, our stance was to provide a permissive default configuration. This allowed first-time users to start experimenting with Helm and Kubernetes without having to dive headfirst into the security controls. Unfortunately, this permissive configuration could grant a user a broad range of permissions they weren't intended to have. DevOps and SREs had to learn additional operational steps when installing Tiller into a multi-tenant cluster.
+ 
+diff --git a/blog/2019-04-29-helm-3-preview-pt3.md b/blog/2019-04-29-helm-3-preview-pt3.md
+index f147de3..3f17f8d 100755
+--- a/blog/2019-04-29-helm-3-preview-pt3.md
++++ b/blog/2019-04-29-helm-3-preview-pt3.md
+@@ -1,13 +1,16 @@
+ ---
+ title: "Helm 3 Preview: Charting Our Future – Part 3: Chart Repositories"
+ slug: "helm-3-preview-pt3"
+-authors: ["mattfisher"]
++aliases: ["/blog/2019-04-29-helm-3-preview-pt3/", "/helm-3-preview-pt3/"]
++authorname: "Matt Fisher"
++author: "@bacongobbler"
++authorlink: "https://twitter.com/bacongobbler"
+ date: "2019-04-29"
+ ---
+ 
+ This is part 3 of 7 of our *Helm 3 Preview: Charting Our Future* blog series, discussing chart repositories. (Check out our previous blog post on the gentle goodbye to Tiller [here](https://helm.sh/blog/helm-3-preview-pt2/).)
+ 
+-At a high level, a Chart Repository is a location where Charts can be stored and shared. The Helm client packs and ships Helm Charts to a Chart Repository. Simply put, a Chart Repository is a basic HTTP server that houses an index.yaml file and some packaged charts.<!-- truncate -->
++At a high level, a Chart Repository is a location where Charts can be stored and shared. The Helm client packs and ships Helm Charts to a Chart Repository. Simply put, a Chart Repository is a basic HTTP server that houses an index.yaml file and some packaged charts.
+ 
+ While there are several benefits to the Chart Repository API meeting the most basic storage requirements, a few drawbacks have started to show:
+ 
+diff --git a/blog/2019-05-02-helm-3-preview-pt4.md b/blog/2019-05-02-helm-3-preview-pt4.md
+index a46b1c2..16515c0 100755
+--- a/blog/2019-05-02-helm-3-preview-pt4.md
++++ b/blog/2019-05-02-helm-3-preview-pt4.md
+@@ -1,13 +1,16 @@
+ ---
+ title: "Helm 3 Preview: Charting Our Future – Part 4: Release Management"
+ slug: "helm-3-preview-pt4"
+-authors: ["mattfisher"]
++aliases: ["/blog/2019-05-02-helm-3-preview-pt4/", "/helm-3-preview-pt4/"]
++authorname: "Matt Fisher"
++author: "@bacongobbler"
++authorlink: "https://twitter.com/bacongobbler"
+ date: "2019-05-02"
+ ---
+ 
+ This is part 4 of 7 of our *Helm 3 Preview: Charting Our Future* blog series on release management. (Check out our previous blog post on the Helm chart repositories [here](https://helm.sh/blog/helm-3-preview-pt3/.).
+ 
+-In Helm 3, an application's state is tracked in-cluster by a pair of objects:<!-- truncate -->
++In Helm 3, an application's state is tracked in-cluster by a pair of objects:
+ 
+ - The release object: represents an instance of an application
+ - The release version secret: represents an application's desired state at a particular instance of time (the release of a new version, for example)
+diff --git a/blog/2019-05-06-helm-3-preview-pt5.md b/blog/2019-05-06-helm-3-preview-pt5.md
+index e828e3a..688673a 100755
+--- a/blog/2019-05-06-helm-3-preview-pt5.md
++++ b/blog/2019-05-06-helm-3-preview-pt5.md
+@@ -1,13 +1,16 @@
+ ---
+ title: "Helm 3 Preview: Charting Our Future – Part 5: Changes to Chart Dependencies"
+ slug: "helm-3-preview-pt5"
+-authors: ["mattfisher"]
++aliases: ["/blog/2019-05-06-helm-3-preview-pt5/", "/helm-3-preview-pt5/"]
++authorname: "Matt Fisher"
++author: "@bacongobbler"
++authorlink: "https://twitter.com/bacongobbler"
+ date: "2019-05-06"
+ ---
+ 
+ This is part 5 of 7 of our *Helm 3 Preview: Charting Our Future* blog series about chart dependencies and some subtle differences between Helm 2 and Helm 3. (Check out our previous blog post on release management [here](https://helm.sh/blog/helm-3-preview-pt4/).)
+ 
+-Charts that were packaged (with `helm package`) for use with Helm 2 can be installed with Helm 3, but the chart development workflow received an overhaul, so some changes are necessary to continue developing charts with Helm 3. One of the components that changed was the chart dependency management system.<!-- truncate -->
++Charts that were packaged (with `helm package`) for use with Helm 2 can be installed with Helm 3, but the chart development workflow received an overhaul, so some changes are necessary to continue developing charts with Helm 3. One of the components that changed was the chart dependency management system.
+ 
+ The Chart dependency management system moved from requirements.yaml and requirements.lock to Chart.yaml and Chart.lock, meaning that charts that relied on the `helm dependency` command will need some tweaking to work in Helm 3.
+ 
+diff --git a/blog/2019-05-09-helm-3-preview-pt6.md b/blog/2019-05-09-helm-3-preview-pt6.md
+index d92df88..dcb9438 100755
+--- a/blog/2019-05-09-helm-3-preview-pt6.md
++++ b/blog/2019-05-09-helm-3-preview-pt6.md
+@@ -1,13 +1,16 @@
+ ---
+ title: "Helm 3 Preview: Charting Our Future – Part 6: Introducing Library Charts"
+ slug: "helm-3-preview-pt6"
+-authors: ["mattfisher"]
++aliases: ["/blog/2019-05-09-helm-3-preview-pt6/", "/helm-3-preview-pt6/"]
++authorname: "Matt Fisher"
++author: "@bacongobbler"
++authorlink: "https://twitter.com/bacongobbler"
+ date: "2019-05-09"
+ ---
+ 
+ This is part 6 of 7 of our *Helm 3 Preview: Charting Our Future* blog series on library charts. You can find our previous blog post on the Helm chart dependencies [here](https://helm.sh/blog/helm-3-preview-pt5/).
+ 
+-Helm 3 supports a class of chart called a "library chart". This is a chart that is shared by other charts, but does not create any release artifacts of its own. A library chart's templates can only declare `define` elements. Globally scoped non-define content is simply ignored. This allows users to re-use and share snippets of code that can be re-used across many charts, avoiding redundancy and keeping charts [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).<!-- truncate -->
++Helm 3 supports a class of chart called a "library chart". This is a chart that is shared by other charts, but does not create any release artifacts of its own. A library chart's templates can only declare `define` elements. Globally scoped non-define content is simply ignored. This allows users to re-use and share snippets of code that can be re-used across many charts, avoiding redundancy and keeping charts [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
+ 
+ Library charts are declared in the `dependencies` directive in Chart.yaml, and are installed and managed like any other chart.
+ 
+diff --git a/blog/2019-05-13-helm-3-preview-pt7.md b/blog/2019-05-13-helm-3-preview-pt7.md
+index 8cb4fd4..4964aa8 100755
+--- a/blog/2019-05-13-helm-3-preview-pt7.md
++++ b/blog/2019-05-13-helm-3-preview-pt7.md
+@@ -1,13 +1,16 @@
+ ---
+ title: "Helm 3 Preview: Charting Our Future – Part 7: What's Next?"
+ slug: "helm-3-preview-pt7"
+-authors: ["mattfisher"]
++aliases: ["/blog/2019-05-13-helm-3-preview-pt7/", "/helm-3-preview-pt7/"]
++authorname: "Matt Fisher"
++author: "@bacongobbler"
++authorlink: "https://twitter.com/bacongobbler"
+ date: "2019-05-13"
+ ---
+ 
+ This is the seventh and final part of our *Helm 3 Preview: Charting Our Future* blog series. Read our previous blog post on library charts [here](https://helm.sh/blog/helm-3-preview-pt6/).
+ 
+-Helm 3.0.0-alpha.1 is the foundation upon which we'll begin to build the next version of Helm. The features shared over the last few weeks were some of the big promises we made for Helm 3. Many of those features are still in their early stages and that is OK; the idea of an alpha release is to test out an idea, gather feedback from early adopters, and validate those assumptions.<!-- truncate -->
++Helm 3.0.0-alpha.1 is the foundation upon which we'll begin to build the next version of Helm. The features shared over the last few weeks were some of the big promises we made for Helm 3. Many of those features are still in their early stages and that is OK; the idea of an alpha release is to test out an idea, gather feedback from early adopters, and validate those assumptions.
+ 
+ Once the alpha has been released, we can start accepting patches from the community for Helm 3. We should have a stable foundation on which to build and accept new features, and users should feel empowered to open tickets and contribute fixes.
+ 
+diff --git a/blog/2019-06-10-get-helm-sh.md b/blog/2019-06-10-get-helm-sh.md
+index 61324e1..2eb1c6f 100755
+--- a/blog/2019-06-10-get-helm-sh.md
++++ b/blog/2019-06-10-get-helm-sh.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Announcing get.helm.sh"
+ slug: "get-helm-sh"
+-authors: ["mattfisher"]
++authorname: "Matt Fisher"
++author: "@bacongobbler"
++authorlink: "https://twitter.com/bacongobbler"
+ date: "2019-06-10"
+ ---
+ 
+ The Helm Client has long been available to download from Google Cloud Storage at the bucket <https://kubernetes-helm.storage.googleapis.com>. This bucket in Google Cloud has been used by Helm since before Kubernetes was part of the CNCF. The first release hosted on this bucket was Helm v2.0.0-alpha.5!
+ 
+-Google has long been gracious in providing funding for this location. Since Helm started using it, Helm (as part of Kubernetes) moved into the CNCF, and then moved out from under the Kubernetes umbrella, becoming a sister project to Kubernetes within the CNCF.<!-- truncate -->
++Google has long been gracious in providing funding for this location. Since Helm started using it, Helm (as part of Kubernetes) moved into the CNCF, and then moved out from under the Kubernetes umbrella, becoming a sister project to Kubernetes within the CNCF.
+ 
+ The CNCF is in the process of taking over the infrastructure for Kubernetes. It was time for Helm to move from a location funded by Google to one funded by the CNCF. Google Cloud buckets cannot be transferred between projects, which meant we could not transfer the bucket over to a CNCF account. We needed to move to a new location as part of the move.
+ 
+diff --git a/blog/2019-08-27-helm-v3-beta.md b/blog/2019-08-27-helm-v3-beta.md
+index 531785f..14632a8 100755
+--- a/blog/2019-08-27-helm-v3-beta.md
++++ b/blog/2019-08-27-helm-v3-beta.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Helm v3 Beta 1 Released"
+ slug: "helm-v3-beta"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2019-08-27"
+ ---
+ 
+ Helm v3 development has hit a new milestone with the release of the [first beta](https://github.com/helm/helm/releases/tag/v3.0.0-beta.1). This is an especially important milestone because it is the end of the effort to refactor Helm v3. The last of the _intended_ breaking changes has landed. From this point on, Helm v3 is focused on bug fixes, stability, and preparing it for a stable release.
+ 
+-If you are interested in Helm v3 now is a great time to test it out. If you find issues please file an issue if one has not already been filed.<!-- truncate -->
++If you are interested in Helm v3 now is a great time to test it out. If you find issues please file an issue if one has not already been filed.
+ 
+ ## Notable changes since Helm v2
+ 
+diff --git a/blog/2019-09-11-migrate-from-helm-v2-to-helm-v3.md b/blog/2019-09-11-migrate-from-helm-v2-to-helm-v3.md
+index b8ce2ee..2730959 100755
+--- a/blog/2019-09-11-migrate-from-helm-v2-to-helm-v3.md
++++ b/blog/2019-09-11-migrate-from-helm-v2-to-helm-v3.md
+@@ -1,15 +1,15 @@
+ ---
+ title: "How to migrate from Helm v2 to Helm v3"
+ slug: "migrate-from-helm-v2-to-helm-v3"
+-authors: ["rimasmocevicius"]
++authorname: "Rimas Mocevicius"
++author: "@rimusz"
++authorlink: "https://rimusz.net"
+ date: "2019-09-11"
+ ---
+ 
+-
+-![Diagram how to migrate from Helm 2 to 3](images/helm-2to3.png)
++![../images/helm-2to3.png](/blog/images/helm-2to3.png)
+ 
+ One of the most important parts of upgrading to a new major release of Helm is the migration of data. This is especially true of Helm v2 to v3 considering the architectural changes between the releases. This is where the [helm-2to3](https://github.com/helm/helm-2to3) plugin comes in.
+-<!-- truncate -->
+ 
+ It helps with this migration by supporting:
+ 
+diff --git a/blog/2019-10-22-helm-2150-released.md b/blog/2019-10-22-helm-2150-released.md
+index c28605e..e20b70d 100755
+--- a/blog/2019-10-22-helm-2150-released.md
++++ b/blog/2019-10-22-helm-2150-released.md
+@@ -1,6 +1,8 @@
+ ---
+ title: "Helm 2.15.0 Released"
+-authors: ["mattfisher"]
++authorname: "Matthew Fisher"
++author: "@bacongobbler"
++authorlink: "https://blog.bacongobbler.com"
+ date: "2019-10-22"
+ ---
+ 
+@@ -8,7 +10,7 @@ date: "2019-10-22"
+ 
+ In addition to these new features (and many more!), many bugs and edge cases in Helm continue to fixed by members of the community. Several parts of the codebase have been refactored for easier maintainability, usability, and better testing.
+ 
+-As Helm moves towards Helm 3's first release, Helm 2 is now transitioning into "maintenance mode". Helm 2.15.0 will be the final feature release for Helm 2.<!-- truncate -->
++As Helm moves towards Helm 3's first release, Helm 2 is now transitioning into "maintenance mode". Helm 2.15.0 will be the final feature release for Helm 2.
+ 
+ ## Helm 2 support plan
+ 
+diff --git a/blog/2019-10-30-helm-symlink-security-notice.md b/blog/2019-10-30-helm-symlink-security-notice.md
+index 22b5a18..fa063aa 100755
+--- a/blog/2019-10-30-helm-symlink-security-notice.md
++++ b/blog/2019-10-30-helm-symlink-security-notice.md
+@@ -1,12 +1,14 @@
+ ---
+ title: "Helm Vulnerability: Client Loading and Packaging Chart Directory Containing Malicious Symlinked Content [CVE-2019-18658]"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2019-10-30"
+ ---
+ 
+ Part of the process for Helm to become a graduated CNCF project is to complete an independent and third party security audit with the results being published. As part of the audit of Helm 3 a security issue was found that also impacts Helm v2. [Cure53](https://cure53.de/) performed the audit and found the issue. More about the audit will be covered in a future post.
+ 
+-The vulnerability found impacts **all versions of Helm between Helm >=2.0.0 and < 2.15.2**. Helm commands that deal with loading a chart as a directory or packaging a chart provide an opportunity for a maliciously designed chart to include content not intended in the chart or to execute a denial of service (DOS) on the computer performing the packaging via the use of symlinks.<!-- truncate -->
++The vulnerability found impacts **all versions of Helm between Helm >=2.0.0 and < 2.15.2**. Helm commands that deal with loading a chart as a directory or packaging a chart provide an opportunity for a maliciously designed chart to include content not intended in the chart or to execute a denial of service (DOS) on the computer performing the packaging via the use of symlinks.
+ 
+ No version of Tiller is known to be impacted. This is a client-only issue.
+ 
+diff --git a/blog/2019-11-04-helm-security-audit-results.md b/blog/2019-11-04-helm-security-audit-results.md
+index d2c5032..6d7a390 100755
+--- a/blog/2019-11-04-helm-security-audit-results.md
++++ b/blog/2019-11-04-helm-security-audit-results.md
+@@ -1,6 +1,8 @@
+ ---
+ title: "Helm Security Audit Results"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2019-11-04"
+ ---
+ 
+@@ -8,7 +10,7 @@ Today, the Helm Maintainers are proud to announce that we have successfully comp
+ 
+ A security audit is part of the graduation criteria for CNCF projects. Specifically, the [graduation criteria](https://github.com/cncf/toc/blob/main/process/graduation_criteria.adoc#graduation-stage) says:
+ 
+-> Have completed an independent and third party security audit with results published of similar scope and quality as the following example (including critical vulnerabilities addressed): https://github.com/envoyproxy/envoy#security-audit and all critical vulnerabilities need to be addressed before graduation.<!-- truncate -->
++> Have completed an independent and third party security audit with results published of similar scope and quality as the following example (including critical vulnerabilities addressed): https://github.com/envoyproxy/envoy#security-audit and all critical vulnerabilities need to be addressed before graduation.
+ 
+ During October, the CNCF funded [Cure53](https://cure53.de/) to perform a security audit of Helm version 3. Cure53 has performed audits of other CNCF projects including Prometheus, Envoy, Jaeger, Notary, and others.
+ 
+diff --git a/blog/2019-11-11-community-management.md b/blog/2019-11-11-community-management.md
+index 6daa9df..f12da64 100755
+--- a/blog/2019-11-11-community-management.md
++++ b/blog/2019-11-11-community-management.md
+@@ -1,12 +1,14 @@
+ ---
+ title: "Helm Community Management"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2019-11-11"
+ ---
+ 
+ [Devstats](https://helm.devstats.cncf.io/) and stats on GitHub are able to capture many different types of contributions to an open source project. But there is one type of contribution for which we have yet to figure out a good metric, and it has been essential for Helm's success. That is community management.
+ 
+-Karen Chu has handled community management for Helm since the project was first announced at the inaugural KubeCon in San Francisco. Her work ranges from big things, like planning and executing two Helm Summits, down to smaller (but still essential) things like managing the [Helm twitter account](https://twitter.com/HelmPack).<!-- truncate -->
++Karen Chu has handled community management for Helm since the project was first announced at the inaugural KubeCon in San Francisco. Her work ranges from big things, like planning and executing two Helm Summits, down to smaller (but still essential) things like managing the [Helm twitter account](https://twitter.com/HelmPack).
+ 
+ Until this point, Karen's role has been pseudo-official. There has been no Helm related title or sub-project of Helm for this work. We are happy to announce that we have now rectified the situation by formalizing community management as a sub-project of Helm with Karen as the person running the show.
+ 
+diff --git a/blog/2019-11-13-helm-3-released.md b/blog/2019-11-13-helm-3-released.md
+index b6cd4d2..0bc4c93 100644
+--- a/blog/2019-11-13-helm-3-released.md
++++ b/blog/2019-11-13-helm-3-released.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Helm 3.0.0 has been released!"
+ slug: "helm-3-released"
+-authors: ["mattfisher"]
++authorname: "Matthew Fisher"
++author: "@bacongobbler"
++authorlink: "https://blog.bacongobbler.com"
+ date: "2019-11-13"
+ ---
+ 
+ The Helm Team is proud to announce the first stable release of Helm 3.
+ 
+-Helm 3 is the latest major release of the CLI tool. Helm 3 builds upon the success of Helm 2, continuing to meet the needs of the evolving ecosystem.<!-- truncate -->
++Helm 3 is the latest major release of the CLI tool. Helm 3 builds upon the success of Helm 2, continuing to meet the needs of the evolving ecosystem.
+ 
+ The internal implementation of Helm 3 has changed considerably from Helm 2. The most apparent change is the removal of Tiller, but it's worth checking out the other changes by diving into the new release. A rich set of new features have been added as a result of the community's input and requirements. Some features have been deprecated or refactored in ways that make them incompatible with Helm 2. Some new experimental features have also been introduced, including OCI support.
+ 
+diff --git a/blog/2019-11-15-helm-at-cloudnativecon.md b/blog/2019-11-15-helm-at-cloudnativecon.md
+index d0a46d7..b28873f 100644
+--- a/blog/2019-11-15-helm-at-cloudnativecon.md
++++ b/blog/2019-11-15-helm-at-cloudnativecon.md
+@@ -1,10 +1,12 @@
+ ---
+ title: "Helm at KubeCon + CloudNativeCon NA 2019"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2019-11-15"
+ ---
+ 
+-Next week is the annual [KubeCon and CloudNativeCon in North America](https://events19.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2019/). The Helm project and maintainers have several things going on and we wanted to invite you to them.<!-- truncate -->
++Next week is the annual [KubeCon and CloudNativeCon in North America](https://events19.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2019/). The Helm project and maintainers have several things going on and we wanted to invite you to them.
+ 
+ Helm will have two maintainer track sessions that focus on an [_Introduction to Helm_](https://sched.co/UajI) and a [_Helm 3 Deep Dive_](https://sched.co/Uagg). Anyone who is new to Helm or would be interested in learning how and why they should use Helm, please consider attending the _Introduction to Helm_. If you are curious about the [recently released Helm 3](https://helm.sh/blog/helm-3-released/), the _Helm 3 Deep Dive_ is for you. Please let others know about these talks if you think they will interest them!
+ 
+diff --git a/blog/2020-04-02-covid-19-extending-helm-v2-bug-fixes.md b/blog/2020-04-02-covid-19-extending-helm-v2-bug-fixes.md
+index 7b37a27..bf8626d 100644
+--- a/blog/2020-04-02-covid-19-extending-helm-v2-bug-fixes.md
++++ b/blog/2020-04-02-covid-19-extending-helm-v2-bug-fixes.md
+@@ -1,10 +1,12 @@
+ ---
+ title: "COVID-19: Extending Helm v2 Bug Fixes"
+ slug: "covid-19-extending-helm-v2-bug-fixes"
++authorname: "Matt Farina & Bridget Kromhout"
++authorlink: "https://helm.sh"
+ date: "2020-04-03"
+ ---
+ 
+-As our world comes together to fight the global pandemic, the Helm maintainers want to ensure that we're doing our part to help you maintain your critical systems while they are operating at peak demand in a time where normal development and operation schedules have had to be adjusted.<!-- truncate -->
++As our world comes together to fight the global pandemic, the Helm maintainers want to ensure that we're doing our part to help you maintain your critical systems while they are operating at peak demand in a time where normal development and operation schedules have had to be adjusted.
+ 
+ When Helm v3 was released in November 2019, our original commitment was that we would offer six months of Helm v2 bug fixes, which would end May 13, 2020, followed by six more months of security fixes for Helm v2. Given the expectation that current priorities require a singular focus on fighting the pandemic, we now plan to release Helm v2 bug fixes for an extra three months, until August 13th, 2020, giving Helm users more time for serving their communities' most immediate needs.
+ 
+diff --git a/blog/2020-04-30-celebrating-helms-cncf-graduation.md b/blog/2020-04-30-celebrating-helms-cncf-graduation.md
+index 38c7c4a..99b89f5 100644
+--- a/blog/2020-04-30-celebrating-helms-cncf-graduation.md
++++ b/blog/2020-04-30-celebrating-helms-cncf-graduation.md
+@@ -1,13 +1,17 @@
+ ---
+ title: "Celebrating Helm's CNCF Graduation"
+ slug: "celebrating-helms-cncf-graduation"
+-authors: ["mattbutcher"]
++authorname: "Matt Butcher"
++author: "@technosophos"
++authorlink: "https://twitter.com/technosophos"
+ date: "2020-04-30"
++twittertype: "summary_large_image"
++twitterimage: "blog/images/helmgraduation-twitter.png"
+ ---
+ 
+-![images/helmgraduation.png](images/helmgraduation.png)
++![../images/helmgraduation.png](/blog/images/helmgraduation.png)
+ 
+-Today we are happy to see Helm [reach the final stage of the CNCF ladder](https://www.cncf.io/announcement/2020/04/30/cloud-native-computing-foundation-announces-helm-graduation/). Helm has moved from the incubating level to the graduated level as a [CNCF project](https://www.cncf.io/projects/), alongside Kubernetes and other select projects.<!-- truncate -->
++Today we are happy to see Helm [reach the final stage of the CNCF ladder](https://www.cncf.io/announcement/2020/04/30/cloud-native-computing-foundation-announces-helm-graduation/). Helm has moved from the incubating level to the graduated level as a [CNCF project](https://www.cncf.io/projects/), alongside Kubernetes and other select projects.
+ 
+ Given Helm's humble beginnings as a hackathon project at Deis, a small startup, we are ecstatic to see our little baby all grown up. And we have certainly learned a lot about coding, community, and organizational politics over the last five years. But those are not the big reasons why we are celebrating Helm's graduation.
+ 
+diff --git a/blog/2020-08-13-helm-v2-deprecation-timeline.md b/blog/2020-08-13-helm-v2-deprecation-timeline.md
+index a4dc5d8..9e2e361 100644
+--- a/blog/2020-08-13-helm-v2-deprecation-timeline.md
++++ b/blog/2020-08-13-helm-v2-deprecation-timeline.md
+@@ -1,7 +1,9 @@
+ ---
+ title: "Helm v2 Deprecation Timeline"
+ slug: "helm-v2-deprecation-timeline"
+-authors: ["bridgetkromhout"]
++authorname: "Bridget Kromhout"
++author: "@bridgetkromhout"
++authorlink: "https://twitter.com/bridgetkromhout"
+ date: "2020-08-12"
+ ---
+ 
+@@ -14,11 +16,10 @@ _[with a nod to Lewis Carroll...](https://www.jabberwocky.com/carroll/walrus.htm
+       Of bugfixes -- and k8s --”
+ 
+ [Helm v3 was released in November 2019](/blog/helm-3-released/), the result of ongoing community effort to evolve Helm to meet the community’s needs. With a streamlined client-only experience, a renewed focus on security, and tighter integration with Kubernetes APIs, Helm v3 continues to provide production-tested package management for Kubernetes. And as a [graduated CNCF project](/blog/celebrating-helms-cncf-graduation/), Helm is a key part of the cloud native ecosystem.
+-<!-- truncate -->
+ 
+ We recognize that rolling out a major version change in production requires time. The Helm maintainers committed to providing bugfixes for Helm v2 until May 2020 (which they [extended to August 2020](/blog/covid-19-extending-helm-v2-bug-fixes/)) and security patches for Helm v2 until November 2020. And now the bugfix window is closing; [Helm v2.16.10](https://github.com/helm/helm/releases/tag/v2.16.10) will be the final bugfix release and 2.17.0 will follow with the [download location updated](https://github.com/helm/helm/issues/8346).
+-
+-## What does this mean for Helm users?
++<!--more-->
++What does this mean for Helm users?
+ 
+ _After August 13, 2020, you will see these changes:_
+ - If you’re still using Helm v2, you will want to [migrate to Helm v3](/blog/migrate-from-helm-v2-to-helm-v3/) now. Helm 3.2.4 is widely used and production-ready. While largely backwards-compatible, there are specific changes you’ll want to be aware of when carrying out your migration.
+diff --git a/blog/2020-10-07-helm-hub-moving-artifact-hub.md b/blog/2020-10-07-helm-hub-moving-artifact-hub.md
+index 2c9fb5a..e5eda6b 100644
+--- a/blog/2020-10-07-helm-hub-moving-artifact-hub.md
++++ b/blog/2020-10-07-helm-hub-moving-artifact-hub.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Helm Hub Moving To Artifact Hub"
+ slug: "helm-hub-moving-to-artifact-hub"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2020-10-07"
+ ---
+ 
+-Today, we are happy to announce that the Helm Hub is moving to the [Artifact Hub](https://artifacthub.io/). That means, when you go to the Helm Hub you will be redirected to the Artifact Hub.<!-- truncate -->
++Today, we are happy to announce that the Helm Hub is moving to the [Artifact Hub](https://artifacthub.io/). That means, when you go to the Helm Hub you will be redirected to the Artifact Hub.
+ 
+ ## What This Means For You
+ 
+diff --git a/blog/2020-10-19-helm-turns-five.md b/blog/2020-10-19-helm-turns-five.md
+index ceb0804..aff37a9 100644
+--- a/blog/2020-10-19-helm-turns-five.md
++++ b/blog/2020-10-19-helm-turns-five.md
+@@ -1,13 +1,16 @@
+ ---
+ title: " Helm Turns 5, and GitHub Gives the Gift of Charts"
+ slug: "helm-turns-five"
+-authors: ["mattbutcher", "mattfarina"]
++authorname: "Matt Butcher & Matt Farina"
++author: "@technosophos & @mattfarina"
++authorlink: "https://helm.sh"
+ date: "2020-10-19"
+ ---
+ 
+-![Happy 5th Birthday Helm](images/happy-5th.png)
++{{< figure src="https://helm.sh/blog/images/happy-5th.png" alt="Happy 5th Birthday Helm" >}}
+ 
+-Five years ago, in a hackathon at Deis (who has since been acquired by Microsoft) Helm was born.<!-- truncate -->
++Five years ago, in a hackathon at Deis (who has since been acquired by Microsoft) Helm was born.
++<!--more-->
+ 
+ ```
+ commit ecad6e2ef9523a0218864ec552bbfc724f0b9d3d
+@@ -25,7 +28,7 @@ But when it came to hosting the packaged charts, we stored them in an object sto
+ 
+ Recently, Google’s time of supporting the official Helm chart repository has come to a close. We are grateful for Google’s hosting the Helm chart repository these last few years. But this event has given us an opportunity to further integrate our chart development pipeline with GitHub.
+ 
+-![Hello Github Octocat!](images/octocat.png)
++{{< figure src="../images/octocat.png" alt="Hello Github Octocat!" width="350px" >}}
+ 
+ So for today’s birthday celebration, we would like to announce that the Helm `stable` and `incubator` chart repositories will be directly hosted out of GitHub. Furthermore, GitHub Actions will power the pipeline for publishing charts. And thanks to GitHub’s blazingly fast network, chart downloads are faster than ever!
+ 
+diff --git a/blog/2020-10-26-new-location-stable-incubator-charts.md b/blog/2020-10-26-new-location-stable-incubator-charts.md
+index 3c63225..497787d 100644
+--- a/blog/2020-10-26-new-location-stable-incubator-charts.md
++++ b/blog/2020-10-26-new-location-stable-incubator-charts.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "New Location For Stable and Incubator Charts"
+ slug: "new-location-stable-incubator-charts"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2020-10-26"
+ ---
+ 
+ [As previously announced](https://helm.sh/blog/helm-turns-five/), the stable and incubator repositories have moved to a new location. This post will update you on the new locations and provide directions to start using them.
+ 
+-_**Important Note:** This does not affect the obsolescence timeline for the stable and incubator repositories that was announced in 2019. On November 13, 2020 the stable and incubator charts repository will reach the end of development and become archives. You can find that many of the charts have moved to other, community managed, repositories. You can discover these on the [Artifact Hub](https://artifacthub.io/). More information on the obsolescence will follow in future blog posts and communications._<!-- truncate -->
++_**Important Note:** This does not affect the obsolescence timeline for the stable and incubator repositories that was announced in 2019. On November 13, 2020 the stable and incubator charts repository will reach the end of development and become archives. You can find that many of the charts have moved to other, community managed, repositories. You can discover these on the [Artifact Hub](https://artifacthub.io/). More information on the obsolescence will follow in future blog posts and communications._
+ 
+ The new location for the stable repository is https://charts.helm.sh/stable and the new location for the incubator repository is https://charts.helm.sh/incubator. If you use charts in either of these old locations below you MUST update the repositories you use before November 13, 2020. The new locations are hosted using GitHub pages.
+ 
+@@ -17,7 +19,7 @@ The new location for the stable repository is https://charts.helm.sh/stable and
+ | incubator | https://kubernetes-charts-incubator.storage.googleapis.com | https://charts.helm.sh/incubator |
+ 
+ 
+-Along with the new locations, Helm v2.17.0 and v3.4.0 have been released to help you use the new location. You are encouraged to upgrade to the latest versions.
++Along with the new locations, Helm v2.17.0 and v3.4.0 have been released to help you use the new location. You are encouraged to upgrade to the latest versions.<!--more-->
+ 
+ ## Helm v3.4.0
+ 
+diff --git a/blog/2020-10-30-charts-repo-deprecation.md b/blog/2020-10-30-charts-repo-deprecation.md
+index 939666d..7b5e966 100644
+--- a/blog/2020-10-30-charts-repo-deprecation.md
++++ b/blog/2020-10-30-charts-repo-deprecation.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Helm Chart Repository Deprecation Update"
+ slug: "charts-repo-deprecation"
+-authors: ["viciglesias"]
++authorname: "Vic Iglesias"
++author: "@vicnastea"
++authorlink: "https://twitter.com/vicnastea"
+ date: "2020-10-30"
+ ---
+ 
+-Back in 2019, when the Helm v2 support timeline and end of life plan was announced, [the deprecation](https://github.com/helm/charts#deprecation-timeline) of the [helm/charts GitHub repository](https://github.com/helm/charts) was announced, as well. The primary reason for the deprecation is the significant increase in upkeep for the [repo maintainers](https://github.com/helm/charts/blob/master/OWNERS). Over the last couple of years the number of charts under maintainance increased from ~100 to 300+ causing a commensurate increase in pull requests and updates to the repo. Unfortunately, despite many efforts to automate review and maintenance tasks, the amount of time available from maintainers has not increased.<!-- truncate -->
++Back in 2019, when the Helm v2 support timeline and end of life plan was announced, [the deprecation](https://github.com/helm/charts#deprecation-timeline) of the [helm/charts GitHub repository](https://github.com/helm/charts) was announced, as well. The primary reason for the deprecation is the significant increase in upkeep for the [repo maintainers](https://github.com/helm/charts/blob/master/OWNERS). Over the last couple of years the number of charts under maintainance increased from ~100 to 300+ causing a commensurate increase in pull requests and updates to the repo. Unfortunately, despite many efforts to automate review and maintenance tasks, the amount of time available from maintainers has not increased.
+ 
+ When we announced the deprecation we also began to share the tools and guidance that we had used to maintain the helm/charts repo. For folks that want to host and maintain their own repositories you now have these tools available to streamline the process:
+ 
+diff --git a/blog/2020-11-11-helm-release-process.md b/blog/2020-11-11-helm-release-process.md
+index d53f00d..ebb330b 100644
+--- a/blog/2020-11-11-helm-release-process.md
++++ b/blog/2020-11-11-helm-release-process.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Helm’s First Patch Wednesday"
+ slug: "helm-release-process"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2020-11-11"
+ ---
+ 
+-Helm recently adopted [a release schedule for minor and patch releases](https://github.com/helm/community/blob/main/hips/hip-0002.md). Today, the second Wednesday in November 2020, marks the first release under the new schedule. This release schedule provides predictability to those who use Helm, contribute to Helm, and maintain Helm.<!-- truncate -->
++Helm recently adopted [a release schedule for minor and patch releases](https://github.com/helm/community/blob/main/hips/hip-0002.md). Today, the second Wednesday in November 2020, marks the first release under the new schedule. This release schedule provides predictability to those who use Helm, contribute to Helm, and maintain Helm.<!--more-->
+ 
+ The release schedule generally follows these rules:
+ 
+diff --git a/blog/2020-11-13-helm-2-becomes-unsupported.md b/blog/2020-11-13-helm-2-becomes-unsupported.md
+index 00f3b88..a8541bc 100644
+--- a/blog/2020-11-13-helm-2-becomes-unsupported.md
++++ b/blog/2020-11-13-helm-2-becomes-unsupported.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Helm 2 and the Charts Project Are Now Unsupported"
+ slug: "helm-2-becomes-unsupported"
+-authors: ["mattbutcher"]
++authorname: "Matt Butcher"
++author: "@technosophos"
++authorlink: "https://technosophos.com"
+ date: "2020-11-13"
+ ---
+ 
+ A year ago, we [introduced Helm 3](https://helm.sh/blog/helm-3-released/), a major evolution in Helm's development. And we [announced](https://helm.sh/blog/2019-10-22-helm-2150-released/) at that time that Helm 2 would receive patches and security updates for a year.
+ 
+-Here we are, one year later. Friday the 13th, 2020 seems like a fitting day to end support for a major version. And today, we are announcing the official end of support for Helm 2. The charts repository is also now read-only, with no further changes.<!-- truncate -->
++Here we are, one year later. Friday the 13th, 2020 seems like a fitting day to end support for a major version. And today, we are announcing the official end of support for Helm 2. The charts repository is also now read-only, with no further changes.
+ 
+ From this point forward, the Helm team will devote all of its energy to Helm 3 and our ecosystem tools.
+ 
+diff --git a/blog/2021-03-05-second-security-audit/index.md b/blog/2021-03-05-second-security-audit/index.md
+index f861942..d02dc53 100644
+--- a/blog/2021-03-05-second-security-audit/index.md
++++ b/blog/2021-03-05-second-security-audit/index.md
+@@ -1,15 +1,17 @@
+ ---
+ title: "Helm 2nd Security Audit"
+ slug: "helm-2nd-security-audit"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2021-03-05"
+ ---
+ 
+-Helm has now completed a second security audit, funded by the [CNCF](https://cncf.io). The [first audit](https://helm.sh/blog/2019-11-04-helm-security-audit-results/) focused on the source code for the Helm client along with the process Helm uses to handle security. The second audit, performed by [Trail of Bits](https://www.trailofbits.com/), looked at the source code for the Helm client along with a threat model for the use of Helm.<!-- truncate -->
++Helm has now completed a second security audit, funded by the [CNCF](https://cncf.io). The [first audit](https://helm.sh/blog/2019-11-04-helm-security-audit-results/) focused on the source code for the Helm client along with the process Helm uses to handle security. The second audit, performed by [Trail of Bits](https://www.trailofbits.com/), looked at the source code for the Helm client along with a threat model for the use of Helm.<!--more-->
+ 
+ The following diagram is from the [threat model](https://github.com/helm/community/blob/main/security-audit/Helm%20Threat%20Model%202020.pdf) and looks at the connections Helm makes along with how it stores files on the local filesystem.
+ 
+-![Thread model diagram](arch.png)
++![](arch.png)
+ 
+ As a result of the audit, the Helm security team worked on [a release](https://github.com/helm/helm/releases/tag/v3.3.2).
+ 
+diff --git a/blog/2021-06-24-welcome-martin-hickey.md b/blog/2021-06-24-welcome-martin-hickey.md
+index a9062b7..07fb605 100644
+--- a/blog/2021-06-24-welcome-martin-hickey.md
++++ b/blog/2021-06-24-welcome-martin-hickey.md
+@@ -1,12 +1,13 @@
+ ---
+ title: "Martin Hickey Joins Helm Org Maintainers"
+ slug: "welcome-martin-hickey"
+-authors: ["mattbutcher"]
++authorname: "Matt Butcher"
++author: "@technosophos"
++authorlink: "https://twitter.com/technosophos"
+ date: "2021-06-24"
+ ---
+-
+-Meet Helm's newest org maintainer: [Martin Hickey](https://hickeyma.github.io/). Martin has been a longtime Helm project maintainer. He was instrumental in the development of Helm 3, and has been one of the most active maintainers on the project. He is also one of the creators of the [Helm 2-to-3 migration plugin](https://github.com/helm/helm-2to3).<!-- truncate -->
++Meet Helm's newest org maintainer: [Martin Hickey](https://hickeyma.github.io/). Martin has been a longtime Helm project maintainer. He was instrumental in the development of Helm 3, and has been one of the most active maintainers on the project. He is also one of the creators of the [Helm 2-to-3 migration plugin](https://github.com/helm/helm-2to3).
+ 
+ This week, the Helm maintainers voted to elect Martin onto the Helm Org Maintainers board. In this new role, Martin will help shape not just Helm, but the many projects that are hosted together with Helm. As a first order of business, Martin will be migrating the [Map KubeAPIs plugin](https://github.com/hickeyma/helm-mapkubeapis) to the Helm organization.
+ 
+-Congratulations to Martin!
++Congratulations to Martin!
+\ No newline at end of file
+diff --git a/blog/2022-01-11-welcome-karen-chu.md b/blog/2022-01-11-welcome-karen-chu.md
+index a1bea88..12a85aa 100644
+--- a/blog/2022-01-11-welcome-karen-chu.md
++++ b/blog/2022-01-11-welcome-karen-chu.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Karen Chu Joins Helm Org Maintainers"
+ slug: "welcome-karen-chu"
+-authors: ["mattbutcher"]
++authorname: "Matt Butcher"
++author: "@technosophos"
++authorlink: "https://twitter.com/technosophos"
+ date: "2022-01-11"
+ ---
+ 
+-The Helm organization is thrilled to introduce [Karen Chu](https://twitter.com/karenhchu) as the latest member of the [Helm org maintainers](https://github.com/helm/community/blob/main/governance/governance.md#helm-org-maintainers). She will be the [ninth committee member](https://github.com/helm/community/blob/main/MAINTAINERS.md). Karen has been active in the Helm ecosystem since day one when Rimas, Jack, and I first started the project. She was instrumental in Helm's early branding, organized both of the Helm Summits, and leads Helm's community management team. You may also know her from her Helm-adjacent work as the co-creator of the [Illustrated Children's Guide to Kubernetes](https://www.cncf.io/phippy/) series or her role as a CNCF ambassador.<!-- truncate -->
++The Helm organization is thrilled to introduce [Karen Chu](https://twitter.com/karenhchu) as the latest member of the [Helm org maintainers](https://github.com/helm/community/blob/main/governance/governance.md#helm-org-maintainers). She will be the [ninth committee member](https://github.com/helm/community/blob/main/MAINTAINERS.md). Karen has been active in the Helm ecosystem since day one when Rimas, Jack, and I first started the project. She was instrumental in Helm's early branding, organized both of the Helm Summits, and leads Helm's community management team. You may also know her from her Helm-adjacent work as the co-creator of the [Illustrated Children's Guide to Kubernetes](https://www.cncf.io/phippy/) series or her role as a CNCF ambassador.
+ 
+ Last week, the Helm project maintainers voted to elect Karen onto the Helm org maintainers board. In this role, Karen will help shape the many projects that are hosted under the Helm umbrella, bringing her insights from the wider ecosystem to her leadership of the Helm organization.
+ 
+diff --git a/blog/2022-02-28-storing-charts-in-oci.md b/blog/2022-02-28-storing-charts-in-oci.md
+index b2ab4e7..0d1baac 100644
+--- a/blog/2022-02-28-storing-charts-in-oci.md
++++ b/blog/2022-02-28-storing-charts-in-oci.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Storing Helm Charts in OCI Registries"
+ slug: "storing-charts-in-oci"
+-authors: ["scottrigby", "joshdolitsky", "mattfarina"]
++authorname: "Scott Rigby, Josh Dolitsky, Matt Farina"
++author: "@scottrigby, @jdolitsky, @mattfarina"
++authorlink: "https://helm.sh"
+ date: "2022-02-28"
+ ---
+ 
+ With the release of Helm 3.8.0, Helm is able to store and work with charts in container registries, as an alternative to [Helm repositories](https://helm.sh/docs/topics/chart_repository/). This feature, which used to be an experimental feature, is now generally available.
+ 
+-<!-- truncate -->
++<!--more-->
+ 
+ Over the past several years container registry developers have been working on ways to store other artifacts in container registries. To facilitate this in a cross platform manner, the Open Containers Initiative (OCI) - the organization that defines the specifications for containers - released their [distribution specification](https://specs.opencontainers.org/distribution-spec/?v=v1.0.0) which allowed other "artifacts" to be stored in registries.
+ 
+diff --git a/blog/2022-04-19-tools-to-manage-helm-declaratively.md b/blog/2022-04-19-tools-to-manage-helm-declaratively.md
+index 63f7f11..9854da9 100644
+--- a/blog/2022-04-19-tools-to-manage-helm-declaratively.md
++++ b/blog/2022-04-19-tools-to-manage-helm-declaratively.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Tools You Can Use To Manage Your Helm Releases Declaratively"
+ slug: "tools-to-manage-helm-declaratively"
+-authors: ["scottrigby", "mattfarina"]
++authorname: "Scott Rigby, Matt Farina"
++author: "@scottrigby, @mattfarina"
++authorlink: "https://helm.sh"
+ date: "2022-04-19"
+ ---
+ 
+ We regularly get questions from people who want tools or methods to manage their Helm releases in an environment. This post provides some insight and direction to help people get started.
+ 
+-<!-- truncate -->
++<!--more-->
+ 
+ ## Why Helm Doesn't Have Tools To Do This
+ 
+diff --git a/blog/2022-10-14-helm-at-kubecon-na-22.md b/blog/2022-10-14-helm-at-kubecon-na-22.md
+index 211684f..24efcb3 100644
+--- a/blog/2022-10-14-helm-at-kubecon-na-22.md
++++ b/blog/2022-10-14-helm-at-kubecon-na-22.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Helm @ KubeCon + CloudNativeCon NA '22"
+ slug: "helm-at-kubecon-na-22"
+-authors: ["karenchu"]
++authorname: "Karen Chu"
++author: "@karenhchu"
++authorlink: "https://twitter.com/karenhchu"
+ date: "2022-10-14"
+ ---
+ 
+ The Helm maintainers are excited to be headed to KubeCon + CloudNativeCon NA '22 in Detroit, MI in a couple of weeks! As always, there will be a few different places you can find us!
+ 
+-<!-- truncate -->
++<!--more-->
+ 
+ ## Helm Maintainer Track Talk: [Learn about Helm and Its Ecosystem](https://sched.co/182Ns)
+ 
+diff --git a/blog/2022-11-14-welcome-yxxhero.md b/blog/2022-11-14-welcome-yxxhero.md
+index 9a37175..6400f5a 100644
+--- a/blog/2022-11-14-welcome-yxxhero.md
++++ b/blog/2022-11-14-welcome-yxxhero.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Helm welcomes yxxhero as our newest helm-www repo maintainer"
+ slug: "welcome-yxxhero"
+-authors: ["karenchu"]
++authorname: "Karen Chu"
++author: "@karenhchu"
++authorlink: "https://twitter.com/karenhchu"
+ date: "2022-11-14"
+ ---
+ 
+ The Helm project is happy to welcome [yxxhero](https://github.com/yxxhero) as our newest maintainer for the helm-www repo! 
+-<!-- truncate --> yxxhero has been a long time contributor to the Helm project over the years. With a supermajority vote from the existing maintainers, yxxhero will be joining to help with Helm documentation. With their background, yxxhero will continue to help strengthen both our simplified and traditional Chinese docs.
++<!--more--> yxxhero has been a long time contributor to the Helm project over the years. With a supermajority vote from the existing maintainers, yxxhero will be joining to help with Helm documentation. With their background, yxxhero will continue to help strengthen both our simplified and traditional Chinese docs.
+ 
+ Cheers to yxxhero! 
+diff --git a/blog/2023-03-31-helm-completes-fuzzing-security-audit.md b/blog/2023-03-31-helm-completes-fuzzing-security-audit.md
+index 265e9c9..8af247f 100644
+--- a/blog/2023-03-31-helm-completes-fuzzing-security-audit.md
++++ b/blog/2023-03-31-helm-completes-fuzzing-security-audit.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Helm Completes Fuzzing Security Audit"
+ slug: "helm-completes-fuzzing-security-audit"
+-authors: ["adamkorczynski", "davidkorczynski", "martinhickey"]
++authorname: "Adam Korczynski, David Korczynski & Martin Hickey"
++author: "@AdamKorcz, @DavidKorczynski & @hickeyma"
++authorlink: "https://helm.sh"
+ date: "2023-03-31 15:00:00"
+ ---
+ 
+-In the past year, the team at [Ada Logics](https://adalogics.com) has worked on integrating continuous fuzzing into the [Helm core project](https://github.com/helm/helm). This was an effort focused on improving the security posture of Helm and ensuring a continued good experience for Helm users. The fuzzing integration involved enrolling Helm in the [OSS-Fuzz project](https://github.com/cncf/cncf-fuzzing) and writing a set of fuzzers that further enriches the test coverage of Helm. In total, 38 fuzzers were written, and nine bugs were found (with eight fixed so far), demonstrating the work’s value for Helm both short term and long term. All fuzzers were implemented by way of [Go-fuzz](https://github.com/dvyukov/go-fuzz) and are run daily by OSS-Fuzz against the latest Helm commit to make sure Helm is continuously fuzz tested. The full report of the engagement can be found [here](https://github.com/helm/community/tree/main/security-audit/FUZZING_AUDIT_2022.pdf).<!-- truncate -->
++In the past year, the team at [Ada Logics](https://adalogics.com) has worked on integrating continuous fuzzing into the [Helm core project](https://github.com/helm/helm). This was an effort focused on improving the security posture of Helm and ensuring a continued good experience for Helm users. The fuzzing integration involved enrolling Helm in the [OSS-Fuzz project](https://github.com/cncf/cncf-fuzzing) and writing a set of fuzzers that further enriches the test coverage of Helm. In total, 38 fuzzers were written, and nine bugs were found (with eight fixed so far), demonstrating the work’s value for Helm both short term and long term. All fuzzers were implemented by way of [Go-fuzz](https://github.com/dvyukov/go-fuzz) and are run daily by OSS-Fuzz against the latest Helm commit to make sure Helm is continuously fuzz tested. The full report of the engagement can be found [here](https://github.com/helm/community/tree/main/security-audit/FUZZING_AUDIT_2022.pdf).
+ 
+ [Helm](https://helm.sh) is described as the Kubernetes package manager. It helps simplify finding, sharing, and using software built for Kubernetes. Helm began as what is now known as [Helm Classic](https://github.com/helm/helm-classic), a Deis project begun in 2015 and introduced at the inaugural KubeCon. In January of 2016, the project merged with a GCS tool called Kubernetes Deployment Manager, and the project was moved under Kubernetes. Helm was promoted from a Kubernetes subproject to a full-fledged CNCF project in June 2018. Helm [graduated as a CNCF project in April 2020](https://www.cncf.io/announcement/2020/04/30/cloud-native-computing-foundation-announces-helm-graduation/). [The CNCF annual survey of 2022](https://www.cncf.io/reports/cncf-annual-survey-2021) found that around 90% of companies are either using or evaluating Kubernetes, and Helm’s performance and security are important, for the continued business operations of these users. 
+ 
+diff --git a/blog/2023-05-15-helm-oci-mediatypes.md b/blog/2023-05-15-helm-oci-mediatypes.md
+index 86282d1..dac603a 100644
+--- a/blog/2023-05-15-helm-oci-mediatypes.md
++++ b/blog/2023-05-15-helm-oci-mediatypes.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "The Helm OCI MediaTypes"
+ slug: "helm-oci-mediatypes"
+-authors: ["andrewblock"]
++authorname: "Andrew Block"
++author: "@sabre1041"
++authorlink: "https://helm.sh"
+ date: "2023-05-15"
+ ---
+ 
+-Helm introduced full support for storing charts within OCI registries as a distribution method beginning in version 3.8, and while this feature has been available for some time now, there is more underneath the hood than one may realize to make this capability all possible. A number of concepts, working in unison, make it possible to store content aside from traditional container images within OCI registries. This article will explore one of these important concepts, Media Types, their purpose, and how Helm’s own set of Media Types make it possible to extend the storage of charts beyond standard chart repositories to OCI registries.<!-- truncate -->
++Helm introduced full support for storing charts within OCI registries as a distribution method beginning in version 3.8, and while this feature has been available for some time now, there is more underneath the hood than one may realize to make this capability all possible. A number of concepts, working in unison, make it possible to store content aside from traditional container images within OCI registries. This article will explore one of these important concepts, Media Types, their purpose, and how Helm’s own set of Media Types make it possible to extend the storage of charts beyond standard chart repositories to OCI registries.
+ 
+ ## OCI Artifacts
+ 
+diff --git a/blog/2023-09-29-helm-3.13.md b/blog/2023-09-29-helm-3.13.md
+index 981989e..e627d59 100644
+--- a/blog/2023-09-29-helm-3.13.md
++++ b/blog/2023-09-29-helm-3.13.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Helm 3.13"
+ slug: "helm-3.13"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2023-09-29"
+ ---
+ 
+-Helm 3.13 brings some significant and useful changes for Helm users. This ranges from longtime bugs being fixed to some new features that can have an impact on performance.<!-- truncate -->
++Helm 3.13 brings some significant and useful changes for Helm users. This ranges from longtime bugs being fixed to some new features that can have an impact on performance. 
+ 
+ ## Dry-run & Template Can Connect To Servers
+ 
+diff --git a/blog/2024-03-14-cve-2019-25210.md b/blog/2024-03-14-cve-2019-25210.md
+index dbd646b..520251e 100644
+--- a/blog/2024-03-14-cve-2019-25210.md
++++ b/blog/2024-03-14-cve-2019-25210.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Response To CVE-2019-25210"
+ slug: "response-CVE-2019-25210"
+-authors: ["helmmaintainers"]
++authorname: "Helm Maintainers"
++author: "@HelmPack"
++authorlink: "https://helm.sh"
+ date: "2024-03-14"
+ ---
+ 
+-[CVE-2019-25210](https://nvd.nist.gov/vuln/detail/CVE-2019-25210) was recently filed against the Helm project. This action was completed without engaging the Helm project and working through the [documented security process and team](https://github.com/helm/community/blob/main/SECURITY.md). The Helm project was given no notice before the disclosure was released which resulted in the inability to provide an appropriate statement beforehand. This post serves as the response from the Helm project.<!-- truncate -->
++[CVE-2019-25210](https://nvd.nist.gov/vuln/detail/CVE-2019-25210) was recently filed against the Helm project. This action was completed without engaging the Helm project and working through the [documented security process and team](https://github.com/helm/community/blob/main/SECURITY.md). The Helm project was given no notice before the disclosure was released which resulted in the inability to provide an appropriate statement beforehand. This post serves as the response from the Helm project.
+ 
+ ## Not A Vulnerability In Helm
+ 
+diff --git a/blog/2024-06-26-the-road-to-helm-4.md b/blog/2024-06-26-the-road-to-helm-4.md
+index 55f11a5..1e92f29 100644
+--- a/blog/2024-06-26-the-road-to-helm-4.md
++++ b/blog/2024-06-26-the-road-to-helm-4.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "The Road to Helm 4"
+ slug: "the-road-to-helm-4"
+-authors: ["helmmaintainers"]
++authorname: "Helm Maintainers"
++author: "@HelmPack"
++authorlink: "https://helm.sh"
+ date: "2024-07-10"
+ ---
+ 
+-We have been saying it for a while now – Helm is "stable software". That should not come as a surprise to anyone familiar with Kubernetes and the surrounding ecosystem as many within the Kubernetes community consider Helm to be the de-facto package manager. The use of Helm is far reaching: from open source community projects, to startups, to Fortune 500 organizations. Helm has become an essential component of build and deployment workflows that handle mission critical workloads.<!-- truncate -->
++We have been saying it for a while now – Helm is "stable software". That should not come as a surprise to anyone familiar with Kubernetes and the surrounding ecosystem as many within the Kubernetes community consider Helm to be the de-facto package manager. The use of Helm is far reaching: from open source community projects, to startups, to Fortune 500 organizations. Helm has become an essential component of build and deployment workflows that handle mission critical workloads.
+ 
+ One of the primary tenets that the Helm project takes very seriously is its policy related to [backwards compatibility](https://github.com/helm/helm/blob/main/CONTRIBUTING.md#semantic-versioning). This strict adherence towards limiting impacts that could adversely affect end consumers is one of the primary reasons why Helm has become such a stable project that the community can count on. Unfortunately, Helm’s backwards compatibility policy does impose limitations to the types of changes or features that can be introduced. It is important to note that Helm is not just a CLI tool, but it is also an SDK. The Helm SDK supports an entire ecosystem of solutions that have been developed to manage Helm content. Any breaking change could negatively impact one of those integrations.
+ 
+diff --git a/blog/2024-07-16-helm2to3-becomes-unsupported.md b/blog/2024-07-16-helm2to3-becomes-unsupported.md
+index db22c40..179b43a 100644
+--- a/blog/2024-07-16-helm2to3-becomes-unsupported.md
++++ b/blog/2024-07-16-helm2to3-becomes-unsupported.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Helm 2to3 is Now Unsupported"
+ slug: "helm2to3-becomes-unsupported"
+-authors: ["martinhickey"]
++authorname: "Martin Hickey"
++author: "@hickeyma"
++authorlink: "https://helm.sh"
+ date: "2024-07-16"
+ ---
+ 
+-Over four years ago, we [introduced Helm 3](https://helm.sh/blog/helm-3-released/), a major evolution in Helm's development. And we [announced](https://helm.sh/blog/2019-10-22-helm-2150-released/) at that time that Helm 2 would receive patches and security updates for a year. We also provided a [migration path to Helm 3 from Helm 2](https://helm.sh/docs/topics/v2_v3_migration/) and a tool [helm-2to3](https://github.com/helm/helm-2to3) to automate migration.<!-- truncate -->
++Over four years ago, we [introduced Helm 3](https://helm.sh/blog/helm-3-released/), a major evolution in Helm's development. And we [announced](https://helm.sh/blog/2019-10-22-helm-2150-released/) at that time that Helm 2 would receive patches and security updates for a year. We also provided a [migration path to Helm 3 from Helm 2](https://helm.sh/docs/topics/v2_v3_migration/) and a tool [helm-2to3](https://github.com/helm/helm-2to3) to automate migration.
+ 
+ One year later, [Helm 2 became unsupported](https://helm.sh/blog/helm-2-becomes-unsupported/).
+ 
+diff --git a/blog/2024-10-07-kubecon-na-24/index.md b/blog/2024-10-07-kubecon-na-24/index.md
+index 67584e5..fc2067c 100644
+--- a/blog/2024-10-07-kubecon-na-24/index.md
++++ b/blog/2024-10-07-kubecon-na-24/index.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Helm at KubeCon/CloudNativeCon SLC"
+ slug: "kubecon-slc"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com"
+ date: "2024-11-07"
+ ---
+ 
+ ![KubeCon / CloudNativeCon Logo](kubecon.png)
+ 
+-Helm is going to be at KubeCon / CloudNativeCon North America in Salt Lake City. There will be something happening each day of the main conference, including:<!-- truncate -->
++Helm is going to be at KubeCon / CloudNativeCon North America in Salt Lake City. There will be something happening each day of the main conference, including:
+ 
+ * Wednesday: 
+   * At a booth in the project pavilion from 3:15pm - 8pm.
+diff --git a/blog/2024-11-08-experience-helm-release-kubecon-na-24.md b/blog/2024-11-08-experience-helm-release-kubecon-na-24.md
+index b7964b8..31382e5 100644
+--- a/blog/2024-11-08-experience-helm-release-kubecon-na-24.md
++++ b/blog/2024-11-08-experience-helm-release-kubecon-na-24.md
+@@ -1,7 +1,9 @@
+ ---
+ title: "Experience a Helm Release: Live at KubeCon + CloudNativeCon North America 2024!"
+ slug: "experience-helm-release-kubecon-na-24"
+-authors: ["andrewblock"]
++authorname: "Andrew Block"
++author: "@sabre1041"
++authorlink: "https://andyserver.com"
+ date: "2024-11-08"
+ ---
+ 
+diff --git a/blog/2025-08-19-debian-helm-repository-move.md b/blog/2025-08-19-debian-helm-repository-move.md
+index 6a56f33..8930efc 100644
+--- a/blog/2025-08-19-debian-helm-repository-move.md
++++ b/blog/2025-08-19-debian-helm-repository-move.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Debian/Ubuntu Helm Apt Repository Move"
+ slug: "debian-helm-repository-move"
+-authors: ["terryhowe"]
++authorname: "Terry Howe"
++author: "@terryhowe"
++authorlink: "https://terryhowe.wordpress.com/"
+ date: "2025-08-19"
+ ---
+ 
+-If you are installing helm with Apt, be aware that the Debian/Ubuntu Helm Apt repository is moving.<!-- truncate -->
++If you are installing helm with Apt, be aware that the Debian/Ubuntu Helm Apt repository is moving.
+ Previously the repository was hosted at [Balto](https://helm.baltorepo.com/) and
+ now it will be hosted at [Buildkite](https://buildkite.com/).
+ 
+diff --git a/blog/2025-09-09-path-to-helm-v4.md b/blog/2025-09-09-path-to-helm-v4.md
+index 0951391..c6578cd 100644
+--- a/blog/2025-09-09-path-to-helm-v4.md
++++ b/blog/2025-09-09-path-to-helm-v4.md
+@@ -1,11 +1,13 @@
+ ---
+ title: "Path To Releasing Helm v4"
+ slug: "path-to-helm-v4"
+-authors: ["mattfarina"]
++authorname: "Matt Farina"
++author: "@mattfarina"
++authorlink: "https://mattfarina.com/"
+ date: "2025-09-09"
+ ---
+ 
+-The [first Alpha for Helm v4](https://github.com/helm/helm/releases/tag/v4.0.0-alpha.1) has been released. Now that Helm v4 development is in the home stretch, we wanted to share the details on what's happening and how the broader community can get involved.<!-- truncate -->
++The [first Alpha for Helm v4](https://github.com/helm/helm/releases/tag/v4.0.0-alpha.1) has been released. Now that Helm v4 development is in the home stretch, we wanted to share the details on what's happening and how the broader community can get involved.<!--more-->
+ 
+ ## Alpha Period
+ 
+diff --git a/blog/helm-at-kubecon-eu-25.md b/blog/helm-at-kubecon-eu-25.md
+index 4ba2ee9..a5e1980 100644
+--- a/blog/helm-at-kubecon-eu-25.md
++++ b/blog/helm-at-kubecon-eu-25.md
+@@ -1,13 +1,15 @@
+ ---
+ title: "Helm @ KubeCon + CloudNativeCon EU '25"
+ slug: "helm-at-kubecon-eu-25"
+-authors: ["karenchu"]
++authorname: "Karen Chu"
++author: "@karenhchu"
++authorlink: "https://bsky.app/profile/karenchu.online"
+ date: "2025-03-31"
+ ---
+ 
+ It's that time of the year again – the Helm team is headed to KubeCon + CloudNativeCon EU '25 in London, UK this week from April 1 - 4! Helm 4 is in the works for later this year so be sure to join the conversation with our maintainers during our talk sessions and at our Helm booth in the Project Pavilion! See below for more details on all Helm-related activies throughout the week.
+ 
+-<!-- truncate -->
++<!--more-->
+ 
+ ## Contribfest: [Expanding the Helm Ecosystem With Helm 4](https://sched.co/1tcyE)
+ 

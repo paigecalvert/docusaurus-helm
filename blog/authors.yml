@@ -5,7 +5,6 @@ adamkorczynski:
   socials:
     github: AdamKorcz
     linkedin: adam-korczynski-731909119
-    x: AdamKorcz4
 andrewblock:
   name: Andrew Block
   image_url: https://github.com/sabre1041.png
@@ -13,8 +12,6 @@ andrewblock:
   socials:
     github: sabre1041
     linkedin: andrewsblock
-    bluesky: andyserver.com
-    x: sabre1041
     # keybase: sabre1041
     website: https://t.co/utJRRBeHm1
 bridgetkromhout:
@@ -24,8 +21,6 @@ bridgetkromhout:
   socials:
     github: bridgetkromhout
     linkedin: bridgetkromhout
-    bluesky: bridgetkromhout.bsky.social
-    x: bridgetkromhout
 davidkorczynski:
   name: David Korczynski
   image_url: https://github.com/davidkorczynski.png
@@ -33,16 +28,12 @@ davidkorczynski:
   socials:
     github: davidkorczynski
     linkedin: david-korczynski-875a4957
-    bluesky: davkor.bsky.social
-    x: davkorcz
 helmmaintainers:
   name: Helm Maintainers
   image_url: https://raw.githubusercontent.com/helm/community/refs/heads/main/art/images/Logo-Tweak-Dark.png
   page: true
   socials:
     github: helm
-    bluesky: helm.sh
-    x: HelmPack
     website: https://helm.sh
 joshdolitsky:
   name: Josh Dolitsky
@@ -59,15 +50,12 @@ karenchu:
   socials:
     github: karenhchu
     linkedin: karenhchu
-    bluesky: karenchu.online
-    x: karenhchu
 martinhickey:
   name: Martin Hickey
   image_url: https://github.com/hickeyma.png
   page: true
   socials:
     github: hickeyma
-    x: mhickeybot
     linkedin: martin-hickey-b64a374
     website: https://hickeyma.github.io/
 mattbutcher:
@@ -76,7 +64,6 @@ mattbutcher:
   page: true
   socials:
     github: technosophos
-    x: technosophos
     linkedin: mattbutcher
     # keybase: technosophos
     website: http://technosophos.com/
@@ -87,7 +74,6 @@ mattfarina:
   socials:
     github: mattfarina
     linkedin: matthewfarina
-    x: mattfarina
     # keybase: mattfarina
     website: https://mattfarina.com/
 mattfisher:
@@ -113,8 +99,6 @@ scottrigby:
   socials:
     github: scottrigby
     linkedin: scottrigby
-    bluesky: r6by
-    x: r6by
     # keybase: r6by
     website: http://basekamp.com/
 terryhowe:
@@ -124,8 +108,6 @@ terryhowe:
   socials:
     github: terryhowe
     linkedin: terrylhowe
-    bluesky: freshpow.bsky.social
-    x: Terry_Howe
     website: https://terryhowe.wordpress.com/
 viciglesias:
   name: Vic Iglesias
@@ -134,5 +116,3 @@ viciglesias:
   socials:
     github: viglesiasce
     linkedin: viglesias
-    bluesky: vicnastea.io
-    x: vicnastea

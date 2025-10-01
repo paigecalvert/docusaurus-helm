@@ -32,3 +32,6 @@ yarn-error.log*
 
 # Algolia Search
 .env
+
+# assistants
+.claude
