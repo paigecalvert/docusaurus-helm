@@ -15,55 +15,11 @@
  * 8. Grid System (Bulma-style classes)
  */
 
-
-/* =============================================================================
-   1. HERO SECTION - Homepage intro/banner area
-   ============================================================================= */
-.home-intro {
-  height: calc(100vh - var(--ifm-navbar-height));
-  background: url('/img/topography.png') left top repeat;
-  background-attachment: fixed;
-  position: relative;
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.home-intro img.logo {
-  position: absolute;
-  top: 50vh;
-  margin-top: -14vw;
-  right: 64vw;
-  width: 10vw;
-}
-
-.home-intro h1 {
-  font-size: 2.775vw;
-  position: absolute;
-  left: 40vw;
-  top: 50vh;
-  margin-top: -13.25vw;
-  max-width: 40vw;
-  line-height: 1.2;
-  letter-spacing: -0.015rem;
-  font-family: var(--ifm-heading-font-family);
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  color: var(--navy);
-}
-
-.home-intro h1 strong {
-  display: block;
-  font-style: normal;
-  color: var(--navy);
-}
-
 .home-intro h2 {
-  border: 5px solid #F4F4F4;
+  border: 5px solid var(--shade-light);
   font-size: 2vw;
-  position: absolute;
   background: rgba(255,255,255,0.67);
   bottom: 8.5vw;
-  left: 25vw;
   width: 48vw;
   padding: 2vw 5.5vw 2vw 2.5vw;
   line-height: 1.5;
@@ -71,137 +27,273 @@
   color: var(--blue-dark);
   font-family: var(--ifm-font-family-base);
   font-weight: normal;
-  z-index: 1110;
 }
 
-.home-intro h2 a {
-  color: var(--blue-light);
+/* =============================================================================
+   1. CONTENT CONTAINER AND BLOCKS
+   ============================================================================= */
+.content-container {
+  margin-top: 5rem;
+  /* Account for navbar */
+}
+
+.content-block {
+  min-height: calc(100vh - 5rem);
+  /* Account for navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.25rem 2rem;
   position: relative;
-  display: inline-block;
+}
+
+/* First content block - pattern background */
+.content-block:first-child {
+  min-height: calc(100vh - 5rem);
+  /* Same calculation as other blocks */
+  position: relative;
+  overflow: visible;
+  padding-bottom: clamp(4rem, 10vh, 6rem);
+}
+
+/* First content block's content should scale and center properly */
+.content-block:first-child .block-content {
+  height: calc(100% - clamp(4rem, 10vh, 6rem));
+  /* Account for wave height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.25rem;
+  /* Equal padding top and bottom */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Responsive text scaling for first block */
+.content-block:first-child h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
   text-align: center;
-  transition: all 0.3s ease-in-out;
+}
+
+.content-block:first-child p {
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  line-height: 1.6;
+  margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+  max-width: 100%;
+  text-align: center;
+}
+
+/* Ensure content never overflows */
+.content-block:first-child .block-content * {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Text centered layout */
+.text-centered {
+  text-align: center;
+}
+
+/* Two column layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Layout spacing */
+.layout-spacing {
+  margin-top: 2rem;
+}
+
+/* Background window like frontend prototype */
+.background-window {
+  position: relative;
+  padding: 2rem;
+  background: transparent;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.background-window::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/img/topography.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Fallback for mobile devices that don't support background-attachment: fixed */
+@media (max-width: 768px) {
+  .background-window::before {
+    background: white !important;
+  }
+}
+
+.background-window-content {
+  position: relative;
+  z-index: 1;
+  color: var(--navy);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Content block background patterns */
+.content-block:nth-child(odd) {
+  background: transparent;
+  color: var(--navy);
+}
+
+.content-block:nth-child(even) {
+  position: relative;
+  background: transparent;
+  color: white;
+}
+
+.content-block:nth-child(even)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Fallback for browsers that don't support blend modes or mobile devices */
+  background: var(--navy);
+  pointer-events: none;
+}
+
+.content-block:nth-child(even) code {
+  background-color: inherit;
+}
+
+/* Enhanced background with blend mode for supported browsers */
+@supports (background-blend-mode: color-burn) {
+  @media screen and (min-width: 769px) {
+    .content-block:nth-child(even)::before {
+      background:
+        url('/img/topography.png'),
+        linear-gradient(180deg, var(--blue-dark) 0%, var(--navy) 100%);
+      background-blend-mode: color-burn;
+      background-attachment: fixed;
+    }
+  }
+}
+
+/* Force flat color on smaller screens */
+@media (max-width: 768px) {
+  .content-block:nth-child(even)::before {
+    background: var(--navy) !important;
+  }
+}
+
+.content-block:nth-child(even) .block-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* All content on blue backgrounds should be white, except inside .tile.is-child */
+.content-block:nth-child(even) h1:not(.tile.is-child *),
+.content-block:nth-child(even) h2:not(.tile.is-child *),
+.content-block:nth-child(even) h3:not(.tile.is-child *),
+.content-block:nth-child(even) h4:not(.tile.is-child *),
+.content-block:nth-child(even) h5:not(.tile.is-child *),
+.content-block:nth-child(even) h6:not(.tile.is-child *),
+.content-block:nth-child(even) p:not(.tile.is-child *),
+.content-block:nth-child(even) li:not(.tile.is-child *),
+.content-block:nth-child(even) .title:not(.tile.is-child *) {
+  color: white !important;
+}
+
+/* Links on blue backgrounds are white with white underline animation, except inside .tile.is-child */
+.content-block:nth-child(even) a:not(.tile.is-child *) {
+  color: white !important;
+}
+
+.content-block:nth-child(even) a:hover:not(.tile.is-child *) {
+  color: white !important;
+}
+
+.content-block:nth-child(even) a::after:not(.tile.is-child *) {
+  background-color: white !important;
+}
+
+/* Block content styling */
+.block-content {
+  max-width: 80vw;
+  width: 100%;
+}
+
+/* Block headers styling */
+.block-content>h2 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.block-content>h2+p {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0.8;
 }
 
 /* =============================================================================
    2. WHAT IS HELM? - Main content explaining Helm's purpose and features
    ============================================================================= */
-.home-overview-wrap {
-  background: 
-    url('/img/topography.png') repeat top left,
-    linear-gradient(180deg, var(--navy) 0%, var(--blue-dark) 100%);
-  background-blend-mode: color-burn;
-  background-attachment: fixed;
-  padding-top: 7.5rem;
-  min-height: 100vh;
-}
 
-.home-overview-wrap .content-wrapper {
-  max-width: 80vw;
-  margin: 0 auto; /* Center the content wrapper */
-  padding-bottom: 5rem;
-}
-
-.home-overview-wrap .content-wrapper h2,
-.home-overview-wrap .content-wrapper h3,
-.home-overview-wrap .content-wrapper p {
-  color: white;
-}
-
-.home-overview-wrap .content-wrapper .lead {
-  text-align: left;
-  margin-top: 3rem;
-}
-
-.home-overview-wrap .content-wrapper .lead p {
-  color: white;
-  padding-right: 5vw;
-  line-height: 1.925;
-  font-size: 1.25vw;
-}
-
-.home-overview-wrap .content-wrapper .lead ul {
-  color: white;
-  padding-right: 5vw;
-}
-
-.home-overview-wrap .content-wrapper .lead ul li {
-  font-size: 1.25vw;
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
-}
-
-.home-overview-wrap .content-wrapper .lead ul li a {
-  color: white;
-  text-decoration: underline;
-}
-
-.home-overview-wrap .content-wrapper .lead h3 {
-  margin: 2.5rem 0 1.25rem;
-}
-
-.home-overview-wrap .content-wrapper ul {
-  margin: 0 2vw;
-  padding: 0;
-  color: white;
-}
-
-.home-overview-wrap .content-wrapper ul li {
-  color: white;
-}
-
-.home-overview-wrap .content-wrapper a {
-  background: var(--blue-dark);
-  opacity: 0.9;
-  color: white;
-  text-decoration: underline;
-}
-
-.home-overview-wrap .content-wrapper a:hover {
-  background: var(--blue-light);
-  color: white;
-}
-
-.home-overview-wrap h2 {
-  font-weight: bold;
-  color: white;
-  font-size: 2.25rem;
-}
-
-.home-overview-wrap img.pyramid {
-  max-width: 10vw;
-  margin-bottom: 2rem;
-}
 
 /* =============================================================================
    3. FEATURE TILES - Small feature highlight boxes
    ============================================================================= */
-.tile-features .tile.is-parent {
-  padding: 3rem 0 0;
+.tile-features {
+  display: flex;
+  flex-direction: column;
 }
 
 .tile-features .tile.is-child {
   background: var(--shade-dark);
-  border-radius: 0.5vw;
-  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
   box-shadow: none;
 }
 
 .tile-features .tile.is-child p {
-  font-size: 1rem;
-  line-height: 1.636;
-  margin: 0.75rem 0 0.25rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.6;
+    margin: 0.75rem 0 0;
+    color: white;
 }
 
 .tile-features .tile.is-child p.title {
-  font-size: 1.333vw;
-  margin: 0;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin: 0 0 0.5rem 0;
   color: white;
+  font-weight: bold;
 }
 
-.tile-features .tile.is-child p code {
-  background: none;
-  color: white;
-  font-size: 0.925rem;
+@media (max-width: 768px) {
+  .tile-features .tile.is-child {
+    padding: 1rem;
+  }
 }
 
 /* =============================================================================
@@ -209,26 +301,53 @@
    ============================================================================= */
 .tile-actions {
   padding: 0;
-  margin: 2rem 6.25vw 4.5rem;
+  margin-top: 1rem;
 }
 
 .tile-actions .tile.is-child {
   padding: 0.75vw 2.5vw 3vw;
-  border: 10px solid white;
-  background: url('/img/topography.png') left top repeat;
-  background-color: rgba(35,35,35,0.02);
-  background-blend-mode: color-burn;
+  /* Remove white borders */
+  border: none;
+  /* Pattern background like frontend prototype background-window */
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+  
+.tile-actions .tile.is-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/img/topography.png');
+  background-repeat: repeat;
   background-attachment: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
+  
+/* White background on mobile devices */
+@media (max-width: 768px) {
+  .tile-actions .tile.is-child {
+    background: white;
+  }
+
+  .tile-actions .tile.is-child::before {
+    display: none;
+  }
 }
 
-.tile-actions .tile.is-child:first-of-type {
-  border-right: none;
+.tile-actions .tile.is-child>* {
+  position: relative;
+  z-index: 1;
 }
 
 .tile-actions .tile.is-child p {
-  font-size: 1.25vw;
+  font-size: 1rem; /* Fixed size instead of responsive scaling */
   line-height: 1.7;
-  color: var(--grey);
+  color: var(--navy); /* Blue text on pattern background */
 }
 
 .tile-actions .tile.is-child img {
@@ -238,8 +357,7 @@
 }
 
 .tile-actions h2 {
-  color: var(--blue-dark);
-  font-size: 2vw;
+  color: var(--navy); /* Blue text on pattern background */
   text-align: center;
 }
 
@@ -267,9 +385,14 @@
   letter-spacing: 0.035rem;
   font-size: 1vw;
   margin: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem; /* Reduce horizontal padding to save space */
   text-decoration: none;
   color: inherit;
+  white-space: nowrap; /* Prevent tab text from wrapping */
+}
+
+.tile-actions ul.tabs li a::after {
+  display: none;
 }
 
 .tile-actions ul.tabs li a.active {
@@ -286,7 +409,7 @@
   display: none;
   animation: fadeEffect 1s;
   position: relative;
-  padding-bottom: 4.25rem;
+  padding-bottom: 2rem;
 }
 
 .tabcontent.active {
@@ -324,7 +447,7 @@
   top: 0.45rem;
   background: white;
   border: 2px solid var(--blue-light);
-  font-size: 1.1vw;
+  font-size: 0.875rem; /* Fixed size instead of vw scaling */
   color: var(--blue-light);
   transition: all 0.3s ease-in-out;
   padding: 0.5rem 1rem;
@@ -347,8 +470,8 @@
 .level-faqs {
   background-color: var(--light);
   min-width: 37.5vw;
-  margin: 1rem auto 7.5rem;
-  padding: 1vw;
+  margin: clamp(0.5rem, 2vh, 1rem) auto clamp(3rem, 12vh, 7.5rem);
+  padding: clamp(0.5rem, 2vw, 1vw);
   border-radius: 5rem;
   display: flex;
   align-items: center;
@@ -369,13 +492,13 @@
   font-weight: bold;
   letter-spacing: 0.035rem;
   -webkit-font-smoothing: antialiased;
-  font-size: 1.25vw;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   margin-bottom: 0.333rem;
   text-transform: none;
 }
 
 .level-faqs p.title {
-  font-size: 1vw;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   margin-bottom: 0;
 }
 
@@ -385,152 +508,15 @@
 
 /* =============================================================================
    6. COMMUNITY SECTION - Community information and social links
-   ============================================================================= */
-.helm-community {
-  color: var(--navy);
-  padding-top: 2rem;
-  padding-bottom: 5rem;
-  background: linear-gradient(0deg, #fff, #F7F7F7);
-  border-bottom: 1px solid var(--shade-light);
-}
+=============================================================================*/
 
-.helm-community h2 {
-  font-family: var(--ifm-heading-font-family);
-  font-weight: bold;
-  letter-spacing: 0.035rem;
-  -webkit-font-smoothing: antialiased;
-  font-size: 2vw;
-  margin: 5rem auto 1rem;
-}
-
-.helm-community h2 + p {
-  margin-bottom: 4.25rem;
-}
-
-.helm-community p {
-  font-size: 1.25rem;
-  padding-right: 0;
-}
-
-.helm-community .community-boxes {
-  margin: 0 6vw;
-}
-
-.helm-community .community-boxes .box {
-  padding: 1.5rem 1.667vw 0.4rem;
-  box-shadow: 0 5px 12px var(--light);
-  margin-bottom: 2rem;
-}
-
-.helm-community .community-boxes .box:hover {
-  box-shadow: 0 1px 10px var(--light);
-  transition: all 0.3s ease-in-out;
-}
-
-.helm-community .community-boxes .box .title {
-  font-size: 1.5rem;
-}
-
-.helm-community .community-boxes .box a {
-  color: var(--navy);
-  border-bottom: 1px solid var(--blue-light);
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-.helm-community .community-boxes .box a::after {
-  display: inline-block;
-  content: "";
-  background: var(--blue-light);
-  height: 3px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 10%;
-  opacity: 0;
-  margin: 0 0 0 -5%;
-  transition: all 0.3s ease-in-out;
-}
-
-.helm-community .community-boxes .box a:hover::after {
-  width: 100%;
-  left: 0;
-  margin-left: 0;
-  opacity: 1;
-}
-
-.helm-community .community-boxes .box dl,
-.helm-community .community-boxes .box p,
-.helm-community .community-boxes .box ul,
-.helm-community .community-boxes .box ol {
-  margin: 0 0 1.5rem;
-}
-
-.helm-community .community-boxes .box p,
-.helm-community .community-boxes .box dd,
-.helm-community .community-boxes .box dt {
-  font-size: 1.12rem;
-  line-height: 1.5;
-  color: var(--shade-dark);
-}
-
-.helm-community .community-boxes .box .placeholder {
-  background: var(--salmon);
-  font-style: italic;
-  padding: 1.125rem 0;
-  text-align: center;
-  margin: 1rem 0;
-  display: inline-block;
-  width: 100%;
-  color: #999;
-  border-radius: 0.5rem;
-}
-
-.helm-community .community-boxes .box dd {
-  padding: 0.25rem 0;
-  margin-left: 0;
-}
-
-.helm-community .community-boxes .box dd em {
-  font-size: 1rem;
-  color: #3a4d79;
-}
-
-.helm-community .community-boxes .box h3,
-.helm-community .community-boxes .box dl dt {
-  font-family: var(--ifm-heading-font-family);
-  font-weight: bold;
-  letter-spacing: 0.035rem;
-  -webkit-font-smoothing: antialiased;
-  color: var(--blue-light);
-  font-size: 1.125rem;
-  margin-top: 1.25rem;
-}
-
-.helm-community .community-boxes .box h3 a,
-.helm-community .community-boxes .box dl dt a {
-  color: var(--blue-light);
-}
-
-.helm-community .community-boxes .box .subtitle {
-  font-size: 0.925rem;
-  margin: 0.25rem 0 1.5rem;
-  font-weight: normal;
-  background: #F4F4F4;
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  line-height: 1.4;
-}
 
 /* =============================================================================
    7. CONTRIBUTORS SECTION - Contributor logos and community text
    ============================================================================= */
 .helm-contrib-logos {
   text-align: center;
-  padding-bottom: 8rem;
+  padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 }
 
@@ -549,27 +535,11 @@
   padding: 3.5em 0 0;
 }
 
-.helm-contrib-logos hr {
-  background-color: var(--shade-light);
-  height: 2px;
-  opacity: 0.25;
-  width: 50%;
-  margin: 1rem 25%;
-  border: none;
-}
-
 .helm-contrib-logos p {
-  color: #9B9B9B;
   text-align: center;
-  padding: 0;
-  margin: 0 auto;
-  font-size: 1.333em;
-  line-height: 2;
-  letter-spacing: 0.025em;
 }
 
 .helm-contrib-logos .contributors {
-  color: #9B9B9B;
   text-align: center;
   padding: 0;
   margin: 0 auto;
@@ -601,34 +571,12 @@
 }
 
 .helm-contrib-logos .contrib-logos a:hover {
-  transform: scale(1.1);
-}
-
-
-.helm-contrib-logos p a {
-  position: relative;
-  display: inline;
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--accent-green);
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s ease;
+  transform: scale(1.5);
 }
 
 .helm-contrib-logos p a::after {
   display: none;
 }
-
-.helm-contrib-logos p a:hover {
-  color: var(--blue-light);
-  text-decoration: underline;
-}
-
-.helm-contrib-logos p small {
-  padding-top: 1rem;
-  font-size: 0.925em;
-}
-
 
 /* =============================================================================
    8. GRID SYSTEM - Bulma-style layout classes for responsive design
@@ -682,6 +630,42 @@
 
 .tile.is-horizontal {
   flex-direction: row;
+}
+
+/* Stack tiles on mobile */
+@media screen and (max-width: 768px) {
+  .tile.is-horizontal {
+    flex-direction: column;
+  }
+
+  .tile.is-parent {
+    flex-direction: column;
+  }
+
+  .tile-features .tile.is-child {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Make tabs more compact on mobile with higher specificity */
+  .tile-actions ul.tabs li a {
+    padding: 0.375rem 0.5rem;
+    font-size: 2vw;
+  }
+
+  /* Adjust tabcontent for mobile with higher specificity */
+  .tabcontent code,
+  .tabcontent pre,
+  .tabcontent input {
+    padding: 0.75rem 4rem 0.75rem 0.75rem;
+    font-size: 2vw;;
+  }
+
+  .tabcontent button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    right: 0.125rem;
+    top: 0.125rem;
+  }
 }
 
 .has-text-centered {

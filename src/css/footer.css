@@ -5,15 +5,26 @@
 
 .footer {
   margin-left: 0; /* Removed the 18.5rem left margin to work better with Docusaurus layout */
-  background: 
-    url('/img/topography.png') repeat top left,
-    linear-gradient(180deg, var(--footer-navy-dark) 0%, var(--footer-navy) 100%);
-  background-blend-mode: color-burn;
-  background-attachment: fixed;
+  background: var(--navy);
+  /* Remove background-attachment: fixed for iOS compatibility - pattern is handled by body::before */
   padding: 2rem 3.5vw 1.5rem;
   max-width: 100%;
   border: none;
   text-align: left;
+  background: var(--navy);
+}
+
+/* Enhanced background with blend mode for supported browsers */
+@supports (background-blend-mode: color-burn) {
+  @media screen and (min-width: 769px) {
+    .footer {
+      background:
+        url('/img/topography.png'),
+        linear-gradient(180deg, var(--blue-dark) 0%, var(--navy) 100%);
+      background-blend-mode: color-burn;
+      background-attachment: fixed;
+    }
+  }
 }
 
 .footer hr {
@@ -27,12 +38,17 @@
 }
 
 .footer__copyright a {
-  color: white;
+  color: var(--ifm-link-hover-color);
   text-decoration: none;
+  position: relative;
 }
 
 .footer__copyright a:hover {
-  color: var(--footer-blue3);
+  color: var(--ifm-link-hover-color);
+  }
+  
+  .footer__copyright a::after {
+    background-color: var(--ifm-link-hover-color);
 }
 
 .footer__copyright a:first-child {
@@ -42,9 +58,7 @@
 
 /* New CNCF Footer Section */
 .footer__bottom {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  /* border-top: 1px solid var(--footer-blue3); */
+  padding: 2rem 0;
 }
 
 .footer__cncf-section {
@@ -64,28 +78,19 @@
 
 .footer__cncf-text p {
   color: white;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
   font-family: 'Space Mono', 'Courier New', monaco, monospace;
   margin: 0;
   line-height: 1.5;
-}
-
-.footer__cncf-logo {
-  flex-shrink: 0;
-}
-
-.footer__cncf-logo img {
-  max-height: 60px;
-  width: auto;
-  display: block;
 }
 
 .footer__copyright-text {
   text-align: center;
   color: var(--footer-grey1);
   font-family: 'Space Mono', 'Courier New', monaco, monospace;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   margin-top: 1rem;
+  line-height: 1.5;
 }
 
 /* Footer Links Styling */
@@ -95,11 +100,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  /* gap: 3rem; */
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.footer__col {
+  margin-bottom: calc(var(--ifm-spacing-vertical) * 1);
+}
 .footer__title {
   color: var(--footer-blue3);
   font-family: 'Space Mono', 'Courier New', monaco, monospace;
@@ -108,20 +116,24 @@
 }
 
 .footer__item a {
-  color: white;
+  color: var(--ifm-link-hover-color);
   line-height: 1.5;
   display: inline-block;
   background-color: transparent !important;
-  border-bottom: 2px solid transparent;
+  border-bottom: none;
   text-decoration: none;
+  position: relative;
   transition: color 0.3s ease;
 }
 
 .footer__item a:hover {
-  color: var(--footer-blue3);
+  color: var(--ifm-link-hover-color);
   text-decoration: none;
 }
 
+.footer__item a::after {
+  background-color: var(--ifm-link-hover-color);
+}
 /* Additional custom footer sections */
 .contrib-text {
   padding: 2rem 0;
@@ -159,8 +171,13 @@
 }
 
 .contrib-text p a {
-  color: white;
+  color: var(--ifm-link-hover-color);
   font-weight: bold;
+  position: relative;
+  }
+  
+  .contrib-text p a::after {
+    background-color: var(--ifm-link-hover-color);
 }
 
 .cncf-wrap {

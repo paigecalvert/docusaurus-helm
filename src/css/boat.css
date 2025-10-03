@@ -42,7 +42,7 @@
 }
 
 .boat {
-  width: 100vw;
+  width: auto;
   position: absolute;
   top: auto;
   bottom: 0;
@@ -51,6 +51,7 @@
   min-height: 10vw;
   z-index: 1070;
   transition: all 0.5s ease-in-out;
+  /* Ensure boat is positioned relative to its parent and contained within borders */
 }
 
 .boat .boat-ship {
@@ -149,7 +150,7 @@
 /* Boat fixed nav 'badge' mode */
 .boat.boat-badge {
   position: fixed;
-  top: calc(var(--ifm-navbar-height) + 1rem);
+  top: calc(var(--ifm-navbar-height) + 1.5rem);
   left: 1rem;
   width: 7.5vw;
   height: 7.5vw;
