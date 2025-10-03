@@ -91,13 +91,25 @@
   position: absolute;
   margin: 0;
   left: 0;
-  right: 0; 
-  bottom: 0; 
+  right: 0;
+  bottom: 0;
   height: 15vw;
   overflow: hidden;
   z-index: 1014;
   background-color: transparent;
   transition: all 0.5s ease-in-out;
+}
+
+/* Constrain only the overflowing wave elements */
+@media (max-width: 768px) {
+  .boat .wave-wrapper .waves {
+    max-width: calc(100vw - 16px); /* Viewport width minus both borders */
+    overflow: hidden;
+  }
+
+  .boat .wave-wrapper:before {
+    max-width: calc(100vw - 16px);
+  }
 }
 
 .boat .wave-wrapper:before {
@@ -145,6 +157,23 @@
 .boat .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
+}
+
+/* Mobile portrait mode - larger boat and higher waves in rem units */
+@media (max-width: 768px) and (orientation: portrait) {
+  .boat .boat-ship:not(.boat-badge .boat-ship) {
+    max-width: 12.5rem !important; /* 200px equivalent, but exclude badge */
+    bottom: 2.5rem !important; /* 40px equivalent */
+  }
+
+  .boat .wave-wrapper .waves {
+    height: 3.75rem !important; /* 60px equivalent */
+    margin-top: 7.5rem !important; /* 120px equivalent */
+  }
+
+  .boat .wave-wrapper:before {
+    height: 4.375rem !important; /* 70px equivalent */
+  }
 }
 
 /* Boat fixed nav 'badge' mode */
