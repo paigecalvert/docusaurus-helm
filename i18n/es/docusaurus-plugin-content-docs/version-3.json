@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "3.19.0",
+    "description": "The label for version 3"
+  },
+  "sidebar.sidebar.category.Introduction": {
+    "message": "Introducción",
+    "description": "The label for category Introduction in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.How-to": {
+    "message": "Cómo hacer",
+    "description": "The label for category How-to in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Topics": {
+    "message": "Temas",
+    "description": "The label for category Topics in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Best Practices": {
+    "message": "Mejores Prácticas",
+    "description": "The label for category Best Practices in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Chart Template Guide": {
+    "message": "Guía de Plantillas de Gráficos",
+    "description": "The label for category Chart Template Guide in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Helm Commands": {
+    "message": "Comandos de Helm",
+    "description": "The label for category Helm Commands in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Go SDK": {
+    "message": "Go SDK",
+    "description": "The label for category Go SDK in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Community": {
+    "message": "Comunidad",
+    "description": "The label for category Community in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Frequently Asked Questions": {
+    "message": "Preguntas Frecuentes",
+    "description": "The label for category Frequently Asked Questions in sidebar sidebar"
+  }
+}
