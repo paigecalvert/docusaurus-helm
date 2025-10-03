@@ -110,10 +110,10 @@ const config = {
       image: 'img/helm-social-card.png',
       algolia: {
         // The application ID provided by Algolia
-        appId: 'ESJAVO0VP6',
+        appId: 'A0EQ8MMS8V',
         // Public API key: it is safe to commit it
-        apiKey: 'fa85d9dfae68673934e42f1a42837e50',
-        indexName: 'helm4docs_r6by_com_esjavo0vp6_pages',
+        apiKey: '0b01becefbece3f0462cf1d8413d82db',
+        indexName: 'Docusaurus Helm 4 Docs Website',
       },
       docs: {
         sidebar: {
