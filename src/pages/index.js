@@ -50,9 +50,24 @@ function HomepageHeader() {
     <div className="content-block home-intro">
       <div className="block-content text-centered">
         <h1>
-          <strong>The package manager for Kubernetes</strong>
+          <strong>
+            <Translate
+              id="homepage.title"
+              description="The main title on the homepage">
+              The package manager for Kubernetes
+            </Translate>
+          </strong>
         </h1>
-        <h2>Helm is the best way to find, share, and use software built for <a href="https://kubernetes.io">Kubernetes</a>.</h2>
+        <h2>
+          <Translate
+            id="homepage.subtitle.prefix"
+            description="First part of the subtitle">
+            Helm is the best way to find, share, and use software built for
+          </Translate>{' '}
+          <a href="https://kubernetes.io">
+            Kubernetes
+          </a>.
+        </h2>
       </div>
 
       <BoatComponent />
@@ -77,8 +92,28 @@ function InstallationSection() {
   return (
     <div className="tile tile-actions is-parent is-horizontal">
       <div className="tile is-child">
-        <h2>Get Helm</h2>
-        <p>Install Helm with a package manager, or <a href="https://github.com/helm/helm/releases/latest">download a binary</a>.</p>
+        <h2>
+          <Translate
+            id="installation.getHelm.title"
+            description="The title for the Get Helm section">
+            Get Helm
+          </Translate>
+        </h2>
+        <p>
+          <Translate
+            id="installation.getHelm.description.prefix"
+            description="First part of installation instructions">
+            Install Helm with a package manager, or
+          </Translate>{' '}
+          <a href="https://github.com/helm/helm/releases/latest">
+            <Translate
+              id="installation.getHelm.downloadLink"
+              description="The link text for downloading Helm binary">
+              download a binary
+            </Translate>
+          </a>
+.
+        </p>
 
         <ul className="tabs" data-tabgroup="tab-group">
           {Object.keys(installCommands).map(tab => (
@@ -112,22 +147,97 @@ function InstallationSection() {
                 onClick={() => copyToClipboard(command)}
                 className="button"
               >
-                Copy
+                <Translate
+                  id="installation.copyButton"
+                  description="The text for the copy button">
+                  Copy
+                </Translate>
               </button>
             </div>
           ))}
         </div>
 
-        <p>Once installed, unpack the helm binary and add it to your PATH and you are good to go! Check the <a href="./docs/intro/install/">docs</a> for further <a href="./docs/intro/install/">installation</a> and <a href="./docs/intro/using_helm/">usage instructions</a>.</p>
+        <p>
+          <Translate
+            id="installation.postInstall.instructions"
+            description="Instructions after installing Helm"
+            values={{
+              docsLink: (
+                <a href="./docs/intro/install/">
+                  <Translate
+                    id="installation.postInstall.docsLink"
+                    description="Link to installation docs">
+                    docs
+                  </Translate>
+                </a>
+              ),
+              installationLink: (
+                <a href="./docs/intro/install/">
+                  <Translate
+                    id="installation.postInstall.installationLink"
+                    description="Link to installation instructions">
+                    installation
+                  </Translate>
+                </a>
+              ),
+              usageLink: (
+                <a href="./docs/intro/using_helm/">
+                  <Translate
+                    id="installation.postInstall.usageLink"
+                    description="Link to usage instructions">
+                    usage instructions
+                  </Translate>
+                </a>
+              ),
+            }}>
+            {'Once installed, unpack the helm binary and add it to your PATH and you are good to go! Check the {docsLink} for further {installationLink} and {usageLink}.'}
+          </Translate>
+        </p>
       </div>
 
       <div className="tile is-child is-centered has-text-centered">
-        <h2>Get Charts</h2>
+        <h2>
+          <Translate
+            id="installation.getCharts.title"
+            description="The title for the Get Charts section">
+            Get Charts
+          </Translate>
+        </h2>
 
-        <p>Visit <a href="https://artifacthub.io">Artifact Hub</a> to explore <a href="https://artifacthub.io/packages/search?kind=0">Helm charts</a> from numerous public repositories.</p>
+        <p>
+          <Translate
+            id="installation.getCharts.description"
+            description="Description of where to find Helm charts"
+            values={{
+              artifactHubLink: (
+          <a href="https://artifacthub.io">
+            Artifact Hub
+          </a>
+              ),
+              chartsLink: (
+                <a href="https://artifacthub.io/packages/search?kind=0">
+                  <Translate
+                    id="installation.getCharts.chartsLink"
+                    description="Link to Helm charts search">
+                    Helm charts
+                  </Translate>
+                </a>
+              ),
+            }}>
+            {'Visit {artifactHubLink} to explore {chartsLink} from numerous public repositories.'}
+          </Translate>
+        </p>
 
         <div className="has-text-center is-centered">
-          <p><a href="https://artifacthub.io/"><img src="/img/artifact-hub.jpg" alt="Artifact Hub" className="is-centered" /></a></p>
+          <p>
+            <a href="https://artifacthub.io/">
+              <img 
+                src="/img/artifact-hub.jpg" 
+                alt="Artifact Hub" 
+                className="is-centered" 
+              />
+            </a>
+          </p>
         </div>
       </div>
     </div>
@@ -137,94 +247,395 @@ function InstallationSection() {
 function CommunitySection() {
   return (
     <div className="block-content">
-      <h2 className="has-text-centered">Join the Community</h2>
+      <h2 className="has-text-centered">
+        <Translate
+          id="community.title"
+          description="The main title for the community section">
+          Join the Community
+        </Translate>
+      </h2>
       <p className="has-text-centered">
-        More information about the Helm project, and how to contribute.
+        <Translate
+          id="community.description"
+          description="Description of the community section">
+          More information about the Helm project, and how to contribute.
+        </Translate>
       </p>
 
       <div className="columns is-desktop community-boxes">
         <div className="column is-one-third-desktop">
           <section className="box">
-            <h2 className="title">Next Feature Release</h2>
+            <h2 className="title">
+              <Translate
+                id="community.nextRelease.title"
+                description="Title for the next feature release section">
+                Next Feature Release
+              </Translate>
+            </h2>
             <dl>
               <dt>
-                <strong>Version:</strong> v3.16.3
+                <strong>
+                  <Translate
+                    id="community.nextRelease.versionLabel"
+                    description="Label for version">
+                    Version:
+                  </Translate>
+                </strong> v3.16.3
                 <br />
-                <strong>Date:</strong> 2024-11-12
+                <strong>
+                  <Translate
+                    id="community.nextRelease.dateLabel"
+                    description="Label for date">
+                    Date:
+                  </Translate>
+                </strong>{' '}
+                2024-11-12
                 <br />
                 <br />
-                <a href="calendar/release">Release Calendar</a>
+                <a href="calendar/release">
+                  <Translate
+                    id="community.nextRelease.calendarLink"
+                    description="Link to release calendar">
+                    Release Calendar
+                  </Translate>
+                </a>
               </dt>
             </dl>
           </section>
 
           <section className="box">
-            <h2 className="title">Events</h2>
+            <h2 className="title">
+              <Translate
+                id="community.events.title"
+                description="Title for the events section">
+                Events
+              </Translate>
+            </h2>
             <dl>
-              <dt>Upcoming Events</dt>
-              <dd><small className="placeholder"><em>Nov 10-13th 2025</em> - <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/">KubeCon North America</a></small></dd>
-              <dt>Past Events</dt>
-              <dd><em>Apr 1-4th 2025</em> - <a href="https://events.linuxfoundation.org/archive/2025/kubecon-cloudnativecon-europe/">KubeCon Europe 2025</a></dd>
-              <dd><em>Nov 12-15th 2024</em> - <a href="https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-north-america/">KubeCon North America 2024</a></dd>
-              <dd><em>May 19-22nd 2024</em> - <a href="https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-europe/">KubeCon Europe 2024</a></dd>
+              <dt>
+                <Translate
+                  id="community.events.upcoming"
+                  description="Label for upcoming events">
+                  Upcoming Events
+                </Translate>
+              </dt>
+              <dd>
+                <small className="placeholder">
+                  <em>
+                    2025-11-10 to 2025-11-13
+                  </em> - <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/">
+                    <Translate
+                      id="community.events.kubeconNA2025"
+                      description="Link to KubeCon North America 2025">
+                      KubeCon North America
+                    </Translate>
+                  </a>
+                </small>
+              </dd>
+              <dt>
+                <Translate
+                  id="community.events.past"
+                  description="Label for past events">
+                  Past Events
+                </Translate>
+              </dt>
+              <dd>
+                <em>
+                  2025-04-01 to 2025-04-04
+                </em> - <a href="https://events.linuxfoundation.org/archive/2025/kubecon-cloudnativecon-europe/">
+                  <Translate
+                    id="community.events.kubeconEU2025"
+                    description="Link to KubeCon Europe 2025">
+                    KubeCon Europe 2025
+                  </Translate>
+                </a>
+              </dd>
+              <dd>
+                <em>
+                  2024-11-12 to 2024-11-15
+                </em> - <a href="https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-north-america/">
+                  <Translate
+                    id="community.events.kubeconNA2024"
+                    description="Link to KubeCon North America 2024">
+                    KubeCon North America 2024
+                  </Translate>
+                </a>
+              </dd>
+              <dd>
+                <em>
+                  2024-05-19 to 2024-05-22
+                </em> - <a href="https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-europe/">
+                  <Translate
+                    id="community.events.kubeconEU2024"
+                    description="Link to KubeCon Europe 2024">
+                    KubeCon Europe 2024
+                  </Translate>
+                </a>
+              </dd>
             </dl>
           </section>
 
           <section className="box">
-            <h2 className="title">SIG Apps</h2>
+            <h2 className="title">
+              SIG Apps
+            </h2>
             <h3 className="subtitle">
-              A Special Interest Group for deploying and operating apps in Kubernetes.
+              <Translate
+                id="community.sigApps.subtitle"
+                description="Subtitle for SIG Apps section">
+                A Special Interest Group for deploying and operating apps in Kubernetes.
+              </Translate>
             </h3>
             <p>
-              <a href="https://github.com/kubernetes/community/blob/master/sig-apps/README.md">SIG-Apps</a> is a Special Interest Group for deploying and operating apps in Kubernetes.
+              <a href="https://github.com/kubernetes/community/blob/master/sig-apps/README.md">
+                SIG-Apps
+              </a>{' '}
+              <Translate
+                id="community.sigApps.description1"
+                description="First paragraph about SIG Apps">
+                is a Special Interest Group for deploying and operating apps in Kubernetes.
+              </Translate>
             </p>
             <p>
-              They <a href="https://github.com/kubernetes/community/blob/master/sig-apps/README.md">meet each week</a> to demo and discuss tools and projects. Community meetings are recorded and <a href="https://www.youtube.com/results?search_query=kubernetes+sig+apps">shared to YouTube</a>.
+              <Translate
+                id="community.sigApps.description2"
+                description="Second paragraph about SIG Apps meetings"
+                values={{
+                  meetLink: (
+                    <a href="https://github.com/kubernetes/community/blob/master/sig-apps/README.md">
+                      <Translate
+                        id="community.sigApps.meetLink"
+                        description="Link to SIG Apps meetings">
+                        meet each week
+                      </Translate>
+                    </a>
+                  ),
+                  youtubeLink: (
+                    <a href="https://www.youtube.com/results?search_query=kubernetes+sig+apps">
+                      <Translate
+                        id="community.sigApps.youtubeLink"
+                        description="Link to YouTube recordings">
+                        shared to YouTube
+                      </Translate>
+                    </a>
+                  ),
+                }}>
+                {'They {meetLink} to demo and discuss tools and projects. Community meetings are recorded and {youtubeLink}.'}
+              </Translate>
             </p>
           </section>
         </div>
 
         <div className="column is-one-third-desktop">
           <section className="box">
-            <h2 className="title">Developer Standups</h2>
+            <h2 className="title">
+              <Translate
+                id="community.standups.title"
+                description="Title for Developer Standups section">
+                Developer Standups
+              </Translate>
+            </h2>
             <h3 className="subtitle">
-              <a href="https://zoom.us/j/696660622"><span className="icon"><i className="mdi mdi-message-video"></i></span> Thursdays 9:30-10am (PT)</a>
+              <a href="https://zoom.us/j/696660622">
+                <span className="icon"><i className="mdi mdi-message-video"></i></span>{' '}
+                <Translate
+                  id="community.standups.schedule"
+                  description="Schedule for developer standups">
+                  Thursdays 9:30-10am (PT)
+                </Translate>
+              </a>
             </h3>
-            <p>These meetings are open to all. Check the <a href="https://github.com/helm/community/blob/main/communication.md#meetings">community repo</a> for notes and details.</p>
+            <p>
+              <Translate
+                id="community.standups.description"
+                description="Description of developer standups"
+                values={{
+                  communityRepoLink: (
+                    <a href="https://github.com/helm/community/blob/main/communication.md#meetings">
+                      <Translate
+                        id="community.standups.communityRepoLink"
+                        description="Link to community repo">
+                        community repo
+                      </Translate>
+                    </a>
+                  ),
+                }}>
+                {'These meetings are open to all. Check the {communityRepoLink} for notes and details.'}
+              </Translate>
+            </p>
           </section>
           
           <section className="box">
-            <h2 className="title">Slack</h2>
+            <h2 className="title">
+              Slack
+            </h2>
             <dl>
-              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/helm-users">Helm Users</a></dt>
-              <dd>Discussion around using Helm, working with charts and solving common errors.</dd>
+              <dt>
+                <span className="icon"><i className="mdi mdi-chat"></i></span>{' '}
+                <a href="https://kubernetes.slack.com/messages/helm-users">
+                  Helm Users
+                </a>
+              </dt>
+              <dd>
+                <Translate
+                  id="community.slack.helmUsersDescription"
+                  description="Description of Helm Users channel">
+                  Discussion around using Helm, working with charts and solving common errors.
+                </Translate>
+              </dd>
 
-              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/helm-dev">Helm Development</a></dt>
-              <dd>Topics regarding Helm development, ongoing PRs, releases, etc.</dd>
+              <dt>
+                <span className="icon"><i className="mdi mdi-chat"></i></span>{' '}
+                <a href="https://kubernetes.slack.com/messages/helm-dev">
+                  Helm Development
+                </a>
+              </dt>
+              <dd>
+                <Translate
+                  id="community.slack.helmDevDescription"
+                  description="Description of Helm Development channel">
+                  Topics regarding Helm development, ongoing PRs, releases, etc.
+                </Translate>
+              </dd>
 
-              <dt><span className="icon"><i className="mdi mdi-chat"></i></span> <a href="https://kubernetes.slack.com/messages/charts">Charts</a></dt>
-              <dd>Discussion for users and contributors to Helm Charts.</dd>
+              <dt>
+                <span className="icon"><i className="mdi mdi-chat"></i></span>{' '}
+                <a href="https://kubernetes.slack.com/messages/charts">
+                  Charts
+                </a>
+              </dt>
+              <dd>
+                <Translate
+                  id="community.slack.chartsDescription"
+                  description="Description of Charts channel">
+                  Discussion for users and contributors to Helm Charts.
+                </Translate>
+              </dd>
             </dl>
 
             <h3 className="subtitle">
-              <a href="https://slack.k8s.io/">Request access here</a> to join the Kubernetes Slack team.
+              <Translate
+                id="community.slack.accessRequest"
+                description="Instructions for requesting Slack access"
+                values={{
+                  accessLink: (
+                    <a href="https://slack.k8s.io/">
+                      <Translate
+                        id="community.slack.accessLink"
+                        description="Link to request Slack access">
+                        Request access here
+                      </Translate>
+                    </a>
+                  ),
+                }}>
+                {'{accessLink} to join the Kubernetes Slack team.'}
+              </Translate>
             </h3>
           </section>
         </div>
 
         <div className="column is-one-third-desktop">
           <section className="box">
-            <h2 className="title">Contributing</h2>
+            <h2 className="title">
+              <Translate
+                id="community.contributing.title"
+                description="Title for Contributing section">
+                Contributing
+              </Translate>
+            </h2>
             <h3 className="subtitle">
-              Helm always welcomes new contributions to the project!
+              <Translate
+                id="community.contributing.subtitle"
+                description="Subtitle for Contributing section">
+                Helm always welcomes new contributions to the project!
+              </Translate>
             </h3>
-            <h3>Where to begin?</h3>
-            <p>Helm is a big project with a lot of users and contributors. It can be a lot to take in!</p>
-            <p>We have a list of <a href="https://github.com/helm/helm/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A%22good+first+issue%22">good first issues</a> if you want to help but don't know where to start.</p>
+            <h3>
+              <Translate
+                id="community.contributing.whereToBegin"
+                description="Heading for where to begin">
+                Where to begin?
+              </Translate>
+            </h3>
+            <p>
+              <Translate
+                id="community.contributing.description1"
+                description="First paragraph about contributing">
+                Helm is a big project with a lot of users and contributors. It can be a lot to take in!
+              </Translate>
+            </p>
+            <p>
+              <Translate
+                id="community.contributing.description2"
+                description="Second paragraph about good first issues"
+                values={{
+                  goodFirstIssuesLink: (
+                    <a href="https://github.com/helm/helm/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A%22good+first+issue%22">
+                      <Translate
+                        id="community.contributing.goodFirstIssuesLink"
+                        description="Link to good first issues">
+                        good first issues
+                      </Translate>
+                    </a>
+                  ),
+                }}>
+                {'We have a list of {goodFirstIssuesLink} if you want to help but don\'t know where to start.'}
+              </Translate>
+            </p>
             
-            <h3>What do I do?</h3>
-            <p>Before you contribute some code, please read our <a href="https://github.com/helm/helm/blob/main/CONTRIBUTING.md">Contribution Guide</a>. It goes over the processes around creating and reviewing pull requests.</p>
-            <p>Once you write some code, please <a href="blog/helm-dco">sign your commits</a> to ensure Helm adheres to the <a href="https://developercertificate.org/">DCO</a> agreement used by the <a href="https://www.cncf.io/">CNCF</a>.</p>
+            <h3>
+              <Translate
+                id="community.contributing.whatToDo"
+                description="Heading for what to do">
+                What do I do?
+              </Translate>
+            </h3>
+            <p>
+              <Translate
+                id="community.contributing.description3"
+                description="Third paragraph about contribution guide"
+                values={{
+                  contributionGuideLink: (
+                    <a href="https://github.com/helm/helm/blob/main/CONTRIBUTING.md">
+                      <Translate
+                        id="community.contributing.contributionGuideLink"
+                        description="Link to contribution guide">
+                        Contribution Guide
+                      </Translate>
+                    </a>
+                  ),
+                }}>
+                {'Before you contribute some code, please read our {contributionGuideLink}. It goes over the processes around creating and reviewing pull requests.'}
+              </Translate>
+            </p>
+            <p>
+              <Translate
+                id="community.contributing.description4"
+                description="Fourth paragraph about signing commits"
+                values={{
+                  signCommitsLink: (
+                    <a href="blog/helm-dco">
+                      <Translate
+                        id="community.contributing.signCommitsLink"
+                        description="Link to signing commits">
+                        sign your commits
+                      </Translate>
+                    </a>
+                  ),
+                  dcoLink: (
+                  <a href="https://developercertificate.org/">
+                    DCO
+                  </a>
+                  ),
+                  cncfLink: (
+              <a href="https://www.cncf.io/">
+                CNCF
+              </a>
+                  ),
+                }}>
+                {'Once you write some code, please {signCommitsLink} to ensure Helm adheres to the {dcoLink} agreement used by the {cncfLink}.'}
+              </Translate>
+            </p>
           </section>
         </div>
       </div>
@@ -233,11 +644,20 @@ function CommunitySection() {
       <div className="helm-contrib-logos">
         <img 
           src="/img/helm.svg" 
-          alt="Helm is supported by and built with a community of over 400 contributors"
+          alt={translate({
+            message: 'Helm is supported by and built with a community of over 400 contributors',
+            description: 'Alt text for Helm logo'
+          })}
           className="helm-logo"
         />
 
-        <p className="contributors">Helm is supported by and built with a community of over 400 developers.</p>
+        <p className="contributors">
+          <Translate
+            id="community.contributors.description"
+            description="Description of Helm contributors">
+            Helm is supported by and built with a community of over 400 developers.
+          </Translate>
+        </p>
 
         <div className="contrib-logos columns">
           <div className="column">
@@ -295,7 +715,20 @@ function CommunitySection() {
           </div>
         </div>
 
-        <p className="contributors">...and many other wonderful <a href="https://github.com/helm/helm/blob/main/OWNERS">helm</a> core maintainers.</p>
+        <p className="contributors">
+          <Translate
+            id="community.contributors.final"
+            description="Final paragraph about core maintainers"
+            values={{
+              helmLink: (
+                <a href="https://github.com/helm/helm/blob/main/OWNERS">
+                  helm
+                </a>
+              ),
+            }}>
+            {'...and many other wonderful {helmLink} core maintainers.'}
+          </Translate>
+        </p>
       </div>
     </div>
   );
@@ -315,38 +748,162 @@ export default function Home() {
         {/* Second content block - blue background */}
         <div className="content-block">
           <div className="block-content">
-            <h2 className="has-text-centered">What is Helm?</h2>
+            <h2 className="has-text-centered">
+              <Translate
+                id="main.whatIsHelm.title"
+                description="Title for What is Helm section">
+                What is Helm?
+              </Translate>
+            </h2>
 
             {/* Two Column Layout */}
             <div className="two-column layout-spacing">
               <div>
-                <p>Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.</p>
-                <p>Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste.</p>
-                <p>Helm is a graduated project in the <a href="https://www.cncf.io">CNCF</a> and is maintained by the <a href="https://github.com/helm/community/blob/main/governance/governance.md">Helm community</a>.</p>
-                <h3>Learn more:</h3>
+                <p>
+                  <Translate
+                    id="main.whatIsHelm.description1"
+                    description="First paragraph about what Helm does">
+                    Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
+                  </Translate>
+                </p>
+                <p>
+                  <Translate
+                    id="main.whatIsHelm.description2"
+                    description="Second paragraph about charts">
+                    Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste.
+                  </Translate>
+                </p>
+                <p>
+                  <Translate
+                    id="main.whatIsHelm.description3"
+                    description="Third paragraph about CNCF and community"
+                    values={{
+                      cncfLink: (
+                  <a href="https://www.cncf.io">
+                    CNCF
+                  </a>
+                      ),
+                      communityLink: (
+                        <a href="https://github.com/helm/community/blob/main/governance/governance.md">
+                          <Translate
+                            id="main.whatIsHelm.communityLink"
+                            description="Link to Helm community">
+                            Helm community
+                          </Translate>
+                        </a>
+                      ),
+                    }}>
+                    {'Helm is a graduated project in the {cncfLink} and is maintained by the {communityLink}.'}
+                  </Translate>
+                </p>
+                <h3>
+                  <Translate
+                    id="main.whatIsHelm.learnMore"
+                    description="Heading for learn more section">
+                    Learn more:
+                  </Translate>
+                </h3>
                 <ul>
-                  <li><a href="./docs/topics/architecture">Helm Architecture</a></li>
-                  <li><a href="./docs/intro/quickstart">Quick Start Guide</a></li>
-                  <li><a href="https://www.youtube.com/watch?v=Zzwq9FmZdsU&t=2s">Video: An Introduction to Helm</a></li>
+                  <li>
+                    <a href="./docs/topics/architecture">
+                      <Translate
+                        id="main.whatIsHelm.architectureLink"
+                        description="Link to Helm Architecture">
+                        Helm Architecture
+                      </Translate>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./docs/intro/quickstart">
+                      <Translate
+                        id="main.whatIsHelm.quickstartLink"
+                        description="Link to Quick Start Guide">
+                        Quick Start Guide
+                      </Translate>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/watch?v=Zzwq9FmZdsU&t=2s">
+                      <Translate
+                        id="main.whatIsHelm.videoLink"
+                        description="Link to Helm introduction video">
+                        Video: An Introduction to Helm
+                      </Translate>
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
                 <div className="tile-features">
                   <div className="tile is-child">
-                    <p className="title">Manage Complexity</p>
-                    <p>Charts describe even the most complex apps, provide repeatable application installation, and serve as a single point of authority.</p>
+                    <p className="title">
+                      <Translate
+                        id="main.features.manageComplexity.title"
+                        description="Title for Manage Complexity feature">
+                        Manage Complexity
+                      </Translate>
+                    </p>
+                    <p>
+                      <Translate
+                        id="main.features.manageComplexity.description"
+                        description="Description for Manage Complexity feature">
+                        Charts describe even the most complex apps, provide repeatable application installation, and serve as a single point of authority.
+                      </Translate>
+                    </p>
                   </div>
                   <div className="tile is-child">
-                    <p className="title">Easy Updates</p>
-                    <p>Take the pain out of updates with in-place upgrades and custom hooks.</p>
+                    <p className="title">
+                      <Translate
+                        id="main.features.easyUpdates.title"
+                        description="Title for Easy Updates feature">
+                        Easy Updates
+                      </Translate>
+                    </p>
+                    <p>
+                      <Translate
+                        id="main.features.easyUpdates.description"
+                        description="Description for Easy Updates feature">
+                        Take the pain out of updates with in-place upgrades and custom hooks.
+                      </Translate>
+                    </p>
                   </div>
                   <div className="tile is-child">
-                    <p className="title">Simple Sharing</p>
-                    <p>Charts are easy to version, share, and host on public or private servers.</p>
+                    <p className="title">
+                      <Translate
+                        id="main.features.simpleSharing.title"
+                        description="Title for Simple Sharing feature">
+                        Simple Sharing
+                      </Translate>
+                    </p>
+                    <p>
+                      <Translate
+                        id="main.features.simpleSharing.description"
+                        description="Description for Simple Sharing feature">
+                        Charts are easy to version, share, and host on public or private servers.
+                      </Translate>
+                    </p>
                   </div>
                   <div className="tile is-child">
-                    <p className="title">Rollbacks</p>
-                    <p>Use <code>helm rollback</code> to roll back to an older version of a release with ease.</p>
+                    <p className="title">
+                      <Translate
+                        id="main.features.rollbacks.title"
+                        description="Title for Rollbacks feature">
+                        Rollbacks
+                      </Translate>
+                    </p>
+                    <p>
+                      <Translate
+                        id="main.features.rollbacks.description.prefix"
+                        description="First part of rollbacks description">
+                        Use
+                      </Translate>{' '}
+                      <code>helm rollback</code>{' '}
+                      <Translate
+                        id="main.features.rollbacks.description.suffix"
+                        description="Last part of rollbacks description">
+                        to roll back to an older version of a release with ease.
+                      </Translate>
+                    </p>
                   </div>
                 </div>
               </div>

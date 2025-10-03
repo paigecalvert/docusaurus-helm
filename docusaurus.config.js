@@ -41,14 +41,41 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es'],
+    locales: ['en', 'de', 'es', 'fr', 'gr', 'ja', 'ko', 'pt', 'ru', 'uk', 'zh'],
     localeConfigs: {
       en: {
         htmlLang: 'en-us',
         label: 'English',
       },
+      de: {
+        label: 'Deutsch',
+      },
       es: {
         label: 'Español',
+      },
+      fr: {
+        label: 'Français',
+      },
+      gr: {
+        label: 'Greek',
+      },
+      ja: {
+        label: '日本語',
+      },
+      ko: {
+        label: '한국어',
+      },
+      pt: {
+        label: 'Português',
+      },
+      ru: {
+        label: 'Русский',
+      },
+      uk: {
+        label: 'Українська',
+      },
+      zh: {
+        label: '中文',
       },
     },
   },

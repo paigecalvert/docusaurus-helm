@@ -1,31 +1,23 @@
 {
   "title": {
-    "message": "Helm Docs",
+    "message": "Helm",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Site Logo",
+    "message": "Logo del Sitio",
     "description": "The alt text of navbar logo"
-  },
-  "item.label.Home": {
-    "message": "Inicio",
-    "description": "Navbar item with label Home"
   },
   "item.label.Docs": {
     "message": "Documentación",
     "description": "Navbar item with label Docs"
   },
-  "item.label.Charts": {
-    "message": "Charts",
-    "description": "Navbar item with label Charts"
-  },
   "item.label.Blog": {
     "message": "Blog",
     "description": "Navbar item with label Blog"
   },
-  "item.label.Community": {
-    "message": "Comunidad",
-    "description": "Navbar item with label Community"
+  "item.label.Charts": {
+    "message": "Gráficos",
+    "description": "Navbar item with label Charts"
   },
   "item.label.GitHub": {
     "message": "GitHub",
