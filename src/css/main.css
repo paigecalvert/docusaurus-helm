@@ -37,6 +37,9 @@
   --ifm-color-primary-dark: var(--navy);
   --ifm-color-primary-light: var(--blue-light);
   --ifm-link-color: var(--navy);
+  --ifm-link-hover-color: #2BA0D3;
+  --ifm-link-decoration: underline;
+  --ifm-link-hover-decoration: underline;
   --ifm-font-family-base: "Public Sans", Helvetica, Arial, sans-serif;
   --ifm-heading-font-family: "Space Mono", "Courier New", monaco, monospace;
   --ifm-heading-font-weight: 700;
@@ -54,25 +57,75 @@
 } */
 
 /* Global page wrapper styles */
-html,
+html {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
 body {
   min-height: 100%;
   padding: 0;
   margin: 0;
-  background: white;
+  background: transparent;
+  box-sizing: border-box;
+  height: fit-content !important; /* needed for border to fit content instead of initial viewport */
+  border: 8px solid var(--navy);
 }
 
 .page-wrapper {
   position: relative;
-  background: white;
+  background: transparent;
 }
 
-body, nav {
+/* Fix for iOS background-attachment: fixed issues */
+html {
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+/* Fixed background container that works on iOS */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("/img/topography.png");
+  background-repeat: repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Ensure pattern shows on non-blue sections */
+.home-intro,
+.helm-community,
+.level-faqs {
+  background-attachment: local; /* Works on iOS */
+}
+
+/* Remove background-image from body and nav since we're using ::before */
+body, nav {
+  background-image: none;
 }
 
 main, .theme-doc-breadcrumbs {
   background: white;
+}
+
+/* Ensure content sections have appropriate backgrounds */
+.home-intro {
+  background: transparent; /* Pattern shows through */
+}
+
+.helm-community {
+  background: white; /* White background for readability */
+}
+
+.level-faqs {
+  background-color: var(--light); /* Keep existing light background */
 }
 
 /* Override main background for homepage only */
@@ -87,6 +140,36 @@ main, .theme-doc-breadcrumbs {
 
 h1,h2,h3,h4,h5,h6 {
   color: var(--navy);
+}
+
+/* Frontend prototype link styling */
+a {
+  color: var(--ifm-link-hover-color);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--ifm-link-hover-color);
+  text-decoration: none;
+}
+
+/* Underline animation on hover */
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ifm-link-hover-color);
+  transition: width 0.3s ease;
+}
+
+a:hover:not(.contrib-logos *):not(.theme-doc-sidebar-container *):not(.pagination-nav *):not(.theme-doc-toc-desktop *):not(.theme-doc-toc-mobile *):not(.breadcrumbs *):not(.navbar-sidebar *)::after {
+  width: 100%;
 }
 
 .anchor {

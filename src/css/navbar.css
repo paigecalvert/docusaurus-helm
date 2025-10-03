@@ -2,15 +2,24 @@
  * Navbar styles for the Helm documentation site.
  */
 
-/* Remove navbar border */
+/* Remove navbar border and account for body border */
 .navbar {
   border-bottom: none !important;
   box-shadow: none !important;
   height: 5rem;
   min-height: 5rem;
+  left: 8px;
+  right: 8px;
+  border-top: 8px solid var(--navy);
+  margin-top: -8px;
+  /* Restore background image for content flow */
+  background-image: url('/img/topography.png');
+  background-repeat: repeat;
+  background-position: -8px -8px;
+  backdrop-filter: none;
 }
 
-/* Navbar Link Styling */
+/* Navbar Link Styling with frontend prototype link behavior */
 .navbar__link {
   color: var(--navy);
   font-size: 1rem;
@@ -20,31 +29,18 @@
   letter-spacing: 0.035rem;
   padding: 0.75rem 1.5vw;
   text-decoration: none;
+  position: relative;
 }
 
-.navbar__link:hover {
-  background-color: rgba(249,158,172,0.5);
-  color: var(--navy);
-  margin-top: calc(-0.75rem - var(--ifm-navbar-padding-vertical, 0px));
-  margin-bottom: calc(-0.75rem - var(--ifm-navbar-padding-vertical, 0px));
-  padding-top: calc(0.75rem + var(--ifm-navbar-padding-vertical, 0px) + 0.75rem);
-  padding-bottom: calc(0.75rem + var(--ifm-navbar-padding-vertical, 0px) + 0.75rem);
+.navbar__item::after {
+  background-color: var(--blue-light);
+  height: 3px;
+  bottom: -11px;
 }
 
-/* Also target navbar items that might have different classes */
-.navbar__item .navbar__link {
-  color: var(--navy);
-  font-size: 1rem;
-  transition: all .3s ease-in-out;
-  font-family: "Space Mono", "Courier New", monaco, monospace;
-  font-weight: bold;
-  letter-spacing: 0.035rem;
-  text-decoration: none;
-}
-
-.navbar__item .navbar__link:hover {
-  background-color: rgba(249,158,172,0.5);
-  color: var(--navy);
+/* Navbar dropdowns */
+.navbar__item .navbar__link::after {
+  display: none;
 }
 
 /* Navbar Brand/Title Styling */
@@ -81,6 +77,10 @@
   height: 100%;
   position: relative;
   transition: background-color 0.3s ease-in-out;
+}
+
+.navbar__brand::after {
+  display: none;
 }
 
 /* Remove hover background from right-side navbar items (dropdowns and icons) */
