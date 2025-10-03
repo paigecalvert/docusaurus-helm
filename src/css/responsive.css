@@ -35,10 +35,8 @@
   .home-intro h1 {
     font-size: 3.5vw; /* Slightly larger on medium screens */
   }
-  
-  .home-intro h2 {
-    font-size: 3vw;
-  }
+
+  /* Removed fixed h2 font size - now handled by clamp() in landing-page.css */
 }
 
 @media screen and (max-width: 768px) {
@@ -78,12 +76,9 @@
   .home-intro h1 {
     font-size: 1.75rem; /* Even smaller for very small screens */
   }
-  
-  .home-intro h2 {
-    font-size: 0.9rem;
-    padding: 0.75rem;
-  }
-  
+
+  /* Removed fixed h2 styles - now handled by clamp() in landing-page.css */
+
   .home-intro img.logo {
     width: 60px;
     max-width: 60px;

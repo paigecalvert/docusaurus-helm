@@ -295,7 +295,7 @@ function CommunitySection() {
           </div>
         </div>
 
-        <p class="contributors">...and many other wonderful <a href="https://github.com/helm/helm/blob/main/OWNERS">helm</a> core maintainers.</p>
+        <p className="contributors">...and many other wonderful <a href="https://github.com/helm/helm/blob/main/OWNERS">helm</a> core maintainers.</p>
       </div>
     </div>
   );

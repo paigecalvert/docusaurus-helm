@@ -15,20 +15,6 @@
  * 8. Grid System (Bulma-style classes)
  */
 
-.home-intro h2 {
-  border: 5px solid var(--shade-light);
-  font-size: 2vw;
-  background: rgba(255,255,255,0.67);
-  bottom: 8.5vw;
-  width: 48vw;
-  padding: 2vw 5.5vw 2vw 2.5vw;
-  line-height: 1.5;
-  letter-spacing: -0.015rem;
-  color: var(--blue-dark);
-  font-family: var(--ifm-font-family-base);
-  font-weight: normal;
-}
-
 /* =============================================================================
    1. CONTENT CONTAINER AND BLOCKS
    ============================================================================= */
@@ -49,8 +35,7 @@
 
 /* First content block - pattern background */
 .content-block:first-child {
-  min-height: calc(100vh - 5rem);
-  /* Same calculation as other blocks */
+  /* Height will be dynamically set by JavaScript */
   position: relative;
   overflow: visible;
   padding-bottom: clamp(4rem, 10vh, 6rem);
@@ -58,16 +43,18 @@
 
 /* First content block's content should scale and center properly */
 .content-block:first-child .block-content {
-  height: calc(100% - clamp(4rem, 10vh, 6rem));
-  /* Account for wave height */
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem 1.25rem;
-  /* Equal padding top and bottom */
+  /* Safe area padding: 5rem top (navbar) + 90px bottom (waves) + side padding - reduced by 30px */
+  padding: calc(5rem + 1rem - 30px) 1.25rem calc(90px + 1rem);
   box-sizing: border-box;
   position: relative;
+  /* iOS Safari viewport fixes */
+  min-height: -webkit-fill-available;
+  min-height: stretch;
 }
 
 /* Responsive text scaling for first block */
@@ -76,6 +63,57 @@
   line-height: 1.2;
   margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
   text-align: center;
+}
+
+.content-block:first-child h2 {
+  /* Restored visual styles with dynamic values */
+  border: clamp(3px, 0.8vw, 5px) solid var(--shade-light);
+  background: rgba(255,255,255,0.67);
+  padding: clamp(1rem, 2vw, 2rem) clamp(1.5rem, 5.5vw, 4rem) clamp(1rem, 2vw, 2rem) clamp(1rem, 2.5vw, 2rem);
+
+  /* Dynamic sizing - no absolute positioning */
+  width: clamp(300px, 48vw, 600px);
+  max-width: calc(100% - 2rem);
+  margin: clamp(0.5rem, 1.5vw, 1rem) auto 0;
+
+  /* Responsive typography */
+  font-size: clamp(0.875rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  letter-spacing: -0.015rem;
+  color: var(--blue-dark);
+  font-family: var(--ifm-font-family-base);
+  font-weight: normal;
+  text-align: left;
+
+  /* Ensure proper scaling */
+  box-sizing: border-box;
+}
+
+/* Additional responsive scaling for smaller viewport heights */
+@media (max-height: 700px) {
+  .content-block:first-child h1 {
+    font-size: clamp(1.25rem, 3.5vw, 2rem);
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+  }
+
+  .content-block:first-child h2 {
+    font-size: clamp(0.75rem, 1.8vw, 1.25rem);
+    padding: clamp(0.75rem, 1.5vw, 1.5rem) clamp(1.25rem, 4vw, 3rem) clamp(0.75rem, 1.5vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem);
+    line-height: 1.3;
+  }
+}
+
+@media (max-height: 500px) {
+  .content-block:first-child h1 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: clamp(0.25rem, 1vw, 0.75rem);
+  }
+
+  .content-block:first-child h2 {
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 3vw, 2rem) clamp(0.5rem, 1vw, 1rem) clamp(0.5rem, 1.5vw, 1rem);
+    line-height: 1.2;
+  }
 }
 
 .content-block:first-child p {

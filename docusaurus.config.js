@@ -264,6 +264,13 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  scripts: [
+    {
+      src: '/js/boat-animation.js',
+      defer: true,
+    },
+  ],
 };
 
 export default config;
