@@ -1,5 +1,5 @@
 // Boat badge scroll animation with dynamic height calculation
-document.addEventListener('DOMContentLoaded', function() {
+function initializeOnPageChange() {
     // Wait for React components to render
     function initializeBoatAnimation() {
         const boat = document.querySelector('.boat');
@@ -133,4 +133,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start initialization
     initializeBoatAnimation();
+}
+
+// Run on initial page load
+document.addEventListener('DOMContentLoaded', initializeOnPageChange);
+
+// Run on client-side route changes (Docusaurus/React Router)
+// Multiple event types to catch different routing scenarios
+window.addEventListener('popstate', () => {
+    setTimeout(initializeOnPageChange, 100);
 });
+
+// Listen for History API changes (pushState/replaceState)
+const originalPushState = history.pushState;
+const originalReplaceState = history.replaceState;
+
+history.pushState = function() {
+    originalPushState.apply(history, arguments);
+    setTimeout(initializeOnPageChange, 100);
+};
+
+history.replaceState = function() {
+    originalReplaceState.apply(history, arguments);
+    setTimeout(initializeOnPageChange, 100);
+};
+
+// Additional fallback for client-side navigation
+window.addEventListener('hashchange', () => {
+    setTimeout(initializeOnPageChange, 100);
+});
+
+// React Router specific event (if available)
+if (typeof window !== 'undefined' && window.addEventListener) {
+    window.addEventListener('routeChangeComplete', () => {
+        setTimeout(initializeOnPageChange, 100);
+    });
+}
