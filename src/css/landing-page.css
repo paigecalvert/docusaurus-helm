@@ -157,44 +157,6 @@
   margin-top: 2rem;
 }
 
-/* Background window like frontend prototype */
-.background-window {
-  position: relative;
-  padding: 2rem;
-  background: transparent;
-  overflow: hidden;
-  margin: 2rem 0;
-}
-
-.background-window::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/img/topography.png');
-  background-repeat: repeat;
-  background-attachment: fixed;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* Fallback for mobile devices that don't support background-attachment: fixed */
-@media (max-width: 768px) {
-  .background-window::before {
-    background: white !important;
-  }
-}
-
-.background-window-content {
-  position: relative;
-  z-index: 1;
-  color: var(--navy);
-  padding: 1.5rem;
-  text-align: center;
-}
-
 /* Content block background patterns */
 .content-block:nth-child(odd) {
   background: transparent;
@@ -402,7 +364,6 @@
 .tile-actions ul.tabs {
   margin: 2.5vw 0 0.75vw;
   position: relative;
-  z-index: 200;
   overflow: visible;
   list-style: none;
   display: flex;
@@ -413,7 +374,6 @@
   margin: 0 0 -2px;
   border: none;
   padding: 0;
-  z-index: 680;
   position: relative;
 }
 
